@@ -1,5 +1,6 @@
 package com.enoch02.aptinaija.feature.companies
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -194,7 +195,9 @@ private fun ProviderFilter(
                     contentDescription = null
                 )
             },
-            modifier = Modifier.testTag("companies_provider_chip")
+            modifier = Modifier
+                .animateContentSize()
+                .testTag("companies_provider_chip")
         )
         DropdownMenu(
             expanded = expanded,
