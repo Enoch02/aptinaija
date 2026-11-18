@@ -24,6 +24,9 @@ interface BookmarkDao {
     @Query("SELECT EXISTS(SELECT 1 FROM bookmarks WHERE questionId = :questionId)")
     fun observeIsBookmarked(questionId: String): Flow<Boolean>
 
+    @Query("SELECT COUNT(*) FROM bookmarks")
+    fun observeCount(): Flow<Int>
+
     @Query("SELECT EXISTS(SELECT 1 FROM bookmarks WHERE questionId = :questionId)")
     suspend fun isBookmarked(questionId: String): Boolean
 

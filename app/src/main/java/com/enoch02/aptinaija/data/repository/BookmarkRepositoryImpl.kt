@@ -18,6 +18,8 @@ class BookmarkRepositoryImpl @Inject constructor(
     override fun observeBookmarks(): Flow<List<Question>> =
         bookmarkDao.observeAll().map { rows -> rows.map { it.toDomain() } }
 
+    override fun observeCount(): Flow<Int> = bookmarkDao.observeCount()
+
     override fun observeIsBookmarked(questionId: String): Flow<Boolean> =
         bookmarkDao.observeIsBookmarked(questionId)
 

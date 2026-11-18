@@ -6,8 +6,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.LocalViewModelStoreOwner
+import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -41,21 +43,27 @@ fun AptiNaijaApp(navController: NavHostController = rememberNavController()) {
         )
     val settings by settingsViewModel.settings.collectAsStateWithLifecycle()
 
+    val shellViewModel: AppShellViewModel = hiltViewModel()
+    val bookmarkCount by shellViewModel.bookmarkCount.collectAsStateWithLifecycle()
+
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = backStackEntry?.destination
-    val isTopLevelDestination = currentDestination?.hierarchy?.any { destination ->
-        destination.hasRoute(HomeRoute::class) ||
-                destination.hasRoute(CompaniesRoute::class) ||
-                destination.hasRoute(HistoryRoute::class) ||
-                destination.hasRoute(WrongAnswersRoute::class) ||
-                destination.hasRoute(SettingsRoute::class)
-    } == true
+    val topLevelDestination = currentDestination.topLevelDestination()
 
     AptiNaijaTheme(fontScale = settings.fontScale) {
         Scaffold(
             contentWindowInsets = WindowInsets(0, 0, 0, 0),
+            topBar = {
+                topLevelDestination?.let { destination ->
+                    AppTopBar(
+                        destination = destination,
+                        bookmarkCount = bookmarkCount,
+                        onBookmarks = { navController.navigate(BookmarksRoute) }
+                    )
+                }
+            },
             bottomBar = {
-                if (isTopLevelDestination) {
+                if (topLevelDestination != null) {
                     AppNavigationBar(
                         currentDestination = currentDestination,
                         onNavigate = navController::navigateToTopLevel
@@ -70,6 +78,13 @@ fun AptiNaijaApp(navController: NavHostController = rememberNavController()) {
         }
     }
 }
+
+private fun NavDestination?.topLevelDestination(): TopLevelDestination? =
+    this?.let { destination ->
+        TopLevelDestination.entries.firstOrNull { candidate ->
+            destination.hierarchy.any { it.hasRoute(candidate.routeClass) }
+        }
+    }
 
 @Composable
 private fun AptiNaijaNavHost(
@@ -90,7 +105,6 @@ private fun AptiNaijaNavHost(
                         TestSetupRoute(mode = "DRILL", section = section)
                     )
                 },
-                onBookmarks = { navController.navigate(BookmarksRoute) },
                 onOpenLastResult = { attemptId ->
                     navController.navigate(ResultsRoute(attemptId))
                 }
@@ -157,7 +171,7 @@ private fun AptiNaijaNavHost(
         }
 
         composable<WrongAnswersRoute> {
-            WrongAnswersScreen(onBack = { navController.popBackStack() })
+            WrongAnswersScreen()
         }
 
         composable<BookmarksRoute> {

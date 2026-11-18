@@ -41,6 +41,7 @@ interface AttemptRepository {
 
 interface BookmarkRepository {
     fun observeBookmarks(): Flow<List<Question>>
+    fun observeCount(): Flow<Int>
     fun observeIsBookmarked(questionId: String): Flow<Boolean>
     suspend fun toggle(questionId: String)
 }

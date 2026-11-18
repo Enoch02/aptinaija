@@ -5,23 +5,16 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material3.AssistChip
-import androidx.compose.material3.Badge
-import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
@@ -44,7 +37,6 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.enoch02.aptinaija.R
 import com.enoch02.aptinaija.core.ui.components.LoadingState
-import com.enoch02.aptinaija.core.ui.components.ScreenScaffold
 import com.enoch02.aptinaija.domain.model.Attempt
 import com.enoch02.aptinaija.domain.model.AttemptMode
 import com.enoch02.aptinaija.domain.model.AttemptStatus
@@ -57,43 +49,21 @@ fun HomeScreen(
     onStartPractice: () -> Unit,
     onStartMock: () -> Unit,
     onDrillSection: (String) -> Unit,
-    onBookmarks: () -> Unit,
     onOpenLastResult: (String) -> Unit,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
 
-    ScreenScaffold(
-        title = stringResource(R.string.home),
-        actions = {
-            IconButton(onClick = onBookmarks) {
-                BadgedBox(
-                    badge = {
-                        if (state.bookmarkCount > 0) {
-                            Badge { Text(state.bookmarkCount.toString()) }
-                        }
-                    }
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.BookmarkBorder,
-                        contentDescription = stringResource(R.string.saved_questions)
-                    )
-                }
-            }
-        },
-        contentWindowInsets = WindowInsets(0, 0, 0, 0)
-    ) {
-        if (state.loading) {
-            LoadingState()
-        } else {
-            HomeContent(
-                state = state,
-                onStartPractice = onStartPractice,
-                onStartMock = onStartMock,
-                onDrillSection = onDrillSection,
-                onOpenLastResult = onOpenLastResult
-            )
-        }
+    if (state.loading) {
+        LoadingState()
+    } else {
+        HomeContent(
+            state = state,
+            onStartPractice = onStartPractice,
+            onStartMock = onStartMock,
+            onDrillSection = onDrillSection,
+            onOpenLastResult = onOpenLastResult
+        )
     }
 }
 
@@ -382,8 +352,7 @@ private fun HomeContentPreview() {
                     defaults = TestDefaults(),
                     sections = emptyList()
                 )
-            ),
-            bookmarkCount = 3
+            )
         ),
         onStartPractice = {},
         onStartMock = {},

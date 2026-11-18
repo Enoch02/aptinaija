@@ -7,7 +7,6 @@ import com.enoch02.aptinaija.domain.model.CompanySummary
 import com.enoch02.aptinaija.domain.model.SectionWeakness
 import com.enoch02.aptinaija.domain.model.TestTemplate
 import com.enoch02.aptinaija.domain.repository.AttemptRepository
-import com.enoch02.aptinaija.domain.repository.BookmarkRepository
 import com.enoch02.aptinaija.domain.repository.QuestionRepository
 import com.enoch02.aptinaija.domain.repository.SettingsRepository
 import com.enoch02.aptinaija.domain.repository.TestRepository
@@ -25,7 +24,6 @@ data class HomeUiState(
     val weakSections: List<SectionWeakness> = emptyList(),
     val companies: List<CompanySummary> = emptyList(),
     val templates: List<TestTemplate> = emptyList(),
-    val bookmarkCount: Int = 0,
     val passMarkPercent: Int = 50,
     val error: String? = null
 ) {
@@ -37,7 +35,6 @@ class HomeViewModel @Inject constructor(
     private val questions: QuestionRepository,
     attempts: AttemptRepository,
     templates: TestRepository,
-    bookmarks: BookmarkRepository,
     settings: SettingsRepository
 ) : ViewModel() {
 
@@ -56,8 +53,6 @@ class HomeViewModel @Inject constructor(
             templates = testTemplates,
             passMarkPercent = appSettings.passMarkPercent
         )
-    }.combine(bookmarks.observeBookmarks()) { uiState, savedQuestions ->
-        uiState.copy(bookmarkCount = savedQuestions.size)
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5_000),
