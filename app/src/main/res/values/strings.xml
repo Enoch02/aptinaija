@@ -67,4 +67,26 @@
     <string name="mode_practice">Practice</string>
     <string name="mode_drill">Section drill</string>
     <string name="mode_mock">Mock test</string>
+    <string name="close_test">Close test</string>
+    <string name="question_meta">Question %1$d of %2$d · %3$s</string>
+    <string name="practice_untimed">Practice · untimed</string>
+    <string name="drill_untimed">Section drill · untimed</string>
+    <string name="mock_untimed">Mock · untimed</string>
+    <string name="reading_passage">Reading passage</string>
+    <string name="passage_expanded">Expanded</string>
+    <string name="passage_collapsed">Collapsed</string>
+    <string name="delta_your_answer">Your answer: %1$s</string>
+    <string name="delta_correct">Correct: %1$s</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="submit">Submit</string>
+    <string name="exit_test_title">Exit test?</string>
+    <string name="exit_test_body">Your progress will be submitted and scored. Unanswered questions count as incorrect.</string>
+    <string name="keep_going">Keep going</string>
+    <string name="submit_and_exit">Submit and exit</string>
+    <string name="bookmark_question">Bookmark question</string>
+    <string name="remove_bookmark">Remove bookmark</string>
+    <string name="timer_warning_20">20% of test time left</string>
+    <string name="timer_warning_10">10% of test time left</string>
+    <string name="attempt_empty">This attempt has no questions.</string>
 </resources>
