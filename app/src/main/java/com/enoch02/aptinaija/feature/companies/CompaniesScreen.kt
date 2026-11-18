@@ -125,15 +125,9 @@ private fun FilterRow(
     onClearProviders: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Row(
-        modifier = modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
+    Column(modifier = modifier) {
         Row(
-            modifier = Modifier
-                .weight(1f)
-                .horizontalScroll(rememberScrollState()),
+            modifier = Modifier.horizontalScroll(rememberScrollState()),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -163,7 +157,8 @@ private fun FilterRow(
                 selectedProviders = state.selectedProviders,
                 providers = state.providers,
                 onProviderToggled = onProviderToggled,
-                onClearProviders = onClearProviders
+                onClearProviders = onClearProviders,
+                modifier = Modifier.align(Alignment.End)
             )
         }
     }
@@ -174,7 +169,8 @@ private fun ProviderFilter(
     selectedProviders: Set<String>,
     providers: List<String>,
     onProviderToggled: (String) -> Unit,
-    onClearProviders: () -> Unit
+    onClearProviders: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     var expanded by remember { mutableStateOf(false) }
     val label = when {
@@ -187,7 +183,7 @@ private fun ProviderFilter(
         )
     }
 
-    Box {
+    Box(modifier = modifier) {
         FilterChip(
             selected = selectedProviders.isNotEmpty(),
             onClick = { expanded = true },
