@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -29,6 +30,7 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
@@ -54,27 +56,28 @@ fun HomeScreen(
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
 
-    if (state.loading) {
-        LoadingState()
-    } else {
-        HomeContent(
-            state = state,
-            onStartPractice = onStartPractice,
-            onStartMock = onStartMock,
-            onDrillSection = onDrillSection,
-            onOpenLastResult = onOpenLastResult
-        )
-    }
+    HomeContent(
+        state = state,
+        onStartPractice = onStartPractice,
+        onStartMock = onStartMock,
+        onDrillSection = onDrillSection,
+        onOpenLastResult = onOpenLastResult
+    )
 }
 
 @Composable
-private fun HomeContent(
+internal fun HomeContent(
     state: HomeUiState,
     onStartPractice: () -> Unit,
     onStartMock: () -> Unit,
     onDrillSection: (String) -> Unit,
     onOpenLastResult: (String) -> Unit
 ) {
+    if (state.loading) {
+        LoadingState(Modifier.testTag("home_loading"))
+        return
+    }
+
     Column(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
@@ -96,7 +99,7 @@ private fun HomeContent(
                     onClick = onStartPractice,
                     modifier = Modifier
                         .weight(1f)
-                        .height(48.dp)
+                        .heightIn(min = 48.dp)
                 ) {
                     Text(stringResource(R.string.start_practice))
                 }
@@ -104,7 +107,7 @@ private fun HomeContent(
                     onClick = onStartMock,
                     modifier = Modifier
                         .weight(1f)
-                        .height(48.dp)
+                        .heightIn(min = 48.dp)
                 ) {
                     Text(stringResource(R.string.mock_test))
                 }
@@ -132,6 +135,7 @@ private fun HomeContent(
             modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .padding(bottom = 8.dp)
+                .testTag("home_ad_slot")
         )
     }
 }
@@ -145,15 +149,21 @@ private fun LastScoreCard(
     val template = attempt?.let { last ->
         state.templates.firstOrNull { it.id == last.templateId }
     }
+    val shape = MaterialTheme.shapes.medium
 
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(MaterialTheme.shapes.medium)
-            .clickable(enabled = attempt != null) {
-                attempt?.let { onOpenLastResult(it.id) }
-            },
-        shape = MaterialTheme.shapes.medium,
+            .clip(shape)
+            .then(
+                if (attempt != null) {
+                    Modifier.clickable { onOpenLastResult(attempt.id) }
+                } else {
+                    Modifier
+                }
+            )
+            .testTag("home_last_score"),
+        shape = shape,
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
         )
@@ -241,7 +251,8 @@ private fun WeakSectionCard(
                 progress = { percent / 100f },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(4.dp),
+                    .height(4.dp)
+                    .testTag("home_progress_${weakness.section}"),
                 color = MaterialTheme.colorScheme.primary,
                 trackColor = MaterialTheme.colorScheme.surfaceContainerHigh,
                 strokeCap = StrokeCap.Round,
@@ -251,7 +262,9 @@ private fun WeakSectionCard(
             AssistChip(
                 onClick = onDrill,
                 label = { Text(stringResource(R.string.drill_this)) },
-                modifier = Modifier.padding(top = 4.dp)
+                modifier = Modifier
+                    .padding(top = 4.dp)
+                    .testTag("home_drill_${weakness.section}")
             )
         }
     }
