@@ -7,7 +7,9 @@ import com.enoch02.aptinaija.domain.model.CompanySummary
 import com.enoch02.aptinaija.domain.model.SectionWeakness
 import com.enoch02.aptinaija.domain.model.TestTemplate
 import com.enoch02.aptinaija.domain.repository.AttemptRepository
+import com.enoch02.aptinaija.domain.repository.BookmarkRepository
 import com.enoch02.aptinaija.domain.repository.QuestionRepository
+import com.enoch02.aptinaija.domain.repository.SettingsRepository
 import com.enoch02.aptinaija.domain.repository.TestRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -23,6 +25,8 @@ data class HomeUiState(
     val weakSections: List<SectionWeakness> = emptyList(),
     val companies: List<CompanySummary> = emptyList(),
     val templates: List<TestTemplate> = emptyList(),
+    val bookmarkCount: Int = 0,
+    val passMarkPercent: Int = 50,
     val error: String? = null
 ) {
     val questionCount: Int get() = companies.sumOf { it.questionCount }
@@ -32,22 +36,28 @@ data class HomeUiState(
 class HomeViewModel @Inject constructor(
     private val questions: QuestionRepository,
     attempts: AttemptRepository,
-    templates: TestRepository
+    templates: TestRepository,
+    bookmarks: BookmarkRepository,
+    settings: SettingsRepository
 ) : ViewModel() {
 
     val state: StateFlow<HomeUiState> = combine(
         attempts.observeLastCompleted(),
         attempts.observeWeakSections(limit = 3),
         questions.observeCompanies(),
-        templates.observeTemplates()
-    ) { lastAttempt, weakSections, companies, testTemplates ->
+        templates.observeTemplates(),
+        settings.settings
+    ) { lastAttempt, weakSections, companies, testTemplates, appSettings ->
         HomeUiState(
             loading = false,
             lastAttempt = lastAttempt,
             weakSections = weakSections,
             companies = companies,
-            templates = testTemplates
+            templates = testTemplates,
+            passMarkPercent = appSettings.passMarkPercent
         )
+    }.combine(bookmarks.observeBookmarks()) { uiState, savedQuestions ->
+        uiState.copy(bookmarkCount = savedQuestions.size)
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5_000),

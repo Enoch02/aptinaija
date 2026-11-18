@@ -1,12 +1,20 @@
 package com.enoch02.aptinaija.navigation
 
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.LocalViewModelStoreOwner
+import androidx.navigation.NavDestination.Companion.hasRoute
+import androidx.navigation.NavDestination.Companion.hierarchy
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.enoch02.aptinaija.core.designsystem.AptiNaijaTheme
 import com.enoch02.aptinaija.feature.bookmarks.BookmarksScreen
@@ -24,29 +32,65 @@ import com.enoch02.aptinaija.feature.wronganswers.WrongAnswersScreen
 
 @Composable
 fun AptiNaijaApp(navController: NavHostController = rememberNavController()) {
-    val settingsViewModel: SettingsViewModel = hiltViewModel()
+    val settingsViewModel: SettingsViewModel =
+        androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel(
+            checkNotNull<androidx.lifecycle.ViewModelStoreOwner>(LocalViewModelStoreOwner.current) {
+                "No ViewModelStoreOwner was provided via LocalViewModelStoreOwner"
+            },
+            null
+        )
     val settings by settingsViewModel.settings.collectAsStateWithLifecycle()
 
+    val backStackEntry by navController.currentBackStackEntryAsState()
+    val currentDestination = backStackEntry?.destination
+    val isTopLevelDestination = currentDestination?.hierarchy?.any { destination ->
+        destination.hasRoute(HomeRoute::class) ||
+                destination.hasRoute(CompaniesRoute::class) ||
+                destination.hasRoute(HistoryRoute::class) ||
+                destination.hasRoute(WrongAnswersRoute::class) ||
+                destination.hasRoute(SettingsRoute::class)
+    } == true
+
     AptiNaijaTheme(fontScale = settings.fontScale) {
-        AptiNaijaNavHost(navController = navController)
+        Scaffold(
+            contentWindowInsets = WindowInsets(0, 0, 0, 0),
+            bottomBar = {
+                if (isTopLevelDestination) {
+                    AppNavigationBar(
+                        currentDestination = currentDestination,
+                        onNavigate = navController::navigateToTopLevel
+                    )
+                }
+            }
+        ) { innerPadding ->
+            AptiNaijaNavHost(
+                navController = navController,
+                modifier = Modifier.padding(innerPadding)
+            )
+        }
     }
 }
 
 @Composable
-private fun AptiNaijaNavHost(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = HomeRoute) {
+private fun AptiNaijaNavHost(
+    navController: NavHostController,
+    modifier: Modifier = Modifier
+) {
+    NavHost(
+        navController = navController,
+        startDestination = HomeRoute,
+        modifier = modifier
+    ) {
         composable<HomeRoute> {
             HomeScreen(
-                onBrowseCompanies = { navController.navigate(CompaniesRoute) },
-                onStartTemplate = { templateId ->
+                onStartPractice = { navController.navigateToTopLevel(CompaniesRoute) },
+                onStartMock = { navController.navigateToTopLevel(CompaniesRoute) },
+                onDrillSection = { section ->
                     navController.navigate(
-                        TestSetupRoute(mode = "MOCK", templateId = templateId)
+                        TestSetupRoute(mode = "DRILL", section = section)
                     )
                 },
-                onHistory = { navController.navigate(HistoryRoute) },
-                onWrongAnswers = { navController.navigate(WrongAnswersRoute) },
                 onBookmarks = { navController.navigate(BookmarksRoute) },
-                onSettings = { navController.navigate(SettingsRoute) },
                 onOpenLastResult = { attemptId ->
                     navController.navigate(ResultsRoute(attemptId))
                 }
@@ -55,7 +99,6 @@ private fun AptiNaijaNavHost(navController: NavHostController) {
 
         composable<CompaniesRoute> {
             CompaniesScreen(
-                onBack = { navController.popBackStack() },
                 onCompany = { company -> navController.navigate(CompanyRoute(company)) }
             )
         }
@@ -122,11 +165,21 @@ private fun AptiNaijaNavHost(navController: NavHostController) {
         }
 
         composable<HistoryRoute> {
-            HistoryScreen(onBack = { navController.popBackStack() })
+            HistoryScreen()
         }
 
         composable<SettingsRoute> {
-            SettingsScreen(onBack = { navController.popBackStack() })
+            SettingsScreen()
         }
+    }
+}
+
+private fun NavHostController.navigateToTopLevel(route: Any) {
+    navigate(route) {
+        popUpTo(graph.findStartDestination().id) {
+            saveState = true
+        }
+        launchSingleTop = true
+        restoreState = true
     }
 }
