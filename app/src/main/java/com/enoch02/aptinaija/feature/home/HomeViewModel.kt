@@ -3,7 +3,6 @@ package com.enoch02.aptinaija.feature.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.enoch02.aptinaija.domain.model.Attempt
-import com.enoch02.aptinaija.domain.model.CompanySummary
 import com.enoch02.aptinaija.domain.model.SectionWeakness
 import com.enoch02.aptinaija.domain.model.TestTemplate
 import com.enoch02.aptinaija.domain.repository.AttemptRepository
@@ -22,13 +21,9 @@ data class HomeUiState(
     val loading: Boolean = true,
     val lastAttempt: Attempt? = null,
     val weakSections: List<SectionWeakness> = emptyList(),
-    val companies: List<CompanySummary> = emptyList(),
     val templates: List<TestTemplate> = emptyList(),
-    val passMarkPercent: Int = 50,
-    val error: String? = null
-) {
-    val questionCount: Int get() = companies.sumOf { it.questionCount }
-}
+    val passMarkPercent: Int = 50
+)
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
@@ -41,15 +36,13 @@ class HomeViewModel @Inject constructor(
     val state: StateFlow<HomeUiState> = combine(
         attempts.observeLastCompleted(),
         attempts.observeWeakSections(limit = 3),
-        questions.observeCompanies(),
         templates.observeTemplates(),
         settings.settings
-    ) { lastAttempt, weakSections, companies, testTemplates, appSettings ->
+    ) { lastAttempt, weakSections, testTemplates, appSettings ->
         HomeUiState(
             loading = false,
             lastAttempt = lastAttempt,
             weakSections = weakSections,
-            companies = companies,
             templates = testTemplates,
             passMarkPercent = appSettings.passMarkPercent
         )
