@@ -2,6 +2,8 @@ package com.enoch02.aptinaija.di
 
 import android.content.Context
 import androidx.room.Room
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.enoch02.aptinaija.core.common.IoDispatcher
 import com.enoch02.aptinaija.data.local.AptiNaijaDatabase
 import com.enoch02.aptinaija.data.local.dao.AttemptDao
@@ -34,10 +36,20 @@ import kotlinx.coroutines.Dispatchers
 @InstallIn(SingletonComponent::class)
 object DatabaseModule {
 
+    private val MIGRATION_1_2 = object : Migration(1, 2) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL(
+                "ALTER TABLE test_templates ADD COLUMN companyId TEXT NOT NULL DEFAULT ''"
+            )
+        }
+    }
+
     @Provides
     @Singleton
     fun database(@ApplicationContext context: Context): AptiNaijaDatabase =
-        Room.databaseBuilder(context, AptiNaijaDatabase::class.java, "aptinaija.db").build()
+        Room.databaseBuilder(context, AptiNaijaDatabase::class.java, "aptinaija.db")
+            .addMigrations(MIGRATION_1_2)
+            .build()
 
     @Provides
     fun questionDao(database: AptiNaijaDatabase): QuestionDao = database.questionDao()

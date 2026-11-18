@@ -18,6 +18,7 @@ class CompaniesMappingTest {
             listOf("Cross-industry (Dragnet clients)", "UBA"),
             items.map { it.company }
         )
+        assertEquals(listOf("DRAGNET", "UBA"), items.map { it.companyId })
 
         val uba = items.single { it.company == "UBA" }
         assertEquals(1, uba.templateCount)
@@ -38,11 +39,11 @@ class CompaniesMappingTest {
     }
 
     @Test
-    fun buildCompanyItems_groupsCompanyNamesIgnoringCase() {
+    fun buildCompanyItems_groupsCompanyIdsIgnoringCase() {
         val items = buildCompanyItems(
             listOf(
-                template("one", "UBA", "In-house", "Numerical Reasoning" to (10 to 10)),
-                template("two", "uba", "In-house", "Verbal Reasoning" to (5 to 5))
+                template("one", "UBA", "UBA", "In-house", "Numerical Reasoning" to (10 to 10)),
+                template("two", "uba", "uba", "In-house", "Verbal Reasoning" to (5 to 5))
             )
         )
 
@@ -118,9 +119,9 @@ class CompaniesMappingTest {
     fun filterCompanies_usesOrWithinEachCategoryAndAndAcrossCategories() {
         val items = buildCompanyItems(
             listOf(
-                template("alpha", "Alpha", "Provider A", "Numerical Reasoning" to (1 to 1)),
-                template("beta", "Beta", "Provider B", "Logical Reasoning" to (1 to 1)),
-                template("gamma", "Gamma", "Provider A", "Verbal Reasoning" to (1 to 1))
+                template("alpha", "ALPHA", "Alpha", "Provider A", "Numerical Reasoning" to (1 to 1)),
+                template("beta", "BETA", "Beta", "Provider B", "Logical Reasoning" to (1 to 1)),
+                template("gamma", "GAMMA", "Gamma", "Provider A", "Verbal Reasoning" to (1 to 1))
             )
         )
 
@@ -155,6 +156,7 @@ class CompaniesMappingTest {
     private fun sampleTemplates() = listOf(
         template(
             id = "UBA_GMAP",
+            companyId = "UBA",
             company = "UBA",
             provider = "In-house / MS Forms",
             "Numerical Reasoning" to (22 to 25),
@@ -163,12 +165,14 @@ class CompaniesMappingTest {
         ),
         template(
             id = "DRAGNET_ONLINE",
+            companyId = "DRAGNET",
             company = "Cross-industry (Dragnet clients)",
             provider = "Dragnet",
             "Logical Reasoning" to (20 to 20)
         ),
         template(
             id = "DRAGNET_FULL",
+            companyId = "DRAGNET",
             company = "Cross-industry (Dragnet clients)",
             provider = "Dragnet",
             "Numerical Reasoning" to (25 to 25),
@@ -179,12 +183,14 @@ class CompaniesMappingTest {
 
     private fun template(
         id: String,
+        companyId: String,
         company: String,
         provider: String,
         vararg sections: Pair<String, Pair<Int, Int>>
     ) = TestTemplate(
         id = id,
         title = id,
+        companyId = companyId,
         company = company,
         provider = provider,
         sourceUrl = null,

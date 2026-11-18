@@ -98,7 +98,7 @@ class BuildAttemptUseCase @Inject constructor(
         val template = requireNotNull(templates.template(templateId)) { "Unknown test template: $templateId" }
         return template.sections.flatMap { section ->
             questions.randomQuestions(
-                company = null,
+                company = template.companyId,
                 section = section.section,
                 limit = section.questionCount
             ).ordered(shuffleQuestions).map { section.section to it }

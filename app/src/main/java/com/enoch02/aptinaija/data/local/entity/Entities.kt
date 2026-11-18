@@ -27,6 +27,7 @@ data class QuestionEntity(
 @Entity(tableName = "test_templates")
 data class TestTemplateEntity(
     @PrimaryKey val id: String,
+    val companyId: String,
     val title: String,
     val company: String,
     val provider: String,

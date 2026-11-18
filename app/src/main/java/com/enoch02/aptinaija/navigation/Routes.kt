@@ -9,7 +9,7 @@ data object HomeRoute
 data object CompaniesRoute
 
 @Serializable
-data class CompanyRoute(val company: String)
+data class CompanyRoute(val companyId: String)
 
 @Serializable
 data class TestSetupRoute(

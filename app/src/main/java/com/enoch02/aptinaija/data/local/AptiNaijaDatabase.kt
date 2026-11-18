@@ -28,7 +28,7 @@ import com.enoch02.aptinaija.data.local.entity.WrongQuestionEntity
         WrongQuestionEntity::class,
         PackMetadataEntity::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = true
 )
 abstract class AptiNaijaDatabase : RoomDatabase() {

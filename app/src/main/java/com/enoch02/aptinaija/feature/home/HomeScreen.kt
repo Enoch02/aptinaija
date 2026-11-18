@@ -359,6 +359,7 @@ private fun HomeContentPreview() {
                 TestTemplate(
                     id = "UBA_GMAP",
                     title = "UBA GMAP Mock",
+                    companyId = "UBA",
                     company = "UBA",
                     provider = "In-house / MS Forms",
                     sourceUrl = null,

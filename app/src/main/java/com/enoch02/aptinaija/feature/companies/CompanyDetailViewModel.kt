@@ -24,16 +24,16 @@ class CompanyDetailViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val route = savedStateHandle.toRoute<CompanyRoute>()
-    val company: String = route.company
+    val companyId: String = route.companyId
 
-    val sections: StateFlow<List<SectionSummary>> = questions.observeSections(company).stateIn(
+    val sections: StateFlow<List<SectionSummary>> = questions.observeSections(companyId).stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5_000),
         initialValue = emptyList()
     )
 
     val templates: StateFlow<List<TestTemplate>> = templates.observeTemplates()
-        .map { list -> list.filter { it.company.equals(company, ignoreCase = true) } }
+        .map { list -> list.filter { it.companyId.equals(companyId, ignoreCase = true) } }
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),

@@ -113,19 +113,19 @@ private fun AptiNaijaNavHost(
 
         composable<CompaniesRoute> {
             CompaniesScreen(
-                onCompany = { company -> navController.navigate(CompanyRoute(company)) }
+                onCompany = { companyId -> navController.navigate(CompanyRoute(companyId)) }
             )
         }
 
         composable<CompanyRoute> {
             CompanyDetailScreen(
                 onBack = { navController.popBackStack() },
-                onStartPractice = { company ->
-                    navController.navigate(TestSetupRoute(mode = "PRACTICE", company = company))
+                onStartPractice = { companyId ->
+                    navController.navigate(TestSetupRoute(mode = "PRACTICE", company = companyId))
                 },
-                onStartDrill = { company, section ->
+                onStartDrill = { companyId, section ->
                     navController.navigate(
-                        TestSetupRoute(mode = "DRILL", company = company, section = section)
+                        TestSetupRoute(mode = "DRILL", company = companyId, section = section)
                     )
                 },
                 onStartTemplate = { templateId ->

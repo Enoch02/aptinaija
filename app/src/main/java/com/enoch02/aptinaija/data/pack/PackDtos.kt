@@ -18,6 +18,7 @@ data class QuestionPackDto(
 @Serializable
 data class QuestionDto(
     val id: String,
+    @SerialName("company_id") val companyId: String,
     val section: String,
     val difficulty: String = "medium",
     val stem: String,
@@ -48,6 +49,7 @@ data class TemplateFlagsDto(
 @Serializable
 data class TemplateDto(
     val title: String,
+    @SerialName("company_id") val companyId: String,
     val company: String,
     val provider: String,
     val sections: List<TemplateSectionDto>,

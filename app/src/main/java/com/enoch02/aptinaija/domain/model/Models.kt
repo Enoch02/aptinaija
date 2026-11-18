@@ -44,6 +44,7 @@ data class TemplateSection(
 data class TestTemplate(
     val id: String,
     val title: String,
+    val companyId: String,
     val company: String,
     val provider: String,
     val sourceUrl: String?,

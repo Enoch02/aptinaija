@@ -65,7 +65,7 @@ class TestSetupViewModel @Inject constructor(
                     loading = false,
                     questionCount = defaultCount,
                     template = template,
-                    company = if (mode == AttemptMode.MOCK) template?.company else it.company
+                    company = if (mode == AttemptMode.MOCK) template?.companyId else it.company
                 )
             }
         }

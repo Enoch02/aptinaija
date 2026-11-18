@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 data class CompanyListItem(
+    val companyId: String,
     val company: String,
     val initials: String,
     val templateCount: Int,
@@ -113,16 +114,18 @@ class CompaniesViewModel @Inject constructor(
 
 internal fun buildCompanyItems(templates: List<TestTemplate>): List<CompanyListItem> =
     templates
-        .groupBy { it.company.trim().lowercase() }
+        .groupBy { it.companyId.trim().uppercase() }
         .values
         .map { group ->
-            val company = group.first().company.trim().ifBlank { "General" }
+            val companyId = group.first().companyId.trim().uppercase()
+            val company = group.first().company.trim().ifBlank { companyId }
             val sections = group
                 .flatMap { it.sections }
                 .map { it.section }
                 .toSet()
             val providers = group.map { it.provider }.toSet()
             CompanyListItem(
+                companyId = companyId,
                 company = company,
                 initials = companyInitials(company),
                 templateCount = group.size,

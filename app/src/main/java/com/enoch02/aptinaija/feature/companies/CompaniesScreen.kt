@@ -107,10 +107,10 @@ internal fun CompaniesContent(
                 )
             }
         } else {
-            items(state.companies, key = { it.company }) { company ->
+            items(state.companies, key = { it.companyId }) { company ->
                 CompanyRow(
                     item = company,
-                    onClick = { onCompany(company.company) }
+                    onClick = { onCompany(company.companyId) }
                 )
             }
         }
@@ -250,7 +250,7 @@ private fun CompanyRow(
             .heightIn(min = 64.dp)
             .clickable(onClick = onClick)
             .padding(vertical = 8.dp)
-            .testTag("company_row_${item.company}"),
+            .testTag("company_row_${item.companyId}"),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Box(
@@ -360,6 +360,7 @@ private fun CompaniesContentPreview() {
                 loading = false,
                 companies = listOf(
                     CompanyListItem(
+                        companyId = "UBA",
                         company = "UBA",
                         initials = "UB",
                         templateCount = 1,
@@ -373,6 +374,7 @@ private fun CompaniesContentPreview() {
                         providers = setOf("In-house / MS Forms")
                     ),
                     CompanyListItem(
+                        companyId = "DRAGNET",
                         company = "Cross-industry (Dragnet clients)",
                         initials = "CI",
                         templateCount = 2,

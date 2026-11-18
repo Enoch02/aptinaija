@@ -44,7 +44,7 @@ fun QuestionEntity.toDomain(): Question = Question(
 
 fun QuestionDto.toEntity(): QuestionEntity = QuestionEntity(
     id = id,
-    company = id.substringBefore('-').ifBlank { "General" },
+    company = companyId.ifBlank { id.substringBefore('-').ifBlank { "General" } },
     section = section,
     difficulty = difficulty,
     stem = stem,
@@ -95,6 +95,7 @@ fun AttemptEntity.toDomain(): Attempt = Attempt(
 fun TestTemplateEntity.toDomain(sections: List<TemplateSectionEntity>): TestTemplate = TestTemplate(
     id = id,
     title = title,
+    companyId = companyId,
     company = company,
     provider = provider,
     sourceUrl = sourceUrl,

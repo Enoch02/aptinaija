@@ -39,6 +39,9 @@ class QuestionPackImporter @Inject constructor(
             if (importedThisProcess) return
             val questionPack = readPack(QUESTION_PACK_ASSET, QuestionPackDto.serializer())
             val templatePack = readPack(TEMPLATE_PACK_ASSET, TemplatesPackDto.serializer())
+            require(questionPack.schemaVersion == 2 && templatePack.schemaVersion == 2) {
+                "Question and template packs must use schema_version 2"
+            }
             val existing = metadataDao.get()
 
             val upToDate = existing != null &&
@@ -76,6 +79,7 @@ class QuestionPackImporter @Inject constructor(
         val templates = templatePack.templates.map { (id, dto) ->
             TestTemplateEntity(
                 id = id,
+                companyId = dto.companyId,
                 title = dto.title,
                 company = dto.company,
                 provider = dto.provider,

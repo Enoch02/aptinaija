@@ -185,6 +185,7 @@ class CompaniesContentTest {
         companies = listOf(
             companyItem(company = "UBA"),
             companyItem(
+                companyId = "DRAGNET",
                 company = "Cross-industry (Dragnet clients)",
                 initials = "CI",
                 templateCount = 2,
@@ -210,6 +211,7 @@ class CompaniesContentTest {
 
     private fun companyItem(
         company: String,
+        companyId: String = company,
         initials: String = "UB",
         templateCount: Int = 1,
         questionCount: Int = 64,
@@ -221,6 +223,7 @@ class CompaniesContentTest {
         ),
         providers: Set<String> = setOf("In-house / MS Forms")
     ) = CompanyListItem(
+        companyId = companyId,
         company = company,
         initials = initials,
         templateCount = templateCount,
