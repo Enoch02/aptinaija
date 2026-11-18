@@ -2,6 +2,25 @@
     <string name="app_name">AptiNaija</string>
     <string name="home">Home</string>
     <string name="companies">Companies</string>
+    <string name="provider">Provider</string>
+    <string name="all_providers">All providers</string>
+    <string name="multiple_providers">Multiple providers</string>
+    <string name="company_summary_multiple">%1$s · %2$s</string>
+    <string name="no_companies_available">No companies available.</string>
+    <string name="no_companies_match">No companies match these filters.</string>
+    <string name="clear_filters">Clear filters</string>
+    <plurals name="company_summary_single">
+        <item quantity="one">%1$s · %2$d q · %3$d min</item>
+        <item quantity="other">%1$s · %2$d q · %3$d min</item>
+    </plurals>
+    <plurals name="papers">
+        <item quantity="one">%1$d paper</item>
+        <item quantity="other">%1$d papers</item>
+    </plurals>
+    <plurals name="providers_selected">
+        <item quantity="one">%1$d provider</item>
+        <item quantity="other">%1$d providers</item>
+    </plurals>
     <string name="history">History</string>
     <string name="wrong">Wrong</string>
     <string name="wrong_answers">Wrong Answers</string>
