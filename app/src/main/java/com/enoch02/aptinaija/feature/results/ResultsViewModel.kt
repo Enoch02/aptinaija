@@ -1,0 +1,48 @@
+package com.enoch02.aptinaija.feature.results
+
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import androidx.navigation.toRoute
+import com.enoch02.aptinaija.domain.model.Attempt
+import com.enoch02.aptinaija.domain.model.ScoreSummary
+import com.enoch02.aptinaija.domain.repository.AttemptRepository
+import com.enoch02.aptinaija.domain.usecase.ScoreAttemptUseCase
+import com.enoch02.aptinaija.navigation.ResultsRoute
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+
+data class ResultsUiState(
+    val loading: Boolean = true,
+    val summary: ScoreSummary? = null,
+    val attempt: Attempt? = null,
+    val error: String? = null
+)
+
+@HiltViewModel
+class ResultsViewModel @Inject constructor(
+    savedStateHandle: SavedStateHandle,
+    private val attempts: AttemptRepository,
+    private val scoreAttempt: ScoreAttemptUseCase
+) : ViewModel() {
+
+    private val attemptId: String = savedStateHandle.toRoute<ResultsRoute>().attemptId
+    private val _state = MutableStateFlow(ResultsUiState())
+    val state: StateFlow<ResultsUiState> = _state.asStateFlow()
+
+    init {
+        viewModelScope.launch {
+            val summary = scoreAttempt(attemptId)
+            val attempt = attempts.get(attemptId)?.attempt
+            _state.value = if (summary == null) {
+                ResultsUiState(loading = false, error = "This attempt no longer exists.")
+            } else {
+                ResultsUiState(loading = false, summary = summary, attempt = attempt)
+            }
+        }
+    }
+}

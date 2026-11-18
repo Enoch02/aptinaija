@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "defaults": {
+    "shuffle": true,
+    "feedback_during": false,
+    "auto_submit": true,
+    "pause": false
+  },
+  "templates": {
+    "UBA_GMAP": {
+      "title": "UBA GMAP Mock",
+      "company": "UBA",
+      "provider": "In-house / MS Forms",
+      "sections": [
+        {
+          "section": "Numerical Reasoning",
+          "count": 22,
+          "minutes": 25
+        },
+        {
+          "section": "Verbal Reasoning",
+          "count": 22,
+          "minutes": 25
+        },
+        {
+          "section": "Logical Reasoning",
+          "count": 20,
+          "minutes": 25
+        }
+      ],
+      "source": "https://recruitmentblueprint.com.ng/uba-graduate-trainee-aptitude-test-past-questions-nigeria/"
+    },
+    "DRAGNET_ONLINE_SCREEN": {
+      "title": "Dragnet Online Logical Screen",
+      "company": "Cross-industry (Dragnet clients)",
+      "provider": "Dragnet",
+      "sections": [
+        {
+          "section": "Logical Reasoning",
+          "count": 20,
+          "minutes": 20
+        }
+      ],
+      "source": "https://teststreams.com/practice-aptitude-tests/dragnet/"
+    },
+    "DRAGNET_FULL": {
+      "title": "Dragnet Full Papers (Numerical + Verbal + Abstract)",
+      "company": "Cross-industry (Dragnet clients)",
+      "provider": "Dragnet",
+      "sections": [
+        {
+          "section": "Numerical Reasoning",
+          "count": 25,
+          "minutes": 25
+        },
+        {
+          "section": "Verbal Reasoning",
+          "count": 25,
+          "minutes": 25
+        },
+        {
+          "section": "Abstract Reasoning",
+          "count": 25,
+          "minutes": 25
+        }
+      ],
+      "source": "https://teststreams.com/practice-aptitude-tests/dragnet/"
+    },
+    "HCP_STYLE": {
+      "title": "HCP-Style Test (5 sections)",
+      "company": "First Bank",
+      "provider": "Human Capital Partners",
+      "sections": [
+        {
+          "section": "Numerical Reasoning",
+          "count": 5,
+          "minutes": 4
+        },
+        {
+          "section": "Verbal Reasoning",
+          "count": 5,
+          "minutes": 3
+        },
+        {
+          "section": "Logical Reasoning",
+          "count": 4,
+          "minutes": 3
+        },
+        {
+          "section": "Abstract Reasoning",
+          "count": 3,
+          "minutes": 3
+        },
+        {
+          "section": "Banking Awareness",
+          "count": 3,
+          "minutes": 3
+        }
+      ],
+      "source": "https://teststreams.com/practice-aptitude-tests/hcp/"
+    },
+    "SHL_NUMERICAL": {
+      "title": "SHL Numerical Reasoning",
+      "company": "Cross-industry (SHL clients)",
+      "provider": "SHL",
+      "sections": [
+        {
+          "section": "Numerical Reasoning",
+          "count": 20,
+          "minutes": 15
+        }
+      ],
+      "source": "https://www.careertestprep.com/practice"
+    },
+    "SHL_VERBAL": {
+      "title": "SHL Verbal Reasoning",
+      "company": "Cross-industry (SHL clients)",
+      "provider": "SHL",
+      "sections": [
+        {
+          "section": "Verbal Reasoning",
+          "count": 12,
+          "minutes": 10
+        }
+      ],
+      "source": "https://www.careertestprep.com/practice"
+    },
+    "SHL_INDUCTIVE": {
+      "title": "SHL Inductive Reasoning",
+      "company": "Cross-industry (SHL clients)",
+      "provider": "SHL",
+      "sections": [
+        {
+          "section": "Abstract Reasoning",
+          "count": 12,
+          "minutes": 12
+        }
+      ],
+      "source": "https://www.careertestprep.com/practice"
+    },
+    "NNPC_GT": {
+      "title": "NNPC Graduate Trainee Mock",
+      "company": "NNPC",
+      "provider": "In-house",
+      "sections": [
+        {
+          "section": "Quantitative Analysis",
+          "count": 60,
+          "minutes": 60
+        },
+        {
+          "section": "Verbal Reasoning",
+          "count": 40,
+          "minutes": 40
+        },
+        {
+          "section": "General Knowledge",
+          "count": 20,
+          "minutes": 20
+        }
+      ],
+      "source": "https://recruitmentblueprint.com.ng/nnpc-aptitude-test-past-questions-free-download/"
+    }
+  }
+}

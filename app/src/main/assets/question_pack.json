@@ -1,0 +1,3586 @@
+{
+    "schema_version": 1,
+    "questions": [
+        {
+            "id": "UBA-NUM-0001",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "A shirt costs ₦8,000 after a 20% discount. What was the original price?",
+            "options": [
+                "₦9,600",
+                "₦10,000",
+                "₦10,400",
+                "₦12,000"
+            ],
+            "answer": 1,
+            "explanation": "After a 20% discount the price is 80% of the original. 8,000 ÷ 0.8 = 10,000.",
+            "tags": [
+                "percentage",
+                "discount"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0002",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "What is the next number in the series: 3, 6, 12, 24, ?",
+            "options": [
+                "36",
+                "42",
+                "48",
+                "54"
+            ],
+            "answer": 2,
+            "explanation": "Each term is double the previous one, so the next term is 24 × 2 = 48.",
+            "tags": [
+                "series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0001",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "passage": "A bank introduced a mobile app to reduce queues in its branches. Within six months, branch visits fell by 30%, but customer complaints about failed transfers rose. The bank concluded that the app was popular but needed improved reliability.",
+            "stem": "Which statement is best supported by the passage?",
+            "options": [
+                "The app completely eliminated queues in branches.",
+                "Customers adopted the app, but some experienced reliability problems.",
+                "Complaints about the bank fell after the app launched.",
+                "Branch visits increased after the app launched."
+            ],
+            "answer": 1,
+            "explanation": "Branch visits fell 30% (adoption), while complaints about failed transfers rose (reliability issues). The other options contradict or overstate the passage.",
+            "tags": [
+                "comprehension",
+                "inference"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0001",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "All bankers are graduates. Some graduates are accountants. Which conclusion must be true?",
+            "options": [
+                "All bankers are accountants.",
+                "Some bankers are accountants.",
+                "No banker is an accountant.",
+                "None of the other conclusions must be true."
+            ],
+            "answer": 3,
+            "explanation": "The accountants among the graduates might not include any bankers, so none of the first three conclusions is guaranteed.",
+            "tags": [
+                "syllogism"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "DRAGNET-LOG-0001",
+            "section": "Logical Reasoning",
+            "difficulty": "easy",
+            "stem": "Ada is taller than Bayo. Bayo is taller than Chidi. Who is the shortest?",
+            "options": [
+                "Ada",
+                "Bayo",
+                "Chidi",
+                "Cannot be determined"
+            ],
+            "answer": 2,
+            "explanation": "The ordering is Ada > Bayo > Chidi, so Chidi is the shortest.",
+            "tags": [
+                "ordering"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0001",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "A train travels 180 km in 2.5 hours. What is its average speed?",
+            "options": [
+                "60 km/h",
+                "72 km/h",
+                "75 km/h",
+                "90 km/h"
+            ],
+            "answer": 1,
+            "explanation": "Speed = distance ÷ time = 180 ÷ 2.5 = 72 km/h.",
+            "tags": [
+                "speed-distance-time"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "FBN-BNK-0001",
+            "section": "Banking Awareness",
+            "difficulty": "easy",
+            "stem": "What does the abbreviation CBN stand for?",
+            "options": [
+                "Commercial Bank of Nigeria",
+                "Central Bank of Nigeria",
+                "Consolidated Banks Network",
+                "Corporate Banking Nigeria"
+            ],
+            "answer": 1,
+            "explanation": "CBN stands for the Central Bank of Nigeria, the country's apex monetary authority.",
+            "tags": [
+                "regulators"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0003",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "What is 15% of ₦40,000?",
+            "options": [
+                "₦600",
+                "₦34,000",
+                "₦60,000",
+                "₦6,000"
+            ],
+            "answer": 3,
+            "explanation": "15% of 40,000 = 40,000 × 15/100 = 6,000.",
+            "tags": [
+                "percentage"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0004",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "What is 25% of ₦18,000?",
+            "options": [
+                "₦4,500",
+                "₦13,500",
+                "₦450",
+                "₦45,000"
+            ],
+            "answer": 0,
+            "explanation": "25% of 18,000 = 18,000 × 25/100 = 4,500.",
+            "tags": [
+                "percentage"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0005",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "What is 12% of ₦5,000?",
+            "options": [
+                "₦600",
+                "₦6,000",
+                "₦60",
+                "₦4,400"
+            ],
+            "answer": 0,
+            "explanation": "12% of 5,000 = 5,000 × 12/100 = 600.",
+            "tags": [
+                "percentage"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0006",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "What is 35% of ₦20,000?",
+            "options": [
+                "₦13,000",
+                "₦700",
+                "₦7,000",
+                "₦70,000"
+            ],
+            "answer": 2,
+            "explanation": "35% of 20,000 = 20,000 × 35/100 = 7,000.",
+            "tags": [
+                "percentage"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0007",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "The price of a bag of rice changed from ₦20,000 to ₦25,000. What is the percentage increase?",
+            "options": [
+                "35%",
+                "50%",
+                "30%",
+                "25%"
+            ],
+            "answer": 3,
+            "explanation": "Change = 5,000. 5,000 ÷ 20,000 × 100 = 25%.",
+            "tags": [
+                "percentage",
+                "percentage-change"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0008",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "The price of a pair of shoes changed from ₦15,000 to ₦18,000. What is the percentage increase?",
+            "options": [
+                "30%",
+                "25%",
+                "20%",
+                "40%"
+            ],
+            "answer": 2,
+            "explanation": "Change = 3,000. 3,000 ÷ 15,000 × 100 = 20%.",
+            "tags": [
+                "percentage",
+                "percentage-change"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0009",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "The price of a textbook changed from ₦2,500 to ₦2,250. What is the percentage decrease?",
+            "options": [
+                "11%",
+                "15%",
+                "10%",
+                "20%"
+            ],
+            "answer": 2,
+            "explanation": "Change = 250. 250 ÷ 2,500 × 100 = 10%.",
+            "tags": [
+                "percentage",
+                "percentage-change"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0010",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "The price of a bag of cement changed from ₦6,000 to ₦6,900. What is the percentage increase?",
+            "options": [
+                "15%",
+                "30%",
+                "20%",
+                "25%"
+            ],
+            "answer": 0,
+            "explanation": "Change = 900. 900 ÷ 6,000 × 100 = 15%.",
+            "tags": [
+                "percentage",
+                "percentage-change"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0011",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "₦120,000 is shared between two people in the ratio 3:2. What is the larger share?",
+            "options": [
+                "₦48,000",
+                "₦72,000",
+                "₦40,000",
+                "₦60,000"
+            ],
+            "answer": 1,
+            "explanation": "Total parts = 5; one part = 24,000. The larger share = 72,000.",
+            "tags": [
+                "ratio"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0012",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "₦90,000 is shared between two people in the ratio 4:5. What is the smaller share?",
+            "options": [
+                "₦18,000",
+                "₦50,000",
+                "₦40,000",
+                "₦22,500"
+            ],
+            "answer": 2,
+            "explanation": "Total parts = 9; one part = 10,000. The smaller share = 40,000.",
+            "tags": [
+                "ratio"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0013",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "₦56,000 is shared between two people in the ratio 3:4. What is the larger share?",
+            "options": [
+                "₦14,000",
+                "₦32,000",
+                "₦24,000",
+                "₦18,666"
+            ],
+            "answer": 1,
+            "explanation": "Total parts = 7; one part = 8,000. The larger share = 32,000.",
+            "tags": [
+                "ratio"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0014",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "A student scored 62, 70, 58, 75 and 85 in five tests. What is the mean score?",
+            "options": [
+                "72",
+                "75",
+                "70",
+                "68"
+            ],
+            "answer": 2,
+            "explanation": "Sum = 350; 350 ÷ 5 = 70.",
+            "tags": [
+                "average"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0015",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "A shop's sales (in ₦ thousands) over four days were 120, 150, 90 and 140. What was the average daily sales?",
+            "options": [
+                "₦125 thousand",
+                "₦500 thousand",
+                "₦120 thousand",
+                "₦130 thousand"
+            ],
+            "answer": 0,
+            "explanation": "Total = 500; 500 ÷ 4 = 125 (thousand).",
+            "tags": [
+                "average"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0016",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "The average of four numbers is 15. Three of them are 10, 12 and 20. What is the fourth number?",
+            "options": [
+                "16",
+                "20",
+                "15",
+                "18"
+            ],
+            "answer": 3,
+            "explanation": "Total = 4 × 15 = 60. Known sum = 42, so the fourth = 60 − 42 = 18.",
+            "tags": [
+                "average"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0017",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "What is the next number in the series: 5, 11, 23, 47, ?",
+            "options": [
+                "71",
+                "96",
+                "94",
+                "95"
+            ],
+            "answer": 3,
+            "explanation": "Each term is double the previous plus 1: 47 × 2 + 1 = 95.",
+            "tags": [
+                "series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0018",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "What is the next number in the series: 2, 6, 12, 20, 30, ?",
+            "options": [
+                "42",
+                "40",
+                "44",
+                "36"
+            ],
+            "answer": 0,
+            "explanation": "Differences increase by 2 (4, 6, 8, 10, then 12): 30 + 12 = 42.",
+            "tags": [
+                "series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0019",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "What is the next number in the series: 100, 91, 82, 73, ?",
+            "options": [
+                "64",
+                "63",
+                "65",
+                "66"
+            ],
+            "answer": 0,
+            "explanation": "Each term falls by 9: 73 − 9 = 64.",
+            "tags": [
+                "series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0020",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "What is the next number in the series: 2, 3, 5, 8, 13, ?",
+            "options": [
+                "20",
+                "26",
+                "18",
+                "21"
+            ],
+            "answer": 3,
+            "explanation": "Each term is the sum of the previous two (Fibonacci-style): 8 + 13 = 21.",
+            "tags": [
+                "series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0021",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "What is the next number in the series: 81, 27, 9, 3, ?",
+            "options": [
+                "3",
+                "6",
+                "1",
+                "2"
+            ],
+            "answer": 2,
+            "explanation": "Each term is one third of the previous: 3 ÷ 3 = 1.",
+            "tags": [
+                "series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0022",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "A laptop costs ₦40,000 before VAT. VAT is charged at 7.5%. What is the total price including VAT?",
+            "options": [
+                "₦47,000",
+                "₦43,000",
+                "₦3,000",
+                "₦42,000"
+            ],
+            "answer": 1,
+            "explanation": "VAT = 7.5% of 40,000 = 3,000. Total = 40,000 + 3,000 = 43,000.",
+            "tags": [
+                "percentage",
+                "vat"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0023",
+            "section": "Numerical Reasoning",
+            "difficulty": "medium",
+            "stem": "A monthly salary of ₦150,000 is increased by 12%. What is the new salary?",
+            "options": [
+                "₦162,000",
+                "₦180,000",
+                "₦168,000",
+                "₦151,200"
+            ],
+            "answer": 2,
+            "explanation": "Increase = 12% of 150,000 = 18,000. New salary = 168,000.",
+            "tags": [
+                "percentage"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0024",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "Three-fifths of the 250 students in a school are girls. How many boys are there?",
+            "options": [
+                "100",
+                "150",
+                "50",
+                "125"
+            ],
+            "answer": 0,
+            "explanation": "Girls = 3/5 × 250 = 150. Boys = 250 − 150 = 100.",
+            "tags": [
+                "fractions"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-NUM-0025",
+            "section": "Numerical Reasoning",
+            "difficulty": "easy",
+            "stem": "Assume ₦1,500 equals $1. How many naira are equal to $40?",
+            "options": [
+                "₦60,000",
+                "₦40,000",
+                "₦61,500",
+                "₦6,000"
+            ],
+            "answer": 0,
+            "explanation": "40 × 1,500 = 60,000.",
+            "tags": [
+                "currency-conversion"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0002",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "If 3x + 7 = 28, what is the value of x?",
+            "options": [
+                "7",
+                "8",
+                "9",
+                "6"
+            ],
+            "answer": 0,
+            "explanation": "3x = 28 − 7 = 21; x = 7.",
+            "tags": [
+                "algebra",
+                "linear-equation"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0003",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "If 5x + 10 = 30, what is the value of x?",
+            "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "answer": 1,
+            "explanation": "5x = 30 − 10 = 20; x = 4.",
+            "tags": [
+                "algebra",
+                "linear-equation"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0004",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "If 4x − 6 = 30, what is the value of x?",
+            "options": [
+                "11",
+                "9",
+                "10",
+                "8"
+            ],
+            "answer": 1,
+            "explanation": "4x = 30 + 6 = 36; x = 9.",
+            "tags": [
+                "algebra",
+                "linear-equation"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0005",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "If 2x + 5 = 29, what is the value of x?",
+            "options": [
+                "11",
+                "13",
+                "14",
+                "12"
+            ],
+            "answer": 3,
+            "explanation": "2x = 29 − 5 = 24; x = 12.",
+            "tags": [
+                "algebra",
+                "linear-equation"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0006",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "If 7x + 9 = 30, what is the value of x?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": 1,
+            "explanation": "7x = 30 − 9 = 21; x = 3.",
+            "tags": [
+                "algebra",
+                "linear-equation"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0007",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "If 6x − 8 = 22, what is the value of x?",
+            "options": [
+                "5",
+                "6",
+                "7",
+                "4"
+            ],
+            "answer": 0,
+            "explanation": "6x = 22 + 8 = 30; x = 5.",
+            "tags": [
+                "algebra",
+                "linear-equation"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0008",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "What is the simple interest on ₦50,000 at 8% per annum for 2 years?",
+            "options": [
+                "₦8,000",
+                "₦16,000",
+                "₦4,000",
+                "₦58,000"
+            ],
+            "answer": 0,
+            "explanation": "I = P × r × t / 100 = 50,000 × 8 × 2 / 100 = 8,000.",
+            "tags": [
+                "simple-interest"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0009",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "What is the simple interest on ₦120,000 at 5% per annum for 3 years?",
+            "options": [
+                "₦36,000",
+                "₦18,000",
+                "₦9,000",
+                "₦6,000"
+            ],
+            "answer": 1,
+            "explanation": "I = P × r × t / 100 = 120,000 × 5 × 3 / 100 = 18,000.",
+            "tags": [
+                "simple-interest"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0010",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "What is the simple interest on ₦200,000 at 6% per annum for 2 years?",
+            "options": [
+                "₦24,000",
+                "₦224,000",
+                "₦48,000",
+                "₦12,000"
+            ],
+            "answer": 0,
+            "explanation": "I = P × r × t / 100 = 200,000 × 6 × 2 / 100 = 24,000.",
+            "tags": [
+                "simple-interest"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0011",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "What is the simple interest on ₦75,000 at 4% per annum for 4 years?",
+            "options": [
+                "₦3,000",
+                "₦6,000",
+                "₦24,000",
+                "₦12,000"
+            ],
+            "answer": 3,
+            "explanation": "I = P × r × t / 100 = 75,000 × 4 × 4 / 100 = 12,000.",
+            "tags": [
+                "simple-interest"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0012",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "What is the simple interest on ₦60,000 at 12% per annum for 5 years?",
+            "options": [
+                "₦18,000",
+                "₦72,000",
+                "₦36,000",
+                "₦7,200"
+            ],
+            "answer": 2,
+            "explanation": "I = P × r × t / 100 = 60,000 × 12 × 5 / 100 = 36,000.",
+            "tags": [
+                "simple-interest"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0013",
+            "section": "Quantitative Analysis",
+            "difficulty": "hard",
+            "stem": "Find the compound interest on ₦10,000 at 10% per annum for 2 years, compounded yearly.",
+            "options": [
+                "₦12,100",
+                "₦2,000",
+                "₦2,100",
+                "₦4,200"
+            ],
+            "answer": 2,
+            "explanation": "Amount = 10,000 × (1 + 10/100)² = 12,100. Interest = 12,100 − 10,000 = 2,100.",
+            "tags": [
+                "compound-interest"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0014",
+            "section": "Quantitative Analysis",
+            "difficulty": "hard",
+            "stem": "Find the compound interest on ₦20,000 at 5% per annum for 2 years, compounded yearly.",
+            "options": [
+                "₦22,050",
+                "₦2,050",
+                "₦2,000",
+                "₦4,100"
+            ],
+            "answer": 1,
+            "explanation": "Amount = 20,000 × (1 + 5/100)² = 22,050. Interest = 22,050 − 20,000 = 2,050.",
+            "tags": [
+                "compound-interest"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0015",
+            "section": "Quantitative Analysis",
+            "difficulty": "hard",
+            "stem": "Find the compound interest on ₦50,000 at 20% per annum for 2 years, compounded yearly.",
+            "options": [
+                "₦22,000",
+                "₦44,000",
+                "₦72,000",
+                "₦20,000"
+            ],
+            "answer": 0,
+            "explanation": "Amount = 50,000 × (1 + 20/100)² = 72,000. Interest = 72,000 − 50,000 = 22,000.",
+            "tags": [
+                "compound-interest"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0016",
+            "section": "Quantitative Analysis",
+            "difficulty": "hard",
+            "stem": "Find the compound interest on ₦40,000 at 10% per annum for 2 years, compounded yearly.",
+            "options": [
+                "₦48,400",
+                "₦8,400",
+                "₦16,800",
+                "₦8,000"
+            ],
+            "answer": 1,
+            "explanation": "Amount = 40,000 × (1 + 10/100)² = 48,400. Interest = 48,400 − 40,000 = 8,400.",
+            "tags": [
+                "compound-interest"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0017",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "Ade can complete a job in 12 days and Bola can complete it in 6 days. Working together, how many days will they take?",
+            "options": [
+                "18 days",
+                "9 days",
+                "6 days",
+                "4 days"
+            ],
+            "answer": 3,
+            "explanation": "Combined rate = 1/12 + 1/6 = 18/72. Time = 72/18 = 4 days.",
+            "tags": [
+                "work-and-time"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0018",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "Ade can complete a job in 30 days and Bola can complete it in 45 days. Working together, how many days will they take?",
+            "options": [
+                "37 days",
+                "30 days",
+                "75 days",
+                "18 days"
+            ],
+            "answer": 3,
+            "explanation": "Combined rate = 1/30 + 1/45 = 75/1350. Time = 1350/75 = 18 days.",
+            "tags": [
+                "work-and-time"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0019",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "Ade can complete a job in 20 days and Bola can complete it in 30 days. Working together, how many days will they take?",
+            "options": [
+                "20 days",
+                "50 days",
+                "12 days",
+                "25 days"
+            ],
+            "answer": 2,
+            "explanation": "Combined rate = 1/20 + 1/30 = 50/600. Time = 600/50 = 12 days.",
+            "tags": [
+                "work-and-time"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0020",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "Ade can complete a job in 8 days and Bola can complete it in 24 days. Working together, how many days will they take?",
+            "options": [
+                "6 days",
+                "16 days",
+                "8 days",
+                "32 days"
+            ],
+            "answer": 0,
+            "explanation": "Combined rate = 1/8 + 1/24 = 32/192. Time = 192/32 = 6 days.",
+            "tags": [
+                "work-and-time"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0021",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "The average age of 4 friends is 24 years. A fifth friend aged 34 joins the group. What is the new average age?",
+            "options": [
+                "28 years",
+                "25 years",
+                "26 years",
+                "24 years"
+            ],
+            "answer": 2,
+            "explanation": "Total = 96; new total = 130; 130 ÷ 5 = 26.",
+            "tags": [
+                "average"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0022",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "The mean of 6 numbers is 20. When the number 15 is removed, what is the mean of the remaining numbers?",
+            "options": [
+                "20",
+                "21",
+                "19",
+                "22"
+            ],
+            "answer": 1,
+            "explanation": "Total = 120; remaining total = 105; 105 ÷ 5 = 21.",
+            "tags": [
+                "average"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0023",
+            "section": "Quantitative Analysis",
+            "difficulty": "hard",
+            "stem": "A batsman's average over 8 innings is 45 runs. How many runs must he score in the 9th innings to raise his average to 50?",
+            "options": [
+                "95",
+                "90",
+                "85",
+                "50"
+            ],
+            "answer": 1,
+            "explanation": "Needed total = 9 × 50 = 450. Current total = 8 × 45 = 360. Required = 90.",
+            "tags": [
+                "average"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0024",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "The average of five consecutive integers is 18. What is the largest of them?",
+            "options": [
+                "22",
+                "19",
+                "20",
+                "21"
+            ],
+            "answer": 2,
+            "explanation": "The middle number is 18, so the integers are 16, 17, 18, 19, 20.",
+            "tags": [
+                "average",
+                "number-sense"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0025",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "If 6 notebooks cost ₦2,400, how much will 15 notebooks cost?",
+            "options": [
+                "₦4,800",
+                "₦6,400",
+                "₦6,000",
+                "₦5,000"
+            ],
+            "answer": 2,
+            "explanation": "One notebook = 400; 15 × 400 = 6,000.",
+            "tags": [
+                "proportion"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0026",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "A recipe uses 3 cups of rice for 5 people. How many cups are needed for 20 people?",
+            "options": [
+                "15",
+                "12",
+                "10",
+                "9"
+            ],
+            "answer": 1,
+            "explanation": "20 people is 4 times as many, so 3 × 4 = 12 cups.",
+            "tags": [
+                "proportion"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0027",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "The ratio of boys to girls in a class is 5:3. If there are 40 boys, how many girls are there?",
+            "options": [
+                "15",
+                "24",
+                "32",
+                "30"
+            ],
+            "answer": 1,
+            "explanation": "One part = 40 ÷ 5 = 8. Girls = 3 × 8 = 24.",
+            "tags": [
+                "ratio"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0028",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "₦84,000 is divided between Ife and Jide in the ratio 2:5. What is Jide's share?",
+            "options": [
+                "₦42,000",
+                "₦50,000",
+                "₦24,000",
+                "₦60,000"
+            ],
+            "answer": 3,
+            "explanation": "One part = 84,000 ÷ 7 = 12,000. Jide's share = 5 × 12,000 = 60,000.",
+            "tags": [
+                "ratio"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0029",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "A car uses 8 litres of petrol to travel 100 km. How many litres are needed to travel 350 km?",
+            "options": [
+                "35 litres",
+                "30 litres",
+                "24 litres",
+                "28 litres"
+            ],
+            "answer": 3,
+            "explanation": "350 km is 3.5 times 100 km, so 8 × 3.5 = 28 litres.",
+            "tags": [
+                "proportion"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0030",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "A trader buys an item for ₦4,000 and sells it for ₦5,000. What is the profit percentage?",
+            "options": [
+                "10%",
+                "20%",
+                "15%",
+                "25%"
+            ],
+            "answer": 3,
+            "explanation": "Profit = 1,000. 1,000 ÷ 4,000 × 100 = 25%.",
+            "tags": [
+                "profit-and-loss"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0031",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "A trader sells an item for ₦9,000 and makes a 20% profit. What was the cost price?",
+            "options": [
+                "₦7,500",
+                "₦7,200",
+                "₦8,000",
+                "₦10,800"
+            ],
+            "answer": 0,
+            "explanation": "Selling price = 120% of cost. Cost = 9,000 ÷ 1.2 = 7,500.",
+            "tags": [
+                "profit-and-loss"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0032",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "A trader sells an item for ₦6,400 and makes a 20% loss. What was the cost price?",
+            "options": [
+                "₦5,120",
+                "₦8,000",
+                "₦7,680",
+                "₦7,000"
+            ],
+            "answer": 1,
+            "explanation": "Selling price = 80% of cost. Cost = 6,400 ÷ 0.8 = 8,000.",
+            "tags": [
+                "profit-and-loss"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0033",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "A shirt is marked ₦5,000 and sold with a 10% discount. What is the selling price?",
+            "options": [
+                "₦500",
+                "₦4,500",
+                "₦4,000",
+                "₦4,750"
+            ],
+            "answer": 1,
+            "explanation": "Discount = 500. Selling price = 5,000 − 500 = 4,500.",
+            "tags": [
+                "discount"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0034",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "An item costs ₦12,000. A shop marks it up by 30%. What is the selling price?",
+            "options": [
+                "₦16,000",
+                "₦15,600",
+                "₦12,360",
+                "₦15,000"
+            ],
+            "answer": 1,
+            "explanation": "Markup = 30% of 12,000 = 3,600. Selling price = 15,600.",
+            "tags": [
+                "profit-and-loss"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0035",
+            "section": "Quantitative Analysis",
+            "difficulty": "hard",
+            "stem": "Two successive discounts of 10% and 10% are given on an item priced ₦10,000. What is the final price?",
+            "options": [
+                "₦8,100",
+                "₦8,000",
+                "₦9,000",
+                "₦8,500"
+            ],
+            "answer": 0,
+            "explanation": "After the first discount: 9,000. After the second: 9,000 × 0.9 = 8,100.",
+            "tags": [
+                "discount"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0036",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "What is the area of a rectangle that is 12 m long and 8 m wide?",
+            "options": [
+                "40 m²",
+                "96 m²",
+                "20 m²",
+                "192 m²"
+            ],
+            "answer": 1,
+            "explanation": "Area = 12 × 8 = 96 m².",
+            "tags": [
+                "geometry",
+                "area"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0037",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "What is the perimeter of a rectangle with length 15 cm and width 9 cm?",
+            "options": [
+                "38 cm",
+                "24 cm",
+                "135 cm",
+                "48 cm"
+            ],
+            "answer": 3,
+            "explanation": "Perimeter = 2 × (15 + 9) = 48 cm.",
+            "tags": [
+                "geometry",
+                "perimeter"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0038",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "What is the area of a circle of radius 7 cm? (Take π = 22/7)",
+            "options": [
+                "44 cm²",
+                "49 cm²",
+                "308 cm²",
+                "154 cm²"
+            ],
+            "answer": 3,
+            "explanation": "Area = π r² = 22/7 × 49 = 154 cm².",
+            "tags": [
+                "geometry",
+                "circle"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0039",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "What is the area of a triangle with base 10 cm and height 8 cm?",
+            "options": [
+                "80 cm²",
+                "36 cm²",
+                "18 cm²",
+                "40 cm²"
+            ],
+            "answer": 3,
+            "explanation": "Area = ½ × base × height = ½ × 10 × 8 = 40 cm².",
+            "tags": [
+                "geometry",
+                "area"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0040",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "What is the volume of a cuboid measuring 5 m by 4 m by 3 m?",
+            "options": [
+                "12 m³",
+                "60 m³",
+                "47 m³",
+                "120 m³"
+            ],
+            "answer": 1,
+            "explanation": "Volume = 5 × 4 × 3 = 60 m³.",
+            "tags": [
+                "geometry",
+                "volume"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0041",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "Two towns are 300 km apart. Two buses leave at the same time, travelling towards each other at 60 km/h and 40 km/h. After how many hours do they meet?",
+            "options": [
+                "5 hours",
+                "3 hours",
+                "7.5 hours",
+                "6 hours"
+            ],
+            "answer": 1,
+            "explanation": "Closing speed = 100 km/h. Time = 300 ÷ 100 = 3 hours.",
+            "tags": [
+                "speed-distance-time"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0042",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "A car travels at 80 km/h for 3 hours and then at 60 km/h for 2 hours. What is the total distance covered?",
+            "options": [
+                "240 km",
+                "360 km",
+                "300 km",
+                "140 km"
+            ],
+            "answer": 1,
+            "explanation": "80 × 3 = 240 km and 60 × 2 = 120 km. Total = 360 km.",
+            "tags": [
+                "speed-distance-time"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0043",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "A runner covers 400 m in 80 seconds. What is the average speed in metres per second?",
+            "options": [
+                "6 m/s",
+                "8 m/s",
+                "5 m/s",
+                "4 m/s"
+            ],
+            "answer": 2,
+            "explanation": "Speed = 400 ÷ 80 = 5 m/s.",
+            "tags": [
+                "speed-distance-time"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0044",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "How long does a bus take to travel 280 km at an average speed of 56 km/h?",
+            "options": [
+                "5 hours",
+                "6 hours",
+                "4 hours",
+                "4.5 hours"
+            ],
+            "answer": 0,
+            "explanation": "Time = 280 ÷ 56 = 5 hours.",
+            "tags": [
+                "speed-distance-time"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0045",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "A bag holds 3 red and 5 blue marbles. One marble is picked at random. What is the probability that it is red?",
+            "options": [
+                "3/8",
+                "5/8",
+                "3/5",
+                "1/8"
+            ],
+            "answer": 0,
+            "explanation": "There are 8 marbles in total and 3 are red, so the probability is 3/8.",
+            "tags": [
+                "probability"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0046",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "A fair six-sided die is rolled once. What is the probability of getting a number greater than 4?",
+            "options": [
+                "1/3",
+                "1/6",
+                "1/2",
+                "2/3"
+            ],
+            "answer": 0,
+            "explanation": "Only 5 and 6 qualify: 2 outcomes out of 6 = 1/3.",
+            "tags": [
+                "probability"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0047",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "One card is drawn at random from a standard 52-card deck. What is the probability that it is a king?",
+            "options": [
+                "1/13",
+                "1/4",
+                "1/52",
+                "4/13"
+            ],
+            "answer": 0,
+            "explanation": "There are 4 kings in 52 cards: 4/52 = 1/13.",
+            "tags": [
+                "probability"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0048",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "In how many different ways can 5 different books be arranged on a shelf?",
+            "options": [
+                "60",
+                "25",
+                "120",
+                "24"
+            ],
+            "answer": 2,
+            "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120.",
+            "tags": [
+                "permutations"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0049",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "In how many ways can a team of 2 players be chosen from 6 players?",
+            "options": [
+                "36",
+                "12",
+                "15",
+                "30"
+            ],
+            "answer": 2,
+            "explanation": "C(6,2) = (6 × 5) ÷ 2 = 15.",
+            "tags": [
+                "combinations"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0050",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "How many different 2-digit numbers can be formed from the digits 1, 2, 3 and 4 if no digit is repeated?",
+            "options": [
+                "12",
+                "24",
+                "8",
+                "16"
+            ],
+            "answer": 0,
+            "explanation": "4 choices for the tens digit and 3 for the units digit: 4 × 3 = 12.",
+            "tags": [
+                "permutations"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0051",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "What is the value of 2⁵ + 3²?",
+            "options": [
+                "41",
+                "35",
+                "25",
+                "47"
+            ],
+            "answer": 0,
+            "explanation": "2⁵ = 32 and 3² = 9, so the sum is 41.",
+            "tags": [
+                "indices"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0052",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "What is the square root of 1,296?",
+            "options": [
+                "46",
+                "34",
+                "36",
+                "38"
+            ],
+            "answer": 2,
+            "explanation": "36 × 36 = 1,296.",
+            "tags": [
+                "roots"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0053",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "What is the highest common factor (HCF) of 36 and 48?",
+            "options": [
+                "24",
+                "12",
+                "6",
+                "144"
+            ],
+            "answer": 1,
+            "explanation": "36 = 2²×3² and 48 = 2⁴×3; the common part is 2²×3 = 12.",
+            "tags": [
+                "hcf-lcm"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0054",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "What is the lowest common multiple (LCM) of 8 and 12?",
+            "options": [
+                "4",
+                "96",
+                "24",
+                "48"
+            ],
+            "answer": 2,
+            "explanation": "8 = 2³ and 12 = 2²×3; LCM = 2³×3 = 24.",
+            "tags": [
+                "hcf-lcm"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0055",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "A father is three times as old as his son. The sum of their ages is 48 years. How old is the son?",
+            "options": [
+                "9 years",
+                "24 years",
+                "12 years",
+                "16 years"
+            ],
+            "answer": 2,
+            "explanation": "Let the son be x: x + 3x = 48, so x = 12.",
+            "tags": [
+                "age-problems"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0056",
+            "section": "Quantitative Analysis",
+            "difficulty": "hard",
+            "stem": "Ada is 5 years older than Bayo. In 5 years the sum of their ages will be 45. How old is Bayo now?",
+            "options": [
+                "15 years",
+                "20 years",
+                "17 years",
+                "10 years"
+            ],
+            "answer": 0,
+            "explanation": "Let Bayo be b: (b + 5) + (b + 10) = 45 gives 2b = 30, so b = 15.",
+            "tags": [
+                "age-problems"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0057",
+            "section": "Quantitative Analysis",
+            "difficulty": "medium",
+            "stem": "Ten years ago Tunde was half as old as he is now. How old is Tunde now?",
+            "options": [
+                "10 years",
+                "20 years",
+                "30 years",
+                "25 years"
+            ],
+            "answer": 1,
+            "explanation": "Let his age be t: t − 10 = t/2, so t = 20.",
+            "tags": [
+                "age-problems"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0058",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "45 is what percentage of 180?",
+            "options": [
+                "50%",
+                "20%",
+                "30%",
+                "25%"
+            ],
+            "answer": 3,
+            "explanation": "45 ÷ 180 × 100 = 25%.",
+            "tags": [
+                "percentage"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0059",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "60 is what percentage of 400?",
+            "options": [
+                "20%",
+                "15%",
+                "10%",
+                "30%"
+            ],
+            "answer": 1,
+            "explanation": "60 ÷ 400 × 100 = 15%.",
+            "tags": [
+                "percentage"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-QUA-0060",
+            "section": "Quantitative Analysis",
+            "difficulty": "easy",
+            "stem": "72 is what percentage of 90?",
+            "options": [
+                "75%",
+                "85%",
+                "160%",
+                "80%"
+            ],
+            "answer": 3,
+            "explanation": "72 ÷ 90 × 100 = 80%.",
+            "tags": [
+                "percentage"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0002",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "Gbenga is taller than Funke. Hauwa is shorter than Emeka. Gbenga is shorter than Hauwa. Who is the tallest?",
+            "options": [
+                "Hauwa",
+                "Gbenga",
+                "Emeka",
+                "Funke"
+            ],
+            "answer": 2,
+            "explanation": "Ordering from tallest to shortest: Emeka > Hauwa > Gbenga > Funke. The tallest is Emeka.",
+            "tags": [
+                "ordering"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0003",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "Lola is older than Jide. Lola is younger than Kemi. Jide is older than Ife. Who is the youngest?",
+            "options": [
+                "Jide",
+                "Ife",
+                "Kemi",
+                "Lola"
+            ],
+            "answer": 1,
+            "explanation": "Ordering from oldest to youngest: Kemi > Lola > Jide > Ife. The youngest is Ife.",
+            "tags": [
+                "ordering"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0004",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "Zainab is heavier than Musa. Tunde is lighter than Ngozi. Ngozi is lighter than Musa. Who is the second heaviest?",
+            "options": [
+                "Zainab",
+                "Ngozi",
+                "Tunde",
+                "Musa"
+            ],
+            "answer": 3,
+            "explanation": "Ordering from heaviest to lightest: Zainab > Musa > Ngozi > Tunde. The second heaviest is Musa.",
+            "tags": [
+                "ordering"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0005",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "Queen is faster than Rita. Peter is slower than Obi. Obi is slower than Rita. Who is the second slowest?",
+            "options": [
+                "Queen",
+                "Obi",
+                "Rita",
+                "Peter"
+            ],
+            "answer": 1,
+            "explanation": "Ordering from fastest to slowest: Queen > Rita > Obi > Peter. The second slowest is Obi.",
+            "tags": [
+                "ordering"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0006",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "Vera is poorer than Tola. Sade is richer than Tola. Sade is poorer than Uche. Who is the second richest?",
+            "options": [
+                "Sade",
+                "Vera",
+                "Uche",
+                "Tola"
+            ],
+            "answer": 0,
+            "explanation": "Ordering from richest to poorest: Uche > Sade > Tola > Vera. The second richest is Sade.",
+            "tags": [
+                "ordering"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0007",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "Yemi is taller than Wale. Yemi is shorter than Amaka. Wale is taller than Zubby. Who is the second shortest?",
+            "options": [
+                "Wale",
+                "Zubby",
+                "Amaka",
+                "Yemi"
+            ],
+            "answer": 0,
+            "explanation": "Ordering from tallest to shortest: Amaka > Yemi > Wale > Zubby. The second shortest is Wale.",
+            "tags": [
+                "ordering"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0008",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "All pilots are trained people. No trained person is careless. Which conclusion must be true?",
+            "options": [
+                "All careless people are pilots.",
+                "Some pilots are careless.",
+                "All trained people are pilots.",
+                "No pilot is careless."
+            ],
+            "answer": 3,
+            "explanation": "Pilots are a subset of trained people, and no trained person is careless, so no pilot is careless.",
+            "tags": [
+                "syllogism"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0009",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "Some doctors are teachers. All teachers are readers. Which conclusion must be true?",
+            "options": [
+                "All readers are teachers.",
+                "Some doctors are readers.",
+                "No doctor is a reader.",
+                "All doctors are readers."
+            ],
+            "answer": 1,
+            "explanation": "The doctors who are teachers are also readers, so at least some doctors are readers.",
+            "tags": [
+                "syllogism"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0010",
+            "section": "Logical Reasoning",
+            "difficulty": "easy",
+            "stem": "All books are made of paper. All paper is flammable. Which conclusion must be true?",
+            "options": [
+                "All flammable things are books.",
+                "Some books are not flammable.",
+                "No paper is a book.",
+                "All books are flammable."
+            ],
+            "answer": 3,
+            "explanation": "Books are a subset of paper, and paper is a subset of flammable things, so all books are flammable.",
+            "tags": [
+                "syllogism"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0011",
+            "section": "Logical Reasoning",
+            "difficulty": "hard",
+            "stem": "Some fruits are sweet. Some sweet things are expensive. Which statement must be true?",
+            "options": [
+                "Some fruits are expensive.",
+                "All fruits are expensive.",
+                "No fruit is expensive.",
+                "None of the other statements must be true."
+            ],
+            "answer": 3,
+            "explanation": "The sweet fruits need not be the expensive sweet things, so no link between fruits and expensive things is guaranteed.",
+            "tags": [
+                "syllogism"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0012",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "If it rains, the match is cancelled. The match was not cancelled. What can be concluded?",
+            "options": [
+                "It rained.",
+                "The match was played indoors.",
+                "Nothing can be concluded.",
+                "It did not rain."
+            ],
+            "answer": 3,
+            "explanation": "If rain always cancels the match, an uncancelled match means it did not rain (contrapositive).",
+            "tags": [
+                "conditional-logic"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0013",
+            "section": "Logical Reasoning",
+            "difficulty": "hard",
+            "stem": "If the alarm rings, all staff evacuate. All staff evacuated. What can be concluded?",
+            "options": [
+                "Nothing definite can be concluded about the alarm.",
+                "The alarm rang.",
+                "The evacuation was a drill.",
+                "The alarm did not ring."
+            ],
+            "answer": 0,
+            "explanation": "Staff might evacuate for other reasons, so we cannot conclude the alarm rang (affirming the consequent is invalid).",
+            "tags": [
+                "conditional-logic"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0014",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "In a certain code, BANK is written as CBOL. How is LOAN written in the same code?",
+            "options": [
+                "KNZM",
+                "NQCP",
+                "JMYL",
+                "MPBO"
+            ],
+            "answer": 3,
+            "explanation": "Each letter moves 1 place forward: LOAN becomes MPBO.",
+            "tags": [
+                "coding-decoding"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0015",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "In a certain code, DEAL is written as FGCN. How is PAID written in the same code?",
+            "options": [
+                "RCKF",
+                "QBJE",
+                "NYGB",
+                "OZHC"
+            ],
+            "answer": 0,
+            "explanation": "Each letter moves 2 places forward: PAID becomes RCKF.",
+            "tags": [
+                "coding-decoding"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0016",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "In a certain code, FISH is written as EHRG. How is TIME written in the same code?",
+            "options": [
+                "UJNF",
+                "RGKC",
+                "SHLD",
+                "VKOG"
+            ],
+            "answer": 2,
+            "explanation": "Each letter moves 1 place back: TIME becomes SHLD.",
+            "tags": [
+                "coding-decoding"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0017",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "If today is Wednesday, what day of the week will it be 100 days from today?",
+            "options": [
+                "Sunday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "answer": 2,
+            "explanation": "100 = 14 weeks + 2 days. Two days after Wednesday is Friday.",
+            "tags": [
+                "calendar"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0018",
+            "section": "Logical Reasoning",
+            "difficulty": "medium",
+            "stem": "If the 5th of a month falls on a Monday, on which day does the 23rd of that month fall?",
+            "options": [
+                "Sunday",
+                "Saturday",
+                "Thursday",
+                "Friday"
+            ],
+            "answer": 3,
+            "explanation": "23 − 5 = 18 days = 2 weeks + 4 days. Four days after Monday is Friday.",
+            "tags": [
+                "calendar"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-LOG-0019",
+            "section": "Logical Reasoning",
+            "difficulty": "easy",
+            "stem": "Tunde walks 6 km north and then 8 km east. How far is he from his starting point in a straight line?",
+            "options": [
+                "14 km",
+                "2 km",
+                "10 km",
+                "12 km"
+            ],
+            "answer": 2,
+            "explanation": "The route forms a right triangle with sides 6 and 8, so the distance is √(36 + 64) = 10 km.",
+            "tags": [
+                "direction-sense"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0001",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Each arrow is a fixed rotation of the one before it: ↑ → ↓ ← ?  Which arrow comes next?",
+            "options": [
+                "↓",
+                "→",
+                "←",
+                "↑"
+            ],
+            "answer": 3,
+            "explanation": "The arrow turns 90° clockwise at each step, so the next arrow is ↑.",
+            "tags": [
+                "rotation",
+                "sequence"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0002",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Each arrow is a fixed rotation of the one before it: → ↑ ← ↓ ?  Which arrow comes next?",
+            "options": [
+                "→",
+                "↓",
+                "↑",
+                "←"
+            ],
+            "answer": 0,
+            "explanation": "The arrow turns 90° anticlockwise at each step, so the next arrow is →.",
+            "tags": [
+                "rotation",
+                "sequence"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0003",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Each arrow is a fixed rotation of the one before it: ↓ ← ↑ → ?  Which arrow comes next?",
+            "options": [
+                "↑",
+                "←",
+                "↓",
+                "→"
+            ],
+            "answer": 2,
+            "explanation": "The arrow turns 90° clockwise at each step, so the next arrow is ↓.",
+            "tags": [
+                "rotation",
+                "sequence"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0004",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Each arrow is a fixed rotation of the one before it: ← ↓ → ↑ ?  Which arrow comes next?",
+            "options": [
+                "↓",
+                "←",
+                "→",
+                "↑"
+            ],
+            "answer": 1,
+            "explanation": "The arrow turns 90° anticlockwise at each step, so the next arrow is ←.",
+            "tags": [
+                "rotation",
+                "sequence"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0005",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Each arrow is a fixed rotation of the one before it: ↑ ↓ ↑ ↓ ?  Which arrow comes next?",
+            "options": [
+                "↑",
+                "←",
+                "→",
+                "↓"
+            ],
+            "answer": 0,
+            "explanation": "The arrow turns 180° at each step, so the next arrow is ↑.",
+            "tags": [
+                "rotation",
+                "sequence"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0006",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Each arrow is a fixed rotation of the one before it: → ← → ← ?  Which arrow comes next?",
+            "options": [
+                "↑",
+                "←",
+                "↓",
+                "→"
+            ],
+            "answer": 3,
+            "explanation": "The arrow turns 180° at each step, so the next arrow is →.",
+            "tags": [
+                "rotation",
+                "sequence"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0007",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "Which comes next in the series: A, C, E, G, ?",
+            "options": [
+                "J",
+                "I",
+                "K",
+                "H"
+            ],
+            "answer": 1,
+            "explanation": "Each letter is 2 places after the previous one: G + 2 = I.",
+            "tags": [
+                "letter-series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0008",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "Which comes next in the series: B, C, E, H, ?",
+            "options": [
+                "N",
+                "L",
+                "M",
+                "K"
+            ],
+            "answer": 1,
+            "explanation": "The gaps grow by 1 each time (+1, +2, +3, +4): H + 4 = L.",
+            "tags": [
+                "letter-series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0009",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "Which comes next in the series: Z, X, V, T, ?",
+            "options": [
+                "R",
+                "Q",
+                "S",
+                "P"
+            ],
+            "answer": 0,
+            "explanation": "Each letter is 2 places before the previous one: T − 2 = R.",
+            "tags": [
+                "letter-series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0010",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "Which comes next in the series: A, Z, B, Y, C, ?",
+            "options": [
+                "X",
+                "Y",
+                "D",
+                "W"
+            ],
+            "answer": 0,
+            "explanation": "Two interleaved series: A, B, C going forward and Z, Y, X going backward. The next term is X.",
+            "tags": [
+                "letter-series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0011",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "Which comes next in the series: AB, CD, EF, GH, ?",
+            "options": [
+                "JK",
+                "HI",
+                "IJ",
+                "IK"
+            ],
+            "answer": 2,
+            "explanation": "Each pair continues the alphabet in order, so after GH comes IJ.",
+            "tags": [
+                "letter-series"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0012",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "Figures 1 to 4 contain 2, 5, 8 and 11 dots respectively. How many dots will Figure 5 contain?",
+            "options": [
+                "14",
+                "16",
+                "13",
+                "15"
+            ],
+            "answer": 0,
+            "explanation": "Each figure adds 3 dots: 11 + 3 = 14.",
+            "tags": [
+                "pattern-counting"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0013",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "Figures 1 to 4 contain 1, 2, 4 and 8 squares respectively. How many squares will Figure 5 contain?",
+            "options": [
+                "16",
+                "12",
+                "10",
+                "14"
+            ],
+            "answer": 0,
+            "explanation": "The number of squares doubles each time: 8 × 2 = 16.",
+            "tags": [
+                "pattern-counting"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0014",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "Figures 1 to 4 contain 1, 4, 9 and 16 stars respectively. How many stars will Figure 5 contain?",
+            "options": [
+                "24",
+                "36",
+                "25",
+                "20"
+            ],
+            "answer": 2,
+            "explanation": "The counts are square numbers (1², 2², 3², 4²), so Figure 5 has 5² = 25.",
+            "tags": [
+                "pattern-counting"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0015",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "Figures 1 to 4 contain 20, 17, 14 and 11 triangles respectively. How many triangles will Figure 5 contain?",
+            "options": [
+                "7",
+                "8",
+                "10",
+                "9"
+            ],
+            "answer": 1,
+            "explanation": "Each figure has 3 fewer triangles: 11 − 3 = 8.",
+            "tags": [
+                "pattern-counting"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0016",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Which shape does not belong with the others?",
+            "options": [
+                "Circle",
+                "Triangle",
+                "Pentagon",
+                "Square"
+            ],
+            "answer": 0,
+            "explanation": "Triangle, square and pentagon are made of straight sides; a circle has none.",
+            "tags": [
+                "odd-one-out"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0017",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Which solid does not belong with the others?",
+            "options": [
+                "Cube",
+                "Cuboid",
+                "Pyramid",
+                "Sphere"
+            ],
+            "answer": 3,
+            "explanation": "Cube, pyramid and cuboid have flat faces and straight edges; a sphere is entirely curved.",
+            "tags": [
+                "odd-one-out"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0018",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Which number does not belong with the others: 4, 9, 16, 20?",
+            "options": [
+                "16",
+                "9",
+                "4",
+                "20"
+            ],
+            "answer": 3,
+            "explanation": "4, 9 and 16 are perfect squares; 20 is not.",
+            "tags": [
+                "odd-one-out"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0019",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Which letter does not belong with the others: E, I, K, O?",
+            "options": [
+                "E",
+                "O",
+                "K",
+                "I"
+            ],
+            "answer": 2,
+            "explanation": "E, I and O are vowels; K is a consonant.",
+            "tags": [
+                "odd-one-out"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0020",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "Triangle is to 3 as hexagon is to ?",
+            "options": [
+                "5",
+                "12",
+                "8",
+                "6"
+            ],
+            "answer": 3,
+            "explanation": "A triangle has 3 sides and a hexagon has 6.",
+            "tags": [
+                "analogy"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0021",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "↑ is to ↓ as → is to ?",
+            "options": [
+                "↑",
+                "←",
+                "→",
+                "↓"
+            ],
+            "answer": 1,
+            "explanation": "Each arrow is paired with the one pointing in the opposite direction.",
+            "tags": [
+                "analogy"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0022",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "A is to C as E is to ?",
+            "options": [
+                "H",
+                "G",
+                "F",
+                "I"
+            ],
+            "answer": 1,
+            "explanation": "C is two letters after A, and G is two letters after E.",
+            "tags": [
+                "analogy"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0023",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "What comes next: ★ ● ★ ● ★ ?",
+            "options": [
+                "★",
+                "■",
+                "▲",
+                "●"
+            ],
+            "answer": 3,
+            "explanation": "The two symbols alternate, so a circle follows a star.",
+            "tags": [
+                "alternation"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0024",
+            "section": "Abstract Reasoning",
+            "difficulty": "easy",
+            "stem": "What comes next: A1, B2, C3, D4, ?",
+            "options": [
+                "E5",
+                "D5",
+                "E4",
+                "F5"
+            ],
+            "answer": 0,
+            "explanation": "The letter and the number both go up by one each step.",
+            "tags": [
+                "alternation"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "SHL-ABS-0025",
+            "section": "Abstract Reasoning",
+            "difficulty": "medium",
+            "stem": "What comes next: ▲ ■ ● ▲ ■ ● ▲ ?",
+            "options": [
+                "▲",
+                "◆",
+                "■",
+                "●"
+            ],
+            "answer": 2,
+            "explanation": "The sequence repeats in the cycle ▲ ■ ●, so a square follows the triangle.",
+            "tags": [
+                "repeating-pattern"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0002",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “abundant”.",
+            "options": [
+                "plentiful",
+                "tiny",
+                "costly",
+                "scarce"
+            ],
+            "answer": 0,
+            "explanation": "“Abundant” means plentiful.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0003",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “brief”.",
+            "options": [
+                "loud",
+                "short",
+                "lengthy",
+                "careful"
+            ],
+            "answer": 1,
+            "explanation": "“Brief” means short.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0004",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “candid”.",
+            "options": [
+                "secretive",
+                "polite",
+                "frank",
+                "anxious"
+            ],
+            "answer": 2,
+            "explanation": "“Candid” means frank.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0005",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “diligent”.",
+            "options": [
+                "hardworking",
+                "clever",
+                "lazy",
+                "rude"
+            ],
+            "answer": 0,
+            "explanation": "“Diligent” means hardworking.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0006",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “frugal”.",
+            "options": [
+                "generous",
+                "thrifty",
+                "wealthy",
+                "wasteful"
+            ],
+            "answer": 1,
+            "explanation": "“Frugal” means thrifty.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0007",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “hostile”.",
+            "options": [
+                "helpful",
+                "unfriendly",
+                "nervous",
+                "cheerful"
+            ],
+            "answer": 1,
+            "explanation": "“Hostile” means unfriendly.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0008",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “obsolete”.",
+            "options": [
+                "broken",
+                "valuable",
+                "outdated",
+                "modern"
+            ],
+            "answer": 2,
+            "explanation": "“Obsolete” means outdated.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0009",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “reluctant”.",
+            "options": [
+                "tired",
+                "curious",
+                "eager",
+                "unwilling"
+            ],
+            "answer": 3,
+            "explanation": "“Reluctant” means unwilling.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0010",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “vital”.",
+            "options": [
+                "hidden",
+                "essential",
+                "optional",
+                "minor"
+            ],
+            "answer": 1,
+            "explanation": "“Vital” means essential.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0011",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “ambiguous”.",
+            "options": [
+                "simple",
+                "unclear",
+                "honest",
+                "precise"
+            ],
+            "answer": 1,
+            "explanation": "“Ambiguous” means unclear.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0012",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “benevolent”.",
+            "options": [
+                "strict",
+                "wealthy",
+                "kind",
+                "cruel"
+            ],
+            "answer": 2,
+            "explanation": "“Benevolent” means kind.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0013",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word closest in meaning to “conceal”.",
+            "options": [
+                "reveal",
+                "repair",
+                "hide",
+                "collect"
+            ],
+            "answer": 2,
+            "explanation": "“Conceal” means hide.",
+            "tags": [
+                "synonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0014",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word opposite in meaning to “expand”.",
+            "options": [
+                "contract",
+                "stretch",
+                "enlarge",
+                "grow"
+            ],
+            "answer": 0,
+            "explanation": "The opposite of “expand” is “contract”.",
+            "tags": [
+                "antonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0015",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word opposite in meaning to “ancient”.",
+            "options": [
+                "aged",
+                "historic",
+                "old",
+                "modern"
+            ],
+            "answer": 3,
+            "explanation": "The opposite of “ancient” is “modern”.",
+            "tags": [
+                "antonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0016",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word opposite in meaning to “generous”.",
+            "options": [
+                "kind",
+                "lavish",
+                "stingy",
+                "charitable"
+            ],
+            "answer": 2,
+            "explanation": "The opposite of “generous” is “stingy”.",
+            "tags": [
+                "antonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0017",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word opposite in meaning to “victory”.",
+            "options": [
+                "defeat",
+                "triumph",
+                "win",
+                "success"
+            ],
+            "answer": 0,
+            "explanation": "The opposite of “victory” is “defeat”.",
+            "tags": [
+                "antonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0018",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word opposite in meaning to “transparent”.",
+            "options": [
+                "clear",
+                "thin",
+                "opaque",
+                "glassy"
+            ],
+            "answer": 2,
+            "explanation": "The opposite of “transparent” is “opaque”.",
+            "tags": [
+                "antonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0019",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word opposite in meaning to “optimistic”.",
+            "options": [
+                "confident",
+                "cheerful",
+                "hopeful",
+                "pessimistic"
+            ],
+            "answer": 3,
+            "explanation": "The opposite of “optimistic” is “pessimistic”.",
+            "tags": [
+                "antonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0020",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word opposite in meaning to “rigid”.",
+            "options": [
+                "stiff",
+                "flexible",
+                "strict",
+                "firm"
+            ],
+            "answer": 1,
+            "explanation": "The opposite of “rigid” is “flexible”.",
+            "tags": [
+                "antonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0021",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "stem": "Choose the word opposite in meaning to “ascend”.",
+            "options": [
+                "descend",
+                "rise",
+                "mount",
+                "climb"
+            ],
+            "answer": 0,
+            "explanation": "The opposite of “ascend” is “descend”.",
+            "tags": [
+                "antonyms",
+                "vocabulary"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0022",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "stem": "Choose the word or phrase that correctly completes the sentence: Neither of the candidates ___ prepared for the interview.",
+            "options": [
+                "was",
+                "have been",
+                "were",
+                "are"
+            ],
+            "answer": 0,
+            "explanation": "“Neither” takes a singular verb, so “was” is correct.",
+            "tags": [
+                "grammar"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0023",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "stem": "Choose the word or phrase that correctly completes the sentence: The committee ___ its decision yesterday.",
+            "options": [
+                "announcing",
+                "announced",
+                "announce",
+                "have announce"
+            ],
+            "answer": 1,
+            "explanation": "“Yesterday” requires the simple past tense: “announced”.",
+            "tags": [
+                "grammar"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0024",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "stem": "Choose the word or phrase that correctly completes the sentence: She has lived in Lagos ___ 2015.",
+            "options": [
+                "from",
+                "since",
+                "during",
+                "for"
+            ],
+            "answer": 1,
+            "explanation": "“Since” is used with a specific point in time (2015).",
+            "tags": [
+                "grammar"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0025",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "stem": "Choose the word or phrase that correctly completes the sentence: He is very good ___ mathematics.",
+            "options": [
+                "at",
+                "with",
+                "in",
+                "on"
+            ],
+            "answer": 0,
+            "explanation": "The correct collocation is “good at”.",
+            "tags": [
+                "grammar"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0026",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "stem": "Choose the word or phrase that correctly completes the sentence: Each of the students ___ a certificate.",
+            "options": [
+                "have received",
+                "were receiving",
+                "has received",
+                "are receiving"
+            ],
+            "answer": 2,
+            "explanation": "“Each” takes a singular verb: “has received”.",
+            "tags": [
+                "grammar"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0027",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "stem": "Choose the word or phrase that correctly completes the sentence: If I ___ you, I would apply for the job.",
+            "options": [
+                "am",
+                "were",
+                "was",
+                "be"
+            ],
+            "answer": 1,
+            "explanation": "The subjunctive mood in a hypothetical condition uses “were”.",
+            "tags": [
+                "grammar"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0028",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "passage": "Lagos introduced dedicated bus lanes to move more commuters in fewer vehicles. Early results showed shorter journey times for bus passengers, although private motorists complained that road space for cars had been reduced. Officials argued that a bus carries many more people per metre of road than a car.",
+            "stem": "According to the passage, why did officials support dedicated bus lanes?",
+            "options": [
+                "A bus carries many more people per metre of road than a car.",
+                "They were cheaper to build than any other road.",
+                "They removed private cars from the roads completely.",
+                "Private motorists had asked for them."
+            ],
+            "answer": 0,
+            "explanation": "The final sentence gives the officials' argument: buses carry far more people per metre of road.",
+            "tags": [
+                "comprehension"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0029",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "passage": "Lagos introduced dedicated bus lanes to move more commuters in fewer vehicles. Early results showed shorter journey times for bus passengers, although private motorists complained that road space for cars had been reduced. Officials argued that a bus carries many more people per metre of road than a car.",
+            "stem": "Which statement is supported by the passage?",
+            "options": [
+                "Journey times for cars became shorter.",
+                "Bus lanes removed all congestion.",
+                "Private motorists welcomed the change.",
+                "Bus passengers had shorter journey times in the early results."
+            ],
+            "answer": 3,
+            "explanation": "The passage reports shorter journey times for bus passengers; the other statements contradict or go beyond it.",
+            "tags": [
+                "comprehension",
+                "inference"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0030",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "passage": "Lagos introduced dedicated bus lanes to move more commuters in fewer vehicles. Early results showed shorter journey times for bus passengers, although private motorists complained that road space for cars had been reduced. Officials argued that a bus carries many more people per metre of road than a car.",
+            "stem": "In the passage, the word “dedicated” most nearly means:",
+            "options": [
+                "temporary",
+                "reserved for a specific use",
+                "emotionally devoted",
+                "expensive"
+            ],
+            "answer": 1,
+            "explanation": "“Dedicated bus lanes” are lanes set aside for buses.",
+            "tags": [
+                "vocabulary-in-context"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0031",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "passage": "Many Nigerian households rely on petrol generators during power cuts. Solar panels have high upfront costs, but they have no fuel expenses and need little maintenance. Over several years, the total cost of a solar system can be lower than the cost of running a generator.",
+            "stem": "What is the main point of the passage?",
+            "options": [
+                "Power cuts have stopped in Nigeria.",
+                "Generators are illegal in Nigerian households.",
+                "Solar power can cost less than a generator over time despite its high initial cost.",
+                "Solar panels are always cheaper to buy than generators."
+            ],
+            "answer": 2,
+            "explanation": "The passage contrasts high upfront cost with lower long-run cost.",
+            "tags": [
+                "comprehension",
+                "main-idea"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0032",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "passage": "Many Nigerian households rely on petrol generators during power cuts. Solar panels have high upfront costs, but they have no fuel expenses and need little maintenance. Over several years, the total cost of a solar system can be lower than the cost of running a generator.",
+            "stem": "Which cost does the passage say solar panels avoid?",
+            "options": [
+                "Insurance",
+                "Fuel",
+                "Installation",
+                "Purchase"
+            ],
+            "answer": 1,
+            "explanation": "The passage says solar panels have no fuel expenses.",
+            "tags": [
+                "comprehension"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0033",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "passage": "Many Nigerian households rely on petrol generators during power cuts. Solar panels have high upfront costs, but they have no fuel expenses and need little maintenance. Over several years, the total cost of a solar system can be lower than the cost of running a generator.",
+            "stem": "Statement: Solar panels need frequent, costly maintenance. Based on the passage, this statement is:",
+            "options": [
+                "True",
+                "False",
+                "Cannot say"
+            ],
+            "answer": 1,
+            "explanation": "The passage says solar panels need little maintenance.",
+            "tags": [
+                "true-false-cannot-say"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0034",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "passage": "A survey of 500 secondary school students found that those who read for at least thirty minutes a day scored higher on average in English tests. The researchers cautioned, however, that the survey could not prove that reading caused the higher scores, since students who already enjoy school might simply read more.",
+            "stem": "What do the researchers caution about?",
+            "options": [
+                "Reading may not be the cause of the higher scores.",
+                "English tests are unreliable.",
+                "The survey was too small to be useful.",
+                "Students should stop reading daily."
+            ],
+            "answer": 0,
+            "explanation": "They note the survey cannot prove that reading caused the higher scores.",
+            "tags": [
+                "comprehension",
+                "inference"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0035",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "passage": "A survey of 500 secondary school students found that those who read for at least thirty minutes a day scored higher on average in English tests. The researchers cautioned, however, that the survey could not prove that reading caused the higher scores, since students who already enjoy school might simply read more.",
+            "stem": "Statement: The survey proves that reading for thirty minutes a day improves English scores. Based on the passage, this statement is:",
+            "options": [
+                "True",
+                "False",
+                "Cannot say"
+            ],
+            "answer": 1,
+            "explanation": "The researchers say the survey could not prove that reading caused the higher scores.",
+            "tags": [
+                "true-false-cannot-say"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0036",
+            "section": "Verbal Reasoning",
+            "difficulty": "hard",
+            "passage": "A survey of 500 secondary school students found that those who read for at least thirty minutes a day scored higher on average in English tests. The researchers cautioned, however, that the survey could not prove that reading caused the higher scores, since students who already enjoy school might simply read more.",
+            "stem": "Which is the most likely reason for the researchers' caution?",
+            "options": [
+                "The tests were too easy.",
+                "Other factors, such as enjoying school, could explain the pattern.",
+                "Students lied about how much they read.",
+                "Reading harms test performance."
+            ],
+            "answer": 1,
+            "explanation": "The passage suggests students who enjoy school may both read more and score higher.",
+            "tags": [
+                "comprehension",
+                "inference"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0037",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "passage": "Mobile money agents have extended banking services to villages without bank branches. Customers can deposit, withdraw and transfer small amounts without travelling long distances. Critics note that agents sometimes run out of cash, which can leave customers stranded.",
+            "stem": "What benefit of mobile money agents does the passage describe?",
+            "options": [
+                "They bring basic banking services to places without branches.",
+                "They give customers free loans.",
+                "They guarantee cash is always available.",
+                "They replace all bank branches."
+            ],
+            "answer": 0,
+            "explanation": "The passage says agents extend services to villages without bank branches.",
+            "tags": [
+                "comprehension"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0038",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "passage": "Mobile money agents have extended banking services to villages without bank branches. Customers can deposit, withdraw and transfer small amounts without travelling long distances. Critics note that agents sometimes run out of cash, which can leave customers stranded.",
+            "stem": "Statement: Mobile money agents never run out of cash. Based on the passage, this statement is:",
+            "options": [
+                "True",
+                "False",
+                "Cannot say"
+            ],
+            "answer": 1,
+            "explanation": "Critics note that agents sometimes run out of cash.",
+            "tags": [
+                "true-false-cannot-say"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0039",
+            "section": "Verbal Reasoning",
+            "difficulty": "medium",
+            "passage": "Sunrise Textiles moved to a four-day working week in January. Output stayed the same, absenteeism dropped, and staff reported lower stress. The company has not yet measured the effect on profit.",
+            "stem": "Statement: The four-day week increased Sunrise Textiles' profit. Based on the passage, this statement is:",
+            "options": [
+                "True",
+                "False",
+                "Cannot say"
+            ],
+            "answer": 2,
+            "explanation": "The passage says the effect on profit has not yet been measured.",
+            "tags": [
+                "true-false-cannot-say"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "UBA-VER-0040",
+            "section": "Verbal Reasoning",
+            "difficulty": "easy",
+            "passage": "Sunrise Textiles moved to a four-day working week in January. Output stayed the same, absenteeism dropped, and staff reported lower stress. The company has not yet measured the effect on profit.",
+            "stem": "Which outcome is reported in the passage?",
+            "options": [
+                "Staff worked longer hours.",
+                "Output rose.",
+                "Absenteeism dropped.",
+                "Profit increased."
+            ],
+            "answer": 2,
+            "explanation": "The passage states that absenteeism dropped; output stayed the same.",
+            "tags": [
+                "comprehension"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0001",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "What is the capital city of Nigeria?",
+            "options": [
+                "Abuja",
+                "Kano",
+                "Ibadan",
+                "Lagos"
+            ],
+            "answer": 0,
+            "explanation": "Abuja has been Nigeria's capital since 1991.",
+            "tags": [
+                "nigeria"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0002",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "In which year did Nigeria gain independence from Britain?",
+            "options": [
+                "1966",
+                "1957",
+                "1960",
+                "1963"
+            ],
+            "answer": 2,
+            "explanation": "Nigeria became independent on 1 October 1960.",
+            "tags": [
+                "nigeria",
+                "history"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0003",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "Which is the longest river in Africa?",
+            "options": [
+                "River Niger",
+                "Zambezi",
+                "River Nile",
+                "River Congo"
+            ],
+            "answer": 2,
+            "explanation": "The Nile is generally regarded as Africa's longest river.",
+            "tags": [
+                "geography"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0004",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "What is the currency of Ghana?",
+            "options": [
+                "Shilling",
+                "Naira",
+                "Cedi",
+                "Rand"
+            ],
+            "answer": 2,
+            "explanation": "Ghana's currency is the cedi.",
+            "tags": [
+                "currency",
+                "africa"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0005",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "What is the chemical symbol for gold?",
+            "options": [
+                "Au",
+                "Gd",
+                "Ag",
+                "Go"
+            ],
+            "answer": 0,
+            "explanation": "Au comes from the Latin word “aurum”.",
+            "tags": [
+                "science"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0006",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "How many states does Nigeria have?",
+            "options": [
+                "30",
+                "37",
+                "36",
+                "34"
+            ],
+            "answer": 2,
+            "explanation": "Nigeria has 36 states plus the Federal Capital Territory.",
+            "tags": [
+                "nigeria"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0007",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "Which is the largest ocean on Earth?",
+            "options": [
+                "Arctic Ocean",
+                "Pacific Ocean",
+                "Indian Ocean",
+                "Atlantic Ocean"
+            ],
+            "answer": 1,
+            "explanation": "The Pacific Ocean covers more area than any other ocean.",
+            "tags": [
+                "geography"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0008",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "Who was Nigeria's first President?",
+            "options": [
+                "Yakubu Gowon",
+                "Nnamdi Azikiwe",
+                "Abubakar Tafawa Balewa",
+                "Olusegun Obasanjo"
+            ],
+            "answer": 1,
+            "explanation": "Nnamdi Azikiwe became the first President when Nigeria became a republic in 1963.",
+            "tags": [
+                "nigeria",
+                "history"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0009",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "Which planet is closest to the Sun?",
+            "options": [
+                "Mercury",
+                "Mars",
+                "Earth",
+                "Venus"
+            ],
+            "answer": 0,
+            "explanation": "Mercury has the smallest orbit of the eight planets.",
+            "tags": [
+                "science",
+                "astronomy"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0010",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "Who wrote the novel “Things Fall Apart”?",
+            "options": [
+                "Wole Soyinka",
+                "Ben Okri",
+                "Chinua Achebe",
+                "Chimamanda Ngozi Adichie"
+            ],
+            "answer": 2,
+            "explanation": "Chinua Achebe published it in 1958.",
+            "tags": [
+                "literature"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0011",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "What is the chemical formula of water?",
+            "options": [
+                "CO₂",
+                "O₂",
+                "NaCl",
+                "H₂O"
+            ],
+            "answer": 3,
+            "explanation": "A water molecule has two hydrogen atoms and one oxygen atom.",
+            "tags": [
+                "science"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0012",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "Which is the largest continent by area?",
+            "options": [
+                "Europe",
+                "Africa",
+                "Asia",
+                "North America"
+            ],
+            "answer": 2,
+            "explanation": "Asia is the largest continent by both area and population.",
+            "tags": [
+                "geography"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0013",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "Which Nigerian won the Nobel Prize in Literature in 1986?",
+            "options": [
+                "Ben Okri",
+                "Wole Soyinka",
+                "Ngũgĩ wa Thiong’o",
+                "Chinua Achebe"
+            ],
+            "answer": 1,
+            "explanation": "Wole Soyinka was the first African winner of the Nobel Prize in Literature.",
+            "tags": [
+                "nigeria",
+                "literature"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0014",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "The African Union has its headquarters in which city?",
+            "options": [
+                "Accra",
+                "Nairobi",
+                "Addis Ababa",
+                "Abuja"
+            ],
+            "answer": 2,
+            "explanation": "The AU headquarters is in Addis Ababa, Ethiopia.",
+            "tags": [
+                "africa",
+                "organisations"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0015",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "How many continents are there on Earth?",
+            "options": [
+                "8",
+                "6",
+                "7",
+                "5"
+            ],
+            "answer": 2,
+            "explanation": "The seven continents are Africa, Antarctica, Asia, Australia/Oceania, Europe, North America and South America.",
+            "tags": [
+                "geography"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0016",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "At sea level, at what temperature (in °C) does pure water boil?",
+            "options": [
+                "120 °C",
+                "100 °C",
+                "90 °C",
+                "80 °C"
+            ],
+            "answer": 1,
+            "explanation": "Water boils at 100 °C at standard atmospheric pressure.",
+            "tags": [
+                "science"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0017",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "What is the capital city of Kenya?",
+            "options": [
+                "Dodoma",
+                "Nairobi",
+                "Kampala",
+                "Mombasa"
+            ],
+            "answer": 1,
+            "explanation": "Nairobi is Kenya's capital and largest city.",
+            "tags": [
+                "africa",
+                "geography"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0018",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "What does ECOWAS stand for?",
+            "options": [
+                "Economic Community of West African States",
+                "Economic Council of West African States",
+                "Eastern Community of West African States",
+                "Economic Community of Western Atlantic States"
+            ],
+            "answer": 0,
+            "explanation": "ECOWAS is a regional bloc of West African countries founded in 1975.",
+            "tags": [
+                "africa",
+                "organisations"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0019",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "Which gas do plants absorb from the air for photosynthesis?",
+            "options": [
+                "Carbon dioxide",
+                "Hydrogen",
+                "Oxygen",
+                "Nitrogen"
+            ],
+            "answer": 0,
+            "explanation": "Plants take in carbon dioxide and release oxygen.",
+            "tags": [
+                "science",
+                "biology"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "NNPC-GEN-0020",
+            "section": "General Knowledge",
+            "difficulty": "easy",
+            "stem": "Which river gives Nigeria its name?",
+            "options": [
+                "River Niger",
+                "River Nile",
+                "River Benue",
+                "River Congo"
+            ],
+            "answer": 0,
+            "explanation": "Nigeria is named after the River Niger.",
+            "tags": [
+                "nigeria",
+                "geography"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "FBN-BNK-0002",
+            "section": "Banking Awareness",
+            "difficulty": "easy",
+            "stem": "What does ATM stand for?",
+            "options": [
+                "Authorised Teller Money",
+                "Automated Teller Machine",
+                "Automatic Transfer Method",
+                "Automated Transaction Manager"
+            ],
+            "answer": 1,
+            "explanation": "An ATM is an Automated Teller Machine.",
+            "tags": [
+                "banking-terms"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "FBN-BNK-0003",
+            "section": "Banking Awareness",
+            "difficulty": "easy",
+            "stem": "In Nigerian banking, what does BVN stand for?",
+            "options": [
+                "Bank Validation Network",
+                "Branch Verification Number",
+                "Bank Verification Number",
+                "Basic Verified Name"
+            ],
+            "answer": 2,
+            "explanation": "The BVN is a unique identifier linking a customer's accounts across banks.",
+            "tags": [
+                "banking-terms"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "FBN-BNK-0004",
+            "section": "Banking Awareness",
+            "difficulty": "easy",
+            "stem": "In banking, what does KYC stand for?",
+            "options": [
+                "Know Your Customer",
+                "Key Yearly Charge",
+                "Keep Your Cash",
+                "Know Your Credit"
+            ],
+            "answer": 0,
+            "explanation": "KYC refers to the checks banks perform to verify customer identity.",
+            "tags": [
+                "banking-terms",
+                "compliance"
+            ],
+            "status": "published"
+        },
+        {
+            "id": "FBN-BNK-0005",
+            "section": "Banking Awareness",
+            "difficulty": "easy",
+            "stem": "A cheque that a bank refuses to pay because the account has insufficient funds is said to be:",
+            "options": [
+                "crossed",
+                "cleared",
+                "dishonoured",
+                "endorsed"
+            ],
+            "answer": 2,
+            "explanation": "A cheque returned unpaid, for example because of insufficient funds, is dishonoured (bounced).",
+            "tags": [
+                "banking-terms",
+                "cheques"
+            ],
+            "status": "published"
+        }
+    ]
+}
