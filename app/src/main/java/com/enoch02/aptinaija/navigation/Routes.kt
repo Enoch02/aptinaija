@@ -9,9 +9,6 @@ data object HomeRoute
 data object CompaniesRoute
 
 @Serializable
-data class CompanyRoute(val companyId: String)
-
-@Serializable
 data class TestSetupRoute(
     val mode: String,
     val company: String? = null,

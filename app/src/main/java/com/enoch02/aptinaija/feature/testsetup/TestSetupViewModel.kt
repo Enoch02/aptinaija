@@ -5,7 +5,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
 import com.enoch02.aptinaija.domain.model.AttemptMode
+import com.enoch02.aptinaija.domain.model.SectionSummary
 import com.enoch02.aptinaija.domain.model.TestTemplate
+import com.enoch02.aptinaija.domain.repository.QuestionRepository
 import com.enoch02.aptinaija.domain.repository.SettingsRepository
 import com.enoch02.aptinaija.domain.repository.TestRepository
 import com.enoch02.aptinaija.domain.usecase.BuildAttemptRequest
@@ -23,72 +25,153 @@ import kotlinx.coroutines.launch
 data class TestSetupUiState(
     val loading: Boolean = true,
     val mode: AttemptMode = AttemptMode.PRACTICE,
-    val company: String? = null,
-    val section: String? = null,
-    val template: TestTemplate? = null,
+    val companyId: String? = null,
+    val companyName: String = "",
+    val sections: List<SectionSummary> = emptyList(),
+    val templates: List<TestTemplate> = emptyList(),
+    val selectedSection: String? = null,
+    val selectedTemplateId: String? = null,
     val questionCount: Int = 20,
     val starting: Boolean = false,
     val attemptId: String? = null,
     val error: String? = null
 ) {
-    val isMock: Boolean get() = mode == AttemptMode.MOCK
-    val mockQuestionCount: Int get() = template?.sections?.sumOf { it.questionCount } ?: 0
-    val mockMinutes: Int get() = template?.sections?.sumOf { it.minutes } ?: 0
+    val selectedTemplate: TestTemplate?
+        get() = templates.firstOrNull { it.id == selectedTemplateId }
+
+    val practiceQuestionCount: Int
+        get() = sections.sumOf { it.questionCount }
+
+    val drillQuestionCount: Int
+        get() = sections.firstOrNull { it.section == selectedSection }?.questionCount ?: 0
+
+    val mockQuestionCount: Int
+        get() = selectedTemplate?.sections?.sumOf { it.questionCount } ?: 0
+
+    val mockMinutes: Int
+        get() = selectedTemplate?.sections?.sumOf { it.minutes } ?: 0
+
+    val canBegin: Boolean
+        get() = !starting && when (mode) {
+            AttemptMode.PRACTICE -> companyId != null && sections.isNotEmpty()
+            AttemptMode.DRILL -> selectedSection != null
+            AttemptMode.MOCK -> selectedTemplate?.sections?.isNotEmpty() == true
+        }
 }
 
 @HiltViewModel
 class TestSetupViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val buildAttempt: BuildAttemptUseCase,
-    private val templates: TestRepository,
-    private val settings: SettingsRepository
+    questions: QuestionRepository,
+    templates: TestRepository,
+    settings: SettingsRepository
 ) : ViewModel() {
 
     private val route = savedStateHandle.toRoute<TestSetupRoute>()
-    private val mode = runCatching { AttemptMode.valueOf(route.mode) }.getOrDefault(AttemptMode.PRACTICE)
+    private val initialMode = runCatching {
+        AttemptMode.valueOf(route.mode)
+    }.getOrDefault(AttemptMode.PRACTICE)
 
-    private val _state = MutableStateFlow(
-        TestSetupUiState(
-            mode = mode,
-            company = route.company,
-            section = route.section
-        )
-    )
+    private val _state = MutableStateFlow(TestSetupUiState(mode = initialMode))
     val state: StateFlow<TestSetupUiState> = _state.asStateFlow()
 
     init {
         viewModelScope.launch {
             val defaultCount = settings.settings.first().defaultQuestionCount
-            val template = route.templateId?.let { templates.template(it) }
+            val routeTemplate = route.templateId?.let { templates.template(it) }
+            val companyId = route.company ?: routeTemplate?.companyId
+            val companyTemplates = if (companyId != null) {
+                templates.observeTemplates().first()
+                    .filter { it.companyId.equals(companyId, ignoreCase = true) }
+            } else {
+                listOfNotNull(routeTemplate)
+            }
+            val sections = if (companyId != null) {
+                questions.observeSections(companyId).first()
+            } else {
+                emptyList()
+            }
+            val companyName = routeTemplate?.company
+                ?.trim()
+                ?.ifBlank { companyId.orEmpty() }
+                ?: companyTemplates.firstOrNull()?.company
+                    ?.trim()
+                    ?.ifBlank { companyId.orEmpty() }
+                ?: companyId.orEmpty()
+
             _state.update {
                 it.copy(
                     loading = false,
-                    questionCount = defaultCount,
-                    template = template,
-                    company = if (mode == AttemptMode.MOCK) template?.companyId else it.company
+                    companyId = companyId,
+                    companyName = companyName,
+                    sections = sections,
+                    templates = companyTemplates,
+                    selectedSection = route.section ?: sections.firstOrNull()?.section,
+                    selectedTemplateId = route.templateId
+                        ?: companyTemplates.firstOrNull()?.id,
+                    questionCount = defaultCount.normalizedQuestionCount()
                 )
             }
         }
     }
 
-    fun changeQuestionCount(delta: Int) {
+    fun selectMode(mode: AttemptMode) {
+        _state.update { current ->
+            current.copy(
+                mode = mode,
+                selectedSection = if (mode == AttemptMode.DRILL) {
+                    current.selectedSection ?: current.sections.firstOrNull()?.section
+                } else {
+                    current.selectedSection
+                },
+                selectedTemplateId = if (mode == AttemptMode.MOCK) {
+                    current.selectedTemplateId ?: current.templates.firstOrNull()?.id
+                } else {
+                    current.selectedTemplateId
+                },
+                error = null
+            )
+        }
+    }
+
+    fun selectSection(section: String) {
+        _state.update { it.copy(selectedSection = section, error = null) }
+    }
+
+    fun selectTemplate(templateId: String) {
+        _state.update { it.copy(selectedTemplateId = templateId, error = null) }
+    }
+
+    fun selectQuestionCount(count: Int) {
         _state.update {
-            it.copy(questionCount = (it.questionCount + delta).coerceIn(5, 100))
+            it.copy(questionCount = count.normalizedQuestionCount(), error = null)
         }
     }
 
     fun start() {
         val current = _state.value
-        if (current.starting || current.attemptId != null) return
+        if (!current.canBegin) return
+        val section = if (current.mode == AttemptMode.DRILL) {
+            current.selectedSection
+        } else {
+            null
+        }
+        val templateId = if (current.mode == AttemptMode.MOCK) {
+            current.selectedTemplateId
+        } else {
+            null
+        }
+
         _state.update { it.copy(starting = true, error = null) }
         viewModelScope.launch {
             runCatching {
                 buildAttempt(
                     BuildAttemptRequest(
-                        mode = mode,
-                        company = current.company,
-                        section = current.section,
-                        templateId = route.templateId,
+                        mode = current.mode,
+                        company = current.companyId,
+                        section = section,
+                        templateId = templateId,
                         questionCount = current.questionCount
                     )
                 )
@@ -96,9 +179,19 @@ class TestSetupViewModel @Inject constructor(
                 _state.update { it.copy(starting = false, attemptId = attemptId) }
             }.onFailure { error ->
                 _state.update {
-                    it.copy(starting = false, error = error.message ?: "Could not start the test")
+                    it.copy(
+                        starting = false,
+                        error = error.message ?: "Could not start the test"
+                    )
                 }
             }
         }
+    }
+
+    private fun Int.normalizedQuestionCount(): Int =
+        if (this in QUESTION_COUNTS) this else 20
+
+    private companion object {
+        val QUESTION_COUNTS = setOf(10, 20, 40)
     }
 }

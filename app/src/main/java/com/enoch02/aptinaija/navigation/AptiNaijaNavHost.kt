@@ -21,7 +21,6 @@ import androidx.navigation.compose.rememberNavController
 import com.enoch02.aptinaija.core.designsystem.AptiNaijaTheme
 import com.enoch02.aptinaija.feature.bookmarks.BookmarksScreen
 import com.enoch02.aptinaija.feature.companies.CompaniesScreen
-import com.enoch02.aptinaija.feature.companies.CompanyDetailScreen
 import com.enoch02.aptinaija.feature.history.HistoryScreen
 import com.enoch02.aptinaija.feature.home.HomeScreen
 import com.enoch02.aptinaija.feature.results.ResultsScreen
@@ -113,23 +112,10 @@ private fun AptiNaijaNavHost(
 
         composable<CompaniesRoute> {
             CompaniesScreen(
-                onCompany = { companyId -> navController.navigate(CompanyRoute(companyId)) }
-            )
-        }
-
-        composable<CompanyRoute> {
-            CompanyDetailScreen(
-                onBack = { navController.popBackStack() },
-                onStartPractice = { companyId ->
-                    navController.navigate(TestSetupRoute(mode = "PRACTICE", company = companyId))
-                },
-                onStartDrill = { companyId, section ->
+                onCompany = { companyId ->
                     navController.navigate(
-                        TestSetupRoute(mode = "DRILL", company = companyId, section = section)
+                        TestSetupRoute(mode = "PRACTICE", company = companyId)
                     )
-                },
-                onStartTemplate = { templateId ->
-                    navController.navigate(TestSetupRoute(mode = "MOCK", templateId = templateId))
                 }
             )
         }
