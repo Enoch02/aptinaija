@@ -45,6 +45,14 @@
         <item quantity="other">%1$d providers</item>
     </plurals>
     <string name="history">History</string>
+    <string name="history_trend_label">Last 10 scores</string>
+    <string name="history_title_mock">%1$s · Mock</string>
+    <string name="history_title_drill">%1$s drill</string>
+    <string name="history_title_practice">%1$s · Practice</string>
+    <string name="history_empty_body">Finish a practice session or mock test and your scores will appear here.</string>
+    <string name="history_trend_up">Score improved</string>
+    <string name="history_trend_down">Score dropped</string>
+    <string name="history_trend_flat">Score unchanged</string>
     <string name="wrong">Wrong</string>
     <string name="wrong_answers">Wrong Answers</string>
     <string name="settings">Settings</string>

@@ -187,7 +187,10 @@ private fun AptiNaijaNavHost(
         }
 
         composable<HistoryRoute> {
-            HistoryScreen()
+            HistoryScreen(
+                onStartPractice = { navController.navigateToTopLevel(CompaniesRoute) },
+                onAttempt = { attemptId -> navController.navigate(ResultsRoute(attemptId)) }
+            )
         }
 
         composable<SettingsRoute> {
