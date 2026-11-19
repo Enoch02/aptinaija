@@ -5,11 +5,12 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
-import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.booleanPreferencesKey
+import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.enoch02.aptinaija.domain.model.AppSettings
+import com.enoch02.aptinaija.domain.model.AppThemeMode
 import com.enoch02.aptinaija.domain.repository.SettingsRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.IOException
@@ -30,7 +31,9 @@ class SettingsRepositoryImpl @Inject constructor(
         .catch { error -> if (error is IOException) emit(emptyPreferences()) else throw error }
         .map { prefs ->
             AppSettings(
-                fontScale = prefs[Keys.FONT_SCALE] ?: 1f,
+                themeMode = AppThemeMode.fromRaw(
+                    prefs[Keys.THEME_MODE] ?: AppThemeMode.AUTO.name
+                ),
                 shuffleQuestions = prefs[Keys.SHUFFLE_QUESTIONS] ?: true,
                 shuffleOptions = prefs[Keys.SHUFFLE_OPTIONS] ?: true,
                 defaultQuestionCount = prefs[Keys.DEFAULT_QUESTION_COUNT] ?: 20,
@@ -38,8 +41,8 @@ class SettingsRepositoryImpl @Inject constructor(
             )
         }
 
-    override suspend fun setFontScale(value: Float) {
-        context.settingsDataStore.edit { it[Keys.FONT_SCALE] = value }
+    override suspend fun setThemeMode(value: AppThemeMode) {
+        context.settingsDataStore.edit { it[Keys.THEME_MODE] = value.name }
     }
 
     override suspend fun setShuffleQuestions(value: Boolean) {
@@ -59,7 +62,7 @@ class SettingsRepositoryImpl @Inject constructor(
     }
 
     private object Keys {
-        val FONT_SCALE = floatPreferencesKey("font_scale")
+        val THEME_MODE = stringPreferencesKey("theme_mode")
         val SHUFFLE_QUESTIONS = booleanPreferencesKey("shuffle_questions")
         val SHUFFLE_OPTIONS = booleanPreferencesKey("shuffle_options")
         val DEFAULT_QUESTION_COUNT = intPreferencesKey("default_question_count")

@@ -120,8 +120,17 @@ data class SectionWeakness(
     val total: Int
 )
 
+enum class AppThemeMode {
+    LIGHT, DARK, AUTO;
+
+    companion object {
+        fun fromRaw(value: String): AppThemeMode =
+            entries.firstOrNull { it.name.equals(value, ignoreCase = true) } ?: AUTO
+    }
+}
+
 data class AppSettings(
-    val fontScale: Float = 1f,
+    val themeMode: AppThemeMode = AppThemeMode.AUTO,
     val shuffleQuestions: Boolean = true,
     val shuffleOptions: Boolean = true,
     val defaultQuestionCount: Int = 20,

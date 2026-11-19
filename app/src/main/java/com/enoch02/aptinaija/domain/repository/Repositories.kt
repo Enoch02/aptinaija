@@ -1,6 +1,7 @@
 package com.enoch02.aptinaija.domain.repository
 
 import com.enoch02.aptinaija.domain.model.AppSettings
+import com.enoch02.aptinaija.domain.model.AppThemeMode
 import com.enoch02.aptinaija.domain.model.Attempt
 import com.enoch02.aptinaija.domain.model.AttemptItem
 import com.enoch02.aptinaija.domain.model.AttemptSession
@@ -48,7 +49,7 @@ interface BookmarkRepository {
 
 interface SettingsRepository {
     val settings: Flow<AppSettings>
-    suspend fun setFontScale(value: Float)
+    suspend fun setThemeMode(value: AppThemeMode)
     suspend fun setShuffleQuestions(value: Boolean)
     suspend fun setShuffleOptions(value: Boolean)
     suspend fun setDefaultQuestionCount(value: Int)

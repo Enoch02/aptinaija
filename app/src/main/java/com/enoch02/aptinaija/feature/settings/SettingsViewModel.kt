@@ -3,6 +3,7 @@ package com.enoch02.aptinaija.feature.settings
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.enoch02.aptinaija.domain.model.AppSettings
+import com.enoch02.aptinaija.domain.model.AppThemeMode
 import com.enoch02.aptinaija.domain.repository.SettingsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -22,8 +23,8 @@ class SettingsViewModel @Inject constructor(
         initialValue = AppSettings()
     )
 
-    fun setFontScale(value: Float) {
-        viewModelScope.launch { repository.setFontScale(value) }
+    fun setThemeMode(value: AppThemeMode) {
+        viewModelScope.launch { repository.setThemeMode(value) }
     }
 
     fun setShuffleQuestions(value: Boolean) {

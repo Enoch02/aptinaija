@@ -1,6 +1,7 @@
 package com.enoch02.aptinaija.domain.usecase
 
 import com.enoch02.aptinaija.domain.model.AppSettings
+import com.enoch02.aptinaija.domain.model.AppThemeMode
 import com.enoch02.aptinaija.domain.model.Attempt
 import com.enoch02.aptinaija.domain.model.AttemptItem
 import com.enoch02.aptinaija.domain.model.AttemptMode
@@ -167,7 +168,7 @@ class BuildAttemptUseCaseTest {
             AppSettings(shuffleQuestions = false, shuffleOptions = false)
         )
 
-        override suspend fun setFontScale(value: Float) = Unit
+        override suspend fun setThemeMode(value: AppThemeMode) = Unit
 
         override suspend fun setShuffleQuestions(value: Boolean) = Unit
 

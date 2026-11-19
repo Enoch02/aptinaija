@@ -1,5 +1,6 @@
 package com.enoch02.aptinaija.navigation
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -19,6 +20,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.enoch02.aptinaija.core.designsystem.AptiNaijaTheme
+import com.enoch02.aptinaija.domain.model.AppThemeMode
 import com.enoch02.aptinaija.domain.model.AttemptMode
 import com.enoch02.aptinaija.feature.bookmarks.BookmarksScreen
 import com.enoch02.aptinaija.feature.companies.CompaniesScreen
@@ -35,8 +37,8 @@ import com.enoch02.aptinaija.feature.wronganswers.WrongAnswersScreen
 @Composable
 fun AptiNaijaApp(navController: NavHostController = rememberNavController()) {
     val settingsViewModel: SettingsViewModel =
-        androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel(
-            checkNotNull<androidx.lifecycle.ViewModelStoreOwner>(LocalViewModelStoreOwner.current) {
+        hiltViewModel(
+            checkNotNull(LocalViewModelStoreOwner.current) {
                 "No ViewModelStoreOwner was provided via LocalViewModelStoreOwner"
             },
             null
@@ -50,7 +52,13 @@ fun AptiNaijaApp(navController: NavHostController = rememberNavController()) {
     val currentDestination = backStackEntry?.destination
     val topLevelDestination = currentDestination.topLevelDestination()
 
-    AptiNaijaTheme(fontScale = settings.fontScale) {
+    val darkTheme = when (settings.themeMode) {
+        AppThemeMode.LIGHT -> false
+        AppThemeMode.DARK -> true
+        AppThemeMode.AUTO -> isSystemInDarkTheme()
+    }
+
+    AptiNaijaTheme(darkTheme = darkTheme) {
         Scaffold(
             contentWindowInsets = WindowInsets(0, 0, 0, 0),
             topBar = {
