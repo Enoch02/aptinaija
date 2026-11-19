@@ -155,7 +155,11 @@ private fun AptiNaijaNavHost(
                                 AttemptMode.MOCK -> null
                                 else -> attempt.totalQuestions
                             }
-                        )
+                        ),
+                        builder = {
+                            // Drop the finished result so back never returns to a stale attempt.
+                            popUpTo<ResultsRoute> { inclusive = true }
+                        }
                     )
                 },
                 onReview = { attemptId -> navController.navigate(ReviewRoute(attemptId)) }
