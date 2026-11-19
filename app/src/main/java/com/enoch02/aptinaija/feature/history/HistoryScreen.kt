@@ -37,6 +37,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -204,7 +205,9 @@ private fun AttemptListItem(entry: HistoryEntry, onClick: () -> Unit) {
             Text(
                 text = title,
                 style = MaterialTheme.typography.titleSmall,
-                modifier = Modifier.testTag("history_title_${entry.id}").padding(start = 4.dp)
+                modifier = Modifier
+                    .testTag("history_title_${entry.id}")
+                    .padding(start = 4.dp)
             )
         }
         Text(
@@ -266,7 +269,8 @@ private fun HistoryEmptyState(onStartPractice: () -> Unit) {
         Text(
             text = stringResource(R.string.history_empty_body),
             style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            textAlign = TextAlign.Center
         )
         Button(
             onClick = onStartPractice,
