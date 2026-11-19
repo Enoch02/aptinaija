@@ -19,6 +19,7 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.enoch02.aptinaija", appContext.packageName)
+        // Debug builds add an applicationIdSuffix, so compare the base id.
+        assertEquals("com.enoch02.aptinaija", appContext.packageName.removeSuffix(".debug"))
     }
 }

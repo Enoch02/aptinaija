@@ -23,7 +23,9 @@ data class ResultsUiState(
     val summary: ScoreSummary? = null,
     val attempt: Attempt? = null,
     val timeLimitSeconds: Long? = null,
-    val error: ResultsError? = null
+    val error: ResultsError? = null,
+    /** A wrong-answer retest has no company, so "Try again" cannot rebuild a setup. */
+    val showTryAgain: Boolean = true
 )
 
 @HiltViewModel
@@ -33,7 +35,8 @@ class ResultsViewModel @Inject constructor(
     private val scoreAttempt: ScoreAttemptUseCase
 ) : ViewModel() {
 
-    private val attemptId: String = savedStateHandle.toRoute<ResultsRoute>().attemptId
+    private val route = savedStateHandle.toRoute<ResultsRoute>()
+    private val attemptId: String = route.attemptId
     private val _state = MutableStateFlow(ResultsUiState())
     val state: StateFlow<ResultsUiState> = _state.asStateFlow()
 
@@ -41,8 +44,13 @@ class ResultsViewModel @Inject constructor(
         viewModelScope.launch {
             val summary = scoreAttempt(attemptId)
             val attempt = attempts.get(attemptId)?.attempt
+            val showTryAgain = !route.fromWrongAnswers
             _state.value = if (summary == null) {
-                ResultsUiState(loading = false, error = ResultsError.MISSING_ATTEMPT)
+                ResultsUiState(
+                    loading = false,
+                    error = ResultsError.MISSING_ATTEMPT,
+                    showTryAgain = showTryAgain
+                )
             } else {
                 ResultsUiState(
                     loading = false,
@@ -50,7 +58,8 @@ class ResultsViewModel @Inject constructor(
                     attempt = attempt,
                     timeLimitSeconds = attempt?.deadlineAt?.let { deadline ->
                         ((deadline - attempt.startedAt) / 1000L).coerceAtLeast(0L)
-                    }
+                    },
+                    showTryAgain = showTryAgain
                 )
             }
         }

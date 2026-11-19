@@ -19,6 +19,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.toRoute
 import com.enoch02.aptinaija.core.designsystem.AptiNaijaTheme
 import com.enoch02.aptinaija.domain.model.AppThemeMode
 import com.enoch02.aptinaija.domain.model.AttemptMode
@@ -138,12 +139,21 @@ private fun AptiNaijaNavHost(
             )
         }
 
-        composable<TestRoute> {
+        composable<TestRoute> { entry ->
+            val fromWrongAnswers = entry.toRoute<TestRoute>().fromWrongAnswers
             TestScreen(
                 onBack = { navController.popBackStack() },
                 onFinished = { attemptId ->
-                    navController.navigate(ResultsRoute(attemptId)) {
-                        popUpTo<TestSetupRoute> { inclusive = true }
+                    navController.navigate(
+                        ResultsRoute(attemptId, fromWrongAnswers = fromWrongAnswers)
+                    ) {
+                        // A wrong-bank retest has no setup entry to pop; pop the
+                        // finished test itself so back never reopens it.
+                        if (fromWrongAnswers) {
+                            popUpTo<TestRoute> { inclusive = true }
+                        } else {
+                            popUpTo<TestSetupRoute> { inclusive = true }
+                        }
                     }
                 }
             )
@@ -179,7 +189,12 @@ private fun AptiNaijaNavHost(
         }
 
         composable<WrongAnswersRoute> {
-            WrongAnswersScreen()
+            WrongAnswersScreen(
+                onRetest = { attemptId ->
+                    navController.navigate(TestRoute(attemptId, fromWrongAnswers = true))
+                },
+                onStartPractice = { navController.navigateToTopLevel(CompaniesRoute) }
+            )
         }
 
         composable<BookmarksRoute> {

@@ -62,6 +62,40 @@ class BuildAttemptUseCaseTest {
     }
 
     @Test
+    fun wrongBankRetest_buildsPracticeAttemptFromUnresolvedQuestions() = runBlocking {
+        val questions = RecordingQuestionRepository()
+        val attempts = FakeAttemptRepository(
+            wrongQuestions = listOf(
+                testQuestion("WRONG-1"),
+                testQuestion("WRONG-2")
+            )
+        )
+        val useCase = BuildAttemptUseCase(
+            questions = questions,
+            templates = FakeTestRepository(),
+            attempts = attempts,
+            optionShuffler = OptionShuffler(),
+            settings = FakeSettingsRepository()
+        )
+
+        val attemptId = useCase(
+            BuildAttemptRequest(mode = AttemptMode.PRACTICE, wrongBankOnly = true)
+        )
+
+        assertEquals(emptyList<QuestionQuery>(), questions.queries)
+        assertEquals(attemptId, attempts.created?.first?.id)
+        assertEquals(AttemptMode.PRACTICE, attempts.created?.first?.mode)
+        assertEquals(
+            listOf("WRONG-1", "WRONG-2"),
+            attempts.created?.second?.map { it.question.id }
+        )
+        assertEquals(
+            listOf(0, 1),
+            attempts.created?.second?.map { it.position }
+        )
+    }
+
+    @Test
     fun practiceTest_usesTheRequestedCompanyId() = runBlocking {
         val questions = RecordingQuestionRepository()
         val useCase = BuildAttemptUseCase(
@@ -87,6 +121,17 @@ class BuildAttemptUseCaseTest {
         val company: String?,
         val section: String?,
         val limit: Int
+    )
+
+    private fun testQuestion(id: String) = Question(
+        id = id,
+        company = "SEP",
+        section = "Numerical Reasoning",
+        difficulty = Difficulty.EASY,
+        stem = "Question $id",
+        options = listOf("A", "B"),
+        answerIndex = 0,
+        explanation = "Because"
     )
 
     private class RecordingQuestionRepository : QuestionRepository {
@@ -134,8 +179,16 @@ class BuildAttemptUseCaseTest {
         override suspend fun template(id: String): TestTemplate? = template
     }
 
-    private class FakeAttemptRepository : AttemptRepository {
-        override suspend fun create(attempt: Attempt, items: List<AttemptItem>): String = attempt.id
+    private class FakeAttemptRepository(
+        private val wrongQuestions: List<Question> = emptyList()
+    ) : AttemptRepository {
+        var created: Pair<Attempt, List<AttemptItem>>? = null
+            private set
+
+        override suspend fun create(attempt: Attempt, items: List<AttemptItem>): String {
+            created = attempt to items
+            return attempt.id
+        }
 
         override suspend fun get(id: String): AttemptSession? = null
 
@@ -158,7 +211,7 @@ class BuildAttemptUseCaseTest {
         override suspend fun sectionScores(attemptId: String): List<SectionScore> =
             emptyList()
 
-        override fun observeWrongQuestions(): Flow<List<Question>> = flowOf(emptyList())
+        override fun observeWrongQuestions(): Flow<List<Question>> = flowOf(wrongQuestions)
 
         override suspend fun resolveWrong(questionId: String) = Unit
     }

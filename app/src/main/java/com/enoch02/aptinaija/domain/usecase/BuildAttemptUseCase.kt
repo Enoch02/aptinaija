@@ -19,7 +19,9 @@ data class BuildAttemptRequest(
     val company: String? = null,
     val section: String? = null,
     val templateId: String? = null,
-    val questionCount: Int = 20
+    val questionCount: Int = 20,
+    /** FR-09: draw a practice attempt from the unresolved wrong-answer bank. */
+    val wrongBankOnly: Boolean = false
 )
 
 class BuildAttemptUseCase @Inject constructor(
@@ -35,15 +37,20 @@ class BuildAttemptUseCase @Inject constructor(
         val now = System.currentTimeMillis()
         val seed = Random.nextLong()
 
-        val selected = when (request.mode) {
-            AttemptMode.MOCK -> mockQuestions(request, preferences.shuffleQuestions)
-            AttemptMode.DRILL -> questions.randomQuestions(
+        val selected = when {
+            request.wrongBankOnly -> attempts.observeWrongQuestions().first()
+                .ordered(preferences.shuffleQuestions)
+                .map { it.section to it }
+
+            request.mode == AttemptMode.MOCK -> mockQuestions(request, preferences.shuffleQuestions)
+
+            request.mode == AttemptMode.DRILL -> questions.randomQuestions(
                 company = request.company,
                 section = request.section,
                 limit = request.questionCount
             ).ordered(preferences.shuffleQuestions).map { it.section to it }
 
-            AttemptMode.PRACTICE -> questions.randomQuestions(
+            else -> questions.randomQuestions(
                 company = request.company,
                 section = null,
                 limit = request.questionCount

@@ -98,6 +98,14 @@ class ResultsContentTest {
     }
 
     @Test
+    fun wrongAnswerRetest_hidesTryAgainButKeepsReview() {
+        setResults(passedState().copy(showTryAgain = false))
+
+        composeRule.onNodeWithTag("results_try_again").assertDoesNotExist()
+        composeRule.onNodeWithTag("results_review").assertIsDisplayed()
+    }
+
+    @Test
     fun largeFontScale_keepsControlsReachableByScrolling() {
         setResults(passedState(), fontScale = 2f)
 

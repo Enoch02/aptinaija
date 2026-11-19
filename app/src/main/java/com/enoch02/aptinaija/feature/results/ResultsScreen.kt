@@ -138,14 +138,16 @@ private fun ResultsBody(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                OutlinedButton(
-                    onClick = onTryAgain,
-                    modifier = Modifier
-                        .weight(1f)
-                        .heightIn(min = 48.dp)
-                        .testTag("results_try_again")
-                ) {
-                    Text(stringResource(R.string.results_try_again))
+                if (state.showTryAgain) {
+                    OutlinedButton(
+                        onClick = onTryAgain,
+                        modifier = Modifier
+                            .weight(1f)
+                            .heightIn(min = 48.dp)
+                            .testTag("results_try_again")
+                    ) {
+                        Text(stringResource(R.string.results_try_again))
+                    }
                 }
                 Button(
                     onClick = onReview,
