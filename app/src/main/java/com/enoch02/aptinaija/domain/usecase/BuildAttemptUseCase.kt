@@ -6,6 +6,7 @@ import com.enoch02.aptinaija.domain.model.AttemptMode
 import com.enoch02.aptinaija.domain.model.AttemptStatus
 import com.enoch02.aptinaija.domain.model.Question
 import com.enoch02.aptinaija.domain.repository.AttemptRepository
+import com.enoch02.aptinaija.domain.repository.BookmarkRepository
 import com.enoch02.aptinaija.domain.repository.QuestionRepository
 import com.enoch02.aptinaija.domain.repository.SettingsRepository
 import com.enoch02.aptinaija.domain.repository.TestRepository
@@ -21,13 +22,16 @@ data class BuildAttemptRequest(
     val templateId: String? = null,
     val questionCount: Int = 20,
     /** FR-09: draw a practice attempt from the unresolved wrong-answer bank. */
-    val wrongBankOnly: Boolean = false
+    val wrongBankOnly: Boolean = false,
+    /** FR-10: draw a practice attempt from bookmarked questions. */
+    val bookmarksOnly: Boolean = false
 )
 
 class BuildAttemptUseCase @Inject constructor(
     private val questions: QuestionRepository,
     private val templates: TestRepository,
     private val attempts: AttemptRepository,
+    private val bookmarks: BookmarkRepository,
     private val optionShuffler: OptionShuffler,
     private val settings: SettingsRepository
 ) {
@@ -39,6 +43,10 @@ class BuildAttemptUseCase @Inject constructor(
 
         val selected = when {
             request.wrongBankOnly -> attempts.observeWrongQuestions().first()
+                .ordered(preferences.shuffleQuestions)
+                .map { it.section to it }
+
+            request.bookmarksOnly -> bookmarks.observeBookmarks().first()
                 .ordered(preferences.shuffleQuestions)
                 .map { it.section to it }
 

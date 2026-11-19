@@ -24,7 +24,7 @@ data class ResultsUiState(
     val attempt: Attempt? = null,
     val timeLimitSeconds: Long? = null,
     val error: ResultsError? = null,
-    /** A wrong-answer retest has no company, so "Try again" cannot rebuild a setup. */
+    /** Retests have no company, so "Try again" cannot rebuild a setup. */
     val showTryAgain: Boolean = true
 )
 
@@ -44,7 +44,7 @@ class ResultsViewModel @Inject constructor(
         viewModelScope.launch {
             val summary = scoreAttempt(attemptId)
             val attempt = attempts.get(attemptId)?.attempt
-            val showTryAgain = !route.fromWrongAnswers
+            val showTryAgain = !route.hideTryAgain
             _state.value = if (summary == null) {
                 ResultsUiState(
                     loading = false,

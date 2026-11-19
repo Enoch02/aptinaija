@@ -16,6 +16,7 @@ import com.enoch02.aptinaija.domain.model.TemplateSection
 import com.enoch02.aptinaija.domain.model.TestDefaults
 import com.enoch02.aptinaija.domain.model.TestTemplate
 import com.enoch02.aptinaija.domain.repository.AttemptRepository
+import com.enoch02.aptinaija.domain.repository.BookmarkRepository
 import com.enoch02.aptinaija.domain.repository.QuestionRepository
 import com.enoch02.aptinaija.domain.repository.SettingsRepository
 import com.enoch02.aptinaija.domain.repository.TestRepository
@@ -49,6 +50,7 @@ class BuildAttemptUseCaseTest {
             questions = questions,
             templates = templates,
             attempts = attempts,
+            bookmarks = FakeBookmarkRepository(),
             optionShuffler = OptionShuffler(),
             settings = FakeSettingsRepository()
         )
@@ -74,6 +76,7 @@ class BuildAttemptUseCaseTest {
             questions = questions,
             templates = FakeTestRepository(),
             attempts = attempts,
+            bookmarks = FakeBookmarkRepository(),
             optionShuffler = OptionShuffler(),
             settings = FakeSettingsRepository()
         )
@@ -96,12 +99,38 @@ class BuildAttemptUseCaseTest {
     }
 
     @Test
+    fun bookmarkRetest_buildsPracticeAttemptFromBookmarkedQuestions() = runBlocking {
+        val questions = RecordingQuestionRepository()
+        val attempts = FakeAttemptRepository()
+        val useCase = BuildAttemptUseCase(
+            questions = questions,
+            templates = FakeTestRepository(),
+            attempts = attempts,
+            bookmarks = FakeBookmarkRepository(
+                listOf(testQuestion("BM-1"), testQuestion("BM-2"))
+            ),
+            optionShuffler = OptionShuffler(),
+            settings = FakeSettingsRepository()
+        )
+
+        useCase(BuildAttemptRequest(mode = AttemptMode.PRACTICE, bookmarksOnly = true))
+
+        assertEquals(emptyList<QuestionQuery>(), questions.queries)
+        assertEquals(AttemptMode.PRACTICE, attempts.created?.first?.mode)
+        assertEquals(
+            listOf("BM-1", "BM-2"),
+            attempts.created?.second?.map { it.question.id }
+        )
+    }
+
+    @Test
     fun practiceTest_usesTheRequestedCompanyId() = runBlocking {
         val questions = RecordingQuestionRepository()
         val useCase = BuildAttemptUseCase(
             questions = questions,
             templates = FakeTestRepository(),
             attempts = FakeAttemptRepository(),
+            bookmarks = FakeBookmarkRepository(),
             optionShuffler = OptionShuffler(),
             settings = FakeSettingsRepository()
         )
@@ -214,6 +243,16 @@ class BuildAttemptUseCaseTest {
         override fun observeWrongQuestions(): Flow<List<Question>> = flowOf(wrongQuestions)
 
         override suspend fun resolveWrong(questionId: String) = Unit
+    }
+
+    private class FakeBookmarkRepository(
+        private val bookmarked: List<Question> = emptyList()
+    ) : BookmarkRepository {
+        override fun observeBookmarks(): Flow<List<Question>> = flowOf(bookmarked)
+        override fun observeCount(): Flow<Int> = flowOf(bookmarked.size)
+        override fun observeIsBookmarked(questionId: String): Flow<Boolean> =
+            flowOf(bookmarked.any { it.id == questionId })
+        override suspend fun toggle(questionId: String) = Unit
     }
 
     private class FakeSettingsRepository : SettingsRepository {

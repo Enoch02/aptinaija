@@ -140,16 +140,14 @@ private fun AptiNaijaNavHost(
         }
 
         composable<TestRoute> { entry ->
-            val fromWrongAnswers = entry.toRoute<TestRoute>().fromWrongAnswers
+            val hideTryAgain = entry.toRoute<TestRoute>().hideTryAgain
             TestScreen(
                 onBack = { navController.popBackStack() },
                 onFinished = { attemptId ->
-                    navController.navigate(
-                        ResultsRoute(attemptId, fromWrongAnswers = fromWrongAnswers)
-                    ) {
-                        // A wrong-bank retest has no setup entry to pop; pop the
-                        // finished test itself so back never reopens it.
-                        if (fromWrongAnswers) {
+                    navController.navigate(ResultsRoute(attemptId, hideTryAgain = hideTryAgain)) {
+                        // A retest has no setup entry to pop; pop the finished
+                        // test itself so back never reopens it.
+                        if (hideTryAgain) {
                             popUpTo<TestRoute> { inclusive = true }
                         } else {
                             popUpTo<TestSetupRoute> { inclusive = true }
@@ -191,14 +189,20 @@ private fun AptiNaijaNavHost(
         composable<WrongAnswersRoute> {
             WrongAnswersScreen(
                 onRetest = { attemptId ->
-                    navController.navigate(TestRoute(attemptId, fromWrongAnswers = true))
+                    navController.navigate(TestRoute(attemptId, hideTryAgain = true))
                 },
                 onStartPractice = { navController.navigateToTopLevel(CompaniesRoute) }
             )
         }
 
         composable<BookmarksRoute> {
-            BookmarksScreen(onBack = { navController.popBackStack() })
+            BookmarksScreen(
+                onBack = { navController.popBackStack() },
+                onRetest = { attemptId ->
+                    navController.navigate(TestRoute(attemptId, hideTryAgain = true))
+                },
+                onStartPractice = { navController.navigateToTopLevel(CompaniesRoute) }
+            )
         }
 
         composable<HistoryRoute> {

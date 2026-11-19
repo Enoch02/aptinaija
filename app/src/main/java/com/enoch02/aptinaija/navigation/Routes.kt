@@ -20,15 +20,15 @@ data class TestSetupRoute(
 @Serializable
 data class TestRoute(
     val attemptId: String,
-    /** Set when the test was started from the wrong-answer bank (FR-09). */
-    val fromWrongAnswers: Boolean = false
+    /** Retests have no setup screen, so their Results must not offer "Try again". */
+    val hideTryAgain: Boolean = false
 )
 
 @Serializable
 data class ResultsRoute(
     val attemptId: String,
-    /** Wrong-answer retests have no company to rebuild a setup screen from. */
-    val fromWrongAnswers: Boolean = false
+    /** Retests have no company to rebuild a setup screen from. */
+    val hideTryAgain: Boolean = false
 )
 
 @Serializable
