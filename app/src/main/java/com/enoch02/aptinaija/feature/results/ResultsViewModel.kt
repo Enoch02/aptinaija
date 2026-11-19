@@ -16,11 +16,14 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
+enum class ResultsError { MISSING_ATTEMPT }
+
 data class ResultsUiState(
     val loading: Boolean = true,
     val summary: ScoreSummary? = null,
     val attempt: Attempt? = null,
-    val error: String? = null
+    val timeLimitSeconds: Long? = null,
+    val error: ResultsError? = null
 )
 
 @HiltViewModel
@@ -39,9 +42,16 @@ class ResultsViewModel @Inject constructor(
             val summary = scoreAttempt(attemptId)
             val attempt = attempts.get(attemptId)?.attempt
             _state.value = if (summary == null) {
-                ResultsUiState(loading = false, error = "This attempt no longer exists.")
+                ResultsUiState(loading = false, error = ResultsError.MISSING_ATTEMPT)
             } else {
-                ResultsUiState(loading = false, summary = summary, attempt = attempt)
+                ResultsUiState(
+                    loading = false,
+                    summary = summary,
+                    attempt = attempt,
+                    timeLimitSeconds = attempt?.deadlineAt?.let { deadline ->
+                        ((deadline - attempt.startedAt) / 1000L).coerceAtLeast(0L)
+                    }
+                )
             }
         }
     }

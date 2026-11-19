@@ -110,7 +110,7 @@ class TestSetupViewModel @Inject constructor(
                     selectedSection = route.section ?: sections.firstOrNull()?.section,
                     selectedTemplateId = route.templateId
                         ?: companyTemplates.firstOrNull()?.id,
-                    questionCount = defaultCount.normalizedQuestionCount()
+                    questionCount = (route.questionCount ?: defaultCount).normalizedQuestionCount()
                 )
             }
         }

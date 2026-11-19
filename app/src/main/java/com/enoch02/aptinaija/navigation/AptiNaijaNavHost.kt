@@ -19,6 +19,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.enoch02.aptinaija.core.designsystem.AptiNaijaTheme
+import com.enoch02.aptinaija.domain.model.AttemptMode
 import com.enoch02.aptinaija.feature.bookmarks.BookmarksScreen
 import com.enoch02.aptinaija.feature.companies.CompaniesScreen
 import com.enoch02.aptinaija.feature.history.HistoryScreen
@@ -142,13 +143,22 @@ private fun AptiNaijaNavHost(
 
         composable<ResultsRoute> {
             ResultsScreen(
-                onReview = { attemptId -> navController.navigate(ReviewRoute(attemptId)) },
-                onHome = {
-                    navController.navigate(HomeRoute) {
-                        popUpTo<HomeRoute> { inclusive = true }
-                        launchSingleTop = true
-                    }
-                }
+                onBack = { navController.popBackStack() },
+                onTryAgain = { attempt ->
+                    navController.navigate(
+                        TestSetupRoute(
+                            mode = attempt.mode.name,
+                            company = attempt.company,
+                            section = attempt.section,
+                            templateId = attempt.templateId,
+                            questionCount = when (attempt.mode) {
+                                AttemptMode.MOCK -> null
+                                else -> attempt.totalQuestions
+                            }
+                        )
+                    )
+                },
+                onReview = { attemptId -> navController.navigate(ReviewRoute(attemptId)) }
             )
         }
 

@@ -64,6 +64,15 @@
     <string name="no_weak_sections">Answer some questions to see your weakest sections.</string>
     <string name="drill_this">Drill this</string>
     <string name="ad_slot">Ad slot · reserved 50dp</string>
+    <string name="results">Results</string>
+    <string name="results_passed">Pass · benchmark %1$d%%</string>
+    <string name="results_failed">Fail · benchmark %1$d%%</string>
+    <string name="results_score_untimed">%1$d of %2$d correct · %3$s used</string>
+    <string name="results_score_timed">%1$d of %2$d correct · %3$s of %4$s used</string>
+    <string name="results_try_again">Try again</string>
+    <string name="results_review_answers">Review answers</string>
+    <string name="results_missing_attempt">This attempt no longer exists.</string>
+    <string name="results_no_sections">No section breakdown is available for this attempt.</string>
     <string name="mode_practice">Practice</string>
     <string name="mode_drill">Section drill</string>
     <string name="mode_mock">Mock test</string>

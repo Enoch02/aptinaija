@@ -2,7 +2,6 @@ package com.enoch02.aptinaija.feature.home
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,11 +24,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.CornerRadius
-import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.StrokeCap
-import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -38,6 +33,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.enoch02.aptinaija.R
+import com.enoch02.aptinaija.core.ui.components.AdSlot
 import com.enoch02.aptinaija.core.ui.components.LoadingState
 import com.enoch02.aptinaija.domain.model.Attempt
 import com.enoch02.aptinaija.domain.model.AttemptMode
@@ -134,8 +130,8 @@ internal fun HomeContent(
         AdSlot(
             modifier = Modifier
                 .padding(horizontal = 16.dp)
-                .padding(bottom = 8.dp)
-                .testTag("home_ad_slot")
+                .padding(bottom = 8.dp),
+            testTag = "home_ad_slot"
         )
     }
 }
@@ -284,36 +280,6 @@ private fun EmptyWeakSectionsCard() {
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(16.dp)
-        )
-    }
-}
-
-@Composable
-private fun AdSlot(modifier: Modifier = Modifier) {
-    val outline = MaterialTheme.colorScheme.outlineVariant
-
-    Box(
-        modifier = modifier
-            .fillMaxWidth()
-            .height(50.dp)
-            .drawBehind {
-                drawRoundRect(
-                    color = outline,
-                    cornerRadius = CornerRadius(4.dp.toPx()),
-                    style = Stroke(
-                        width = 1.dp.toPx(),
-                        pathEffect = PathEffect.dashPathEffect(
-                            floatArrayOf(4.dp.toPx(), 4.dp.toPx())
-                        )
-                    )
-                )
-            },
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = stringResource(R.string.ad_slot),
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
         )
     }
 }

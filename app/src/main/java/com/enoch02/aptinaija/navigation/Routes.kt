@@ -13,7 +13,8 @@ data class TestSetupRoute(
     val mode: String,
     val company: String? = null,
     val section: String? = null,
-    val templateId: String? = null
+    val templateId: String? = null,
+    val questionCount: Int? = null
 )
 
 @Serializable
