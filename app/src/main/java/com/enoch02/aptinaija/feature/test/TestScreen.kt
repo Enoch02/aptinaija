@@ -11,7 +11,6 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -33,15 +32,10 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.text.InlineTextContent
-import androidx.compose.foundation.text.appendInlineContent
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Bookmark
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.ExpandLess
-import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.Update
 import androidx.compose.material3.AlertDialog
@@ -64,8 +58,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
@@ -77,11 +69,6 @@ import androidx.compose.ui.semantics.paneTitle
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.semantics.stateDescription
-import androidx.compose.ui.text.Placeholder
-import androidx.compose.ui.text.PlaceholderVerticalAlign
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -90,12 +77,13 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.enoch02.aptinaija.R
 import com.enoch02.aptinaija.core.designsystem.AptiNaijaTheme
+import com.enoch02.aptinaija.core.ui.components.AnswerDeltaRow
+import com.enoch02.aptinaija.core.ui.components.AnswerReveal
 import com.enoch02.aptinaija.core.ui.components.LoadingState
+import com.enoch02.aptinaija.core.ui.components.QuestionCard
+import com.enoch02.aptinaija.core.ui.components.QuestionOption
 import com.enoch02.aptinaija.core.ui.components.MessageState
 import com.enoch02.aptinaija.domain.model.AttemptMode
-
-private const val MARK_YOUR_ANSWER = "your_answer_mark"
-private const val MARK_CORRECT_ANSWER = "correct_answer_mark"
 
 @Composable
 fun TestScreen(
@@ -377,323 +365,53 @@ private fun QuestionBody(
     onSelectOption: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Column(
+    QuestionCard(
+        meta = stringResource(
+            R.string.question_meta,
+            question.position + 1,
+            state.total,
+            question.section
+        ),
+        passage = question.passage,
+        stem = question.stem,
+        options = question.options.mapIndexed { index, option ->
+            val selected = option.originalIndex == question.selectedOriginal
+            val reveal = when {
+                !state.revealFeedback -> null
+                option.originalIndex == question.correctOriginal -> AnswerReveal.CORRECT
+                selected -> AnswerReveal.WRONG
+                else -> null
+            }
+            QuestionOption(
+                letter = ('A' + index).toString(),
+                text = option.text,
+                value = option.originalIndex,
+                selected = selected,
+                reveal = reveal
+            )
+        },
+        onSelectOption = onSelectOption,
+        interactive = state.canChangeAnswer,
         modifier = modifier
             .verticalScroll(rememberScrollState())
             .testTag("test_content")
             .padding(horizontal = 16.dp)
             .padding(top = 16.dp, bottom = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        Text(
-            text = stringResource(
-                R.string.question_meta,
-                question.position + 1,
-                state.total,
-                question.section
-            ),
-            style = MaterialTheme.typography.labelMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.testTag("test_meta")
-        )
-
-        question.passage?.let { passage ->
-            PassageBlock(passage = passage)
-        }
-
-        Text(
-            text = question.stem,
-            style = stemStyle(question.stem),
-            modifier = Modifier.testTag("test_stem")
-        )
-
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .testTag("test_options"),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            question.options.forEachIndexed { index, option ->
-                val selected = option.originalIndex == question.selectedOriginal
-                val reveal = when {
-                    !state.revealFeedback -> null
-                    option.originalIndex == question.correctOriginal -> AnswerReveal.CORRECT
-                    selected -> AnswerReveal.WRONG
-                    else -> null
-                }
-
-                AnswerOptionRow(
-                    letter = ('A' + index).toString(),
-                    text = option.text,
-                    selected = selected,
-                    reveal = reveal,
-                    interactive = state.canChangeAnswer,
-                    onClick = { onSelectOption(option.originalIndex) },
-                    modifier = Modifier.testTag("test_option_$index")
+        footer = if (state.revealFeedback) {
+            {
+                AnswerDeltaRow(
+                    selectedLetter = optionLetter(question, question.selectedOriginal),
+                    correctLetter = optionLetter(question, question.correctOriginal),
+                    answeredCorrectly = question.selectedOriginal == question.correctOriginal,
+                    explanation = question.explanation,
+                    testTag = "test_feedback",
+                    lineTestTag = "test_feedback_line"
                 )
             }
-        }
-
-        if (state.revealFeedback) {
-            FeedbackBlock(question = question)
-        }
-    }
-}
-
-private enum class AnswerReveal { CORRECT, WRONG }
-
-@Composable
-private fun AnswerOptionRow(
-    letter: String,
-    text: String,
-    selected: Boolean,
-    reveal: AnswerReveal?,
-    interactive: Boolean,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    val colors = MaterialTheme.colorScheme
-    val shape = MaterialTheme.shapes.medium
-
-    val container: Color
-    val contentColor: Color
-    when (reveal) {
-        AnswerReveal.CORRECT -> {
-            container = colors.primaryContainer
-            contentColor = colors.onPrimaryContainer
-        }
-
-        AnswerReveal.WRONG -> {
-            container = colors.errorContainer
-            contentColor = colors.onErrorContainer
-        }
-
-        null -> when {
-            selected -> {
-                container = colors.primaryContainer
-                contentColor = colors.onPrimaryContainer
-            }
-
-            else -> {
-                container = colors.surfaceContainerLow
-                contentColor = colors.onSurface
-            }
-        }
-    }
-
-    val border = if (reveal == null && selected) {
-        BorderStroke(1.dp, colors.outline)
-    } else {
-        null
-    }
-
-    val letterBorder = when (reveal) {
-        AnswerReveal.CORRECT -> colors.primary
-        AnswerReveal.WRONG -> colors.error
-        null -> if (selected) colors.primary else colors.outline
-    }
-    val letterFilled = reveal == null && selected
-
-    // Revealed rows stay readable, so they keep semantics without a click action.
-    val interaction = if (interactive) {
-        Modifier.selectable(
-            selected = selected,
-            role = Role.RadioButton,
-            onClick = onClick
-        )
-    } else {
-        Modifier.semantics(mergeDescendants = true) {
-            role = Role.RadioButton
-            this.selected = selected
-        }
-    }
-
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .clip(shape)
-            .then(interaction)
-            .background(container, shape)
-            .then(if (border != null) Modifier.border(border, shape) else Modifier)
-            .heightIn(min = 48.dp)
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Box(
-            modifier = Modifier
-                .size(24.dp)
-                .clip(CircleShape)
-                .then(
-                    if (letterFilled) {
-                        Modifier.background(colors.primary)
-                    } else {
-                        Modifier.border(1.dp, letterBorder, CircleShape)
-                    }
-                ),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                text = letter,
-                style = MaterialTheme.typography.labelLarge,
-                color = if (letterFilled) colors.onPrimary else contentColor
-            )
-        }
-
-        Spacer(modifier = Modifier.width(12.dp))
-
-        Text(
-            text = text,
-            style = MaterialTheme.typography.bodyLarge,
-            color = contentColor,
-            modifier = Modifier.weight(1f)
-        )
-
-        if (reveal != null) {
-            Spacer(modifier = Modifier.width(12.dp))
-            Icon(
-                imageVector = if (reveal == AnswerReveal.CORRECT) {
-                    Icons.Filled.Check
-                } else {
-                    Icons.Filled.Close
-                },
-                contentDescription = null,
-                tint = contentColor,
-                modifier = Modifier.size(16.dp)
-            )
-        }
-    }
-}
-
-@Composable
-private fun PassageBlock(passage: String) {
-    var expanded by rememberSaveable(passage) { mutableStateOf(false) }
-
-    Surface(
-        modifier = Modifier
-            .fillMaxWidth()
-            .testTag("test_passage"),
-        shape = MaterialTheme.shapes.medium,
-        color = MaterialTheme.colorScheme.surfaceContainerLow
-    ) {
-        Column {
-            val passageState = stringResource(
-                if (expanded) R.string.passage_expanded else R.string.passage_collapsed
-            )
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { expanded = !expanded }
-                    .heightIn(min = 48.dp)
-                    .padding(horizontal = 16.dp, vertical = 12.dp)
-                    .semantics { stateDescription = passageState },
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = stringResource(R.string.reading_passage),
-                    style = MaterialTheme.typography.titleSmall,
-                    modifier = Modifier.weight(1f)
-                )
-                Icon(
-                    imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
-                    contentDescription = null,
-                    modifier = Modifier.size(20.dp)
-                )
-            }
-
-            if (expanded) {
-                Text(
-                    text = passage,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(start = 16.dp, end = 16.dp, bottom = 16.dp)
-                        .testTag("test_passage_body")
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun FeedbackBlock(question: TestQuestionUi) {
-    val answeredCorrectly = question.selectedOriginal == question.correctOriginal
-    val feedbackColor = if (answeredCorrectly) {
-        MaterialTheme.colorScheme.primary
-    } else {
-        MaterialTheme.colorScheme.error
-    }
-
-    val delta = buildAnnotatedString {
-        append(
-            stringResource(
-                R.string.delta_your_answer,
-                optionLetter(question, question.selectedOriginal)
-            )
-        )
-        appendInlineContent(MARK_YOUR_ANSWER, if (answeredCorrectly) "✓" else "✗")
-        if (!answeredCorrectly) {
-            append(" · ")
-            append(
-                stringResource(
-                    R.string.delta_correct,
-                    optionLetter(question, question.correctOriginal)
-                )
-            )
-            appendInlineContent(MARK_CORRECT_ANSWER, "✓")
-        }
-    }
-
-    val checkPlaceholder = Placeholder(
-        width = 16.sp,
-        height = 16.sp,
-        placeholderVerticalAlign = PlaceholderVerticalAlign.TextCenter
-    )
-
-    val inlineContent = mapOf(
-        MARK_YOUR_ANSWER to InlineTextContent(checkPlaceholder) {
-            Icon(
-                imageVector = if (answeredCorrectly) Icons.Filled.Check else Icons.Filled.Close,
-                contentDescription = null,
-                tint = feedbackColor,
-                modifier = Modifier.size(16.dp)
-            )
-        },
-        MARK_CORRECT_ANSWER to InlineTextContent(checkPlaceholder) {
-            Icon(
-                imageVector = Icons.Filled.Check,
-                contentDescription = null,
-                tint = feedbackColor,
-                modifier = Modifier.size(16.dp)
-            )
+        } else {
+            null
         }
     )
-
-    Surface(
-        modifier = Modifier
-            .fillMaxWidth()
-            .testTag("test_feedback"),
-        shape = MaterialTheme.shapes.medium,
-        color = MaterialTheme.colorScheme.surfaceContainer
-    ) {
-        Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            Text(
-                text = delta,
-                style = MaterialTheme.typography.titleSmall,
-                color = feedbackColor,
-                inlineContent = inlineContent,
-                modifier = Modifier.testTag("test_feedback_line")
-            )
-            Text(
-                text = question.explanation,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurface
-            )
-        }
-    }
 }
 
 @Composable
@@ -767,16 +485,6 @@ internal fun ExitTestDialog(
             }
         }
     )
-}
-
-@Composable
-private fun stemStyle(stem: String): TextStyle {
-    val base = if (stem.length <= 160) {
-        MaterialTheme.typography.titleLarge
-    } else {
-        MaterialTheme.typography.titleMedium
-    }
-    return base.copy(fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.onSurface)
 }
 
 private fun optionLetter(question: TestQuestionUi, originalIndex: Int?): String {

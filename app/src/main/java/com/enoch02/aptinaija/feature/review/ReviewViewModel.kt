@@ -32,9 +32,11 @@ data class ReviewItemUi(
     val bookmarked: Boolean
 )
 
+enum class ReviewError { MISSING_ATTEMPT }
+
 data class ReviewUiState(
     val loading: Boolean = true,
-    val error: String? = null,
+    val error: ReviewError? = null,
     val wrongOnly: Boolean = false,
     val items: List<ReviewItemUi> = emptyList()
 )
@@ -83,7 +85,7 @@ class ReviewViewModel @Inject constructor(
             }
         ReviewUiState(
             loading = !isLoaded,
-            error = if (isLoaded && current == null) "This attempt no longer exists." else null,
+            error = if (isLoaded && current == null) ReviewError.MISSING_ATTEMPT else null,
             wrongOnly = onlyWrong,
             items = items
         )
