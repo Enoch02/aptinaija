@@ -45,7 +45,7 @@ import com.enoch02.aptinaija.domain.model.TestTemplate
 @Composable
 fun HomeScreen(
     onStartPractice: () -> Unit,
-    onStartMock: () -> Unit,
+    onStartRandomQuiz: () -> Unit,
     onDrillSection: (String) -> Unit,
     onOpenLastResult: (String) -> Unit,
     viewModel: HomeViewModel = hiltViewModel()
@@ -55,7 +55,7 @@ fun HomeScreen(
     HomeContent(
         state = state,
         onStartPractice = onStartPractice,
-        onStartMock = onStartMock,
+        onStartRandomQuiz = onStartRandomQuiz,
         onDrillSection = onDrillSection,
         onOpenLastResult = onOpenLastResult
     )
@@ -65,7 +65,7 @@ fun HomeScreen(
 internal fun HomeContent(
     state: HomeUiState,
     onStartPractice: () -> Unit,
-    onStartMock: () -> Unit,
+    onStartRandomQuiz: () -> Unit,
     onDrillSection: (String) -> Unit,
     onOpenLastResult: (String) -> Unit
 ) {
@@ -100,12 +100,13 @@ internal fun HomeContent(
                     Text(stringResource(R.string.start_practice))
                 }
                 OutlinedButton(
-                    onClick = onStartMock,
+                    onClick = onStartRandomQuiz,
                     modifier = Modifier
                         .weight(1f)
                         .heightIn(min = 48.dp)
+                        .testTag("home_start_random_quiz")
                 ) {
-                    Text(stringResource(R.string.mock_test))
+                    Text(stringResource(R.string.random_quiz))
                 }
             }
 
@@ -289,6 +290,7 @@ private fun Attempt.titleFallback(): String = when (mode) {
     AttemptMode.MOCK -> stringResource(R.string.mode_mock)
     AttemptMode.DRILL -> stringResource(R.string.mode_drill)
     AttemptMode.PRACTICE -> stringResource(R.string.mode_practice)
+    AttemptMode.RANDOM_QUIZ -> stringResource(R.string.mode_random_quiz)
 }
 
 private fun formatDuration(startedAt: Long, completedAt: Long?): String {
@@ -335,7 +337,7 @@ private fun HomeContentPreview() {
             )
         ),
         onStartPractice = {},
-        onStartMock = {},
+        onStartRandomQuiz = {},
         onDrillSection = {},
         onOpenLastResult = {}
     )

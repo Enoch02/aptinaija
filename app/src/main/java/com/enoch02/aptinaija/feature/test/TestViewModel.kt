@@ -63,13 +63,14 @@ data class TestUiState(
     val current: TestQuestionUi? get() = questions.getOrNull(currentIndex)
     val total: Int get() = questions.size
     val isLast: Boolean get() = currentIndex >= questions.lastIndex
-    val feedbackEnabled: Boolean get() = mode != AttemptMode.MOCK
+    val feedbackEnabled: Boolean get() = mode != AttemptMode.MOCK && mode != AttemptMode.RANDOM_QUIZ
 
     /** Practice and drill reveal the answer right after it is given (FR-03). */
     val revealFeedback: Boolean get() = feedbackEnabled && current?.selectedOriginal != null
 
-    /** Mock keeps options editable until submit; practice and drill lock them once answered. */
-    val canChangeAnswer: Boolean get() = mode == AttemptMode.MOCK || current?.selectedOriginal == null
+    /** Mock-style modes keep options editable until submit; practice and drill lock them. */
+    val canChangeAnswer: Boolean get() =
+        mode == AttemptMode.MOCK || mode == AttemptMode.RANDOM_QUIZ || current?.selectedOriginal == null
 
     val progress: Float get() = if (total == 0) 0f else (currentIndex + 1f) / total
 
@@ -274,5 +275,6 @@ class TestViewModel @Inject constructor(
         AttemptMode.MOCK -> company?.let { "$it mock test" } ?: "Mock test"
         AttemptMode.DRILL -> section?.let { "$it drill" } ?: "Section drill"
         AttemptMode.PRACTICE -> "Practice"
+        AttemptMode.RANDOM_QUIZ -> "Random quiz"
     }
 }

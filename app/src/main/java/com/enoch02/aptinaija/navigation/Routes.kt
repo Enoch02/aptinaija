@@ -18,10 +18,15 @@ data class TestSetupRoute(
 )
 
 @Serializable
+data class RandomQuizSetupRoute(val questionCount: Int? = null)
+
+@Serializable
 data class TestRoute(
     val attemptId: String,
     /** Retests have no setup screen, so their Results must not offer "Try again". */
-    val hideTryAgain: Boolean = false
+    val hideTryAgain: Boolean = false,
+    /** Random quiz has its own setup route, which must be popped when the test finishes. */
+    val fromRandomQuiz: Boolean = false
 )
 
 @Serializable

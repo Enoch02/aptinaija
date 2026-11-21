@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
 import com.enoch02.aptinaija.domain.model.AttemptMode
+import com.enoch02.aptinaija.domain.model.QuestionCount
 import com.enoch02.aptinaija.domain.model.SectionSummary
 import com.enoch02.aptinaija.domain.model.TestTemplate
 import com.enoch02.aptinaija.domain.repository.QuestionRepository
@@ -56,6 +57,7 @@ data class TestSetupUiState(
             AttemptMode.PRACTICE -> companyId != null && sections.isNotEmpty()
             AttemptMode.DRILL -> selectedSection != null
             AttemptMode.MOCK -> selectedTemplate?.sections?.isNotEmpty() == true
+            AttemptMode.RANDOM_QUIZ -> false
         }
 }
 
@@ -110,7 +112,7 @@ class TestSetupViewModel @Inject constructor(
                     selectedSection = route.section ?: sections.firstOrNull()?.section,
                     selectedTemplateId = route.templateId
                         ?: companyTemplates.firstOrNull()?.id,
-                    questionCount = (route.questionCount ?: defaultCount).normalizedQuestionCount()
+                    questionCount = QuestionCount.normalize(route.questionCount ?: defaultCount)
                 )
             }
         }
@@ -145,7 +147,7 @@ class TestSetupViewModel @Inject constructor(
 
     fun selectQuestionCount(count: Int) {
         _state.update {
-            it.copy(questionCount = count.normalizedQuestionCount(), error = null)
+            it.copy(questionCount = QuestionCount.normalize(count), error = null)
         }
     }
 
@@ -186,12 +188,5 @@ class TestSetupViewModel @Inject constructor(
                 }
             }
         }
-    }
-
-    private fun Int.normalizedQuestionCount(): Int =
-        if (this in QUESTION_COUNTS) this else 20
-
-    private companion object {
-        val QUESTION_COUNTS = setOf(10, 20, 40)
     }
 }

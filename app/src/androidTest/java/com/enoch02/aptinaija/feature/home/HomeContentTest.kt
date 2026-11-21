@@ -79,19 +79,19 @@ class HomeContentTest {
     @Test
     fun quickStartButtons_invokeCallbacks() {
         var startPractice = false
-        var startMock = false
+        var startRandomQuiz = false
         setHome(
             state = HomeUiState(loading = false),
             onStartPractice = { startPractice = true },
-            onStartMock = { startMock = true }
+            onStartRandomQuiz = { startRandomQuiz = true }
         )
 
         composeRule.onNodeWithText("Start practice").performClick()
-        composeRule.onNodeWithText("Mock test").performClick()
+        composeRule.onNodeWithTag("home_start_random_quiz").performClick()
 
         composeRule.runOnIdle {
             assertTrue(startPractice)
-            assertTrue(startMock)
+            assertTrue(startRandomQuiz)
         }
     }
 
@@ -161,7 +161,7 @@ class HomeContentTest {
     private fun setHome(
         state: HomeUiState,
         onStartPractice: () -> Unit = {},
-        onStartMock: () -> Unit = {},
+        onStartRandomQuiz: () -> Unit = {},
         onDrillSection: (String) -> Unit = {},
         onOpenLastResult: (String) -> Unit = {},
         fontScale: Float = 1f
@@ -171,7 +171,7 @@ class HomeContentTest {
                 HomeContent(
                     state = state,
                     onStartPractice = onStartPractice,
-                    onStartMock = onStartMock,
+                    onStartRandomQuiz = onStartRandomQuiz,
                     onDrillSection = onDrillSection,
                     onOpenLastResult = onOpenLastResult
                 )

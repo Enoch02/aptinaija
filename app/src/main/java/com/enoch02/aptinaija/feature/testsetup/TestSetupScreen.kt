@@ -41,16 +41,17 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.enoch02.aptinaija.R
 import com.enoch02.aptinaija.core.designsystem.AptiNaijaTheme
+import com.enoch02.aptinaija.core.ui.components.InfoCard
 import com.enoch02.aptinaija.core.ui.components.LoadingState
+import com.enoch02.aptinaija.core.ui.components.QuestionCountSelector
 import com.enoch02.aptinaija.core.ui.components.ScreenScaffold
+import com.enoch02.aptinaija.core.ui.components.SummaryCard
 import com.enoch02.aptinaija.domain.model.AttemptMode
 import com.enoch02.aptinaija.domain.model.SectionSummary
 import com.enoch02.aptinaija.domain.model.TemplateSection
@@ -130,6 +131,8 @@ internal fun TestSetupContent(
                         state = state,
                         onTemplateSelected = onTemplateSelected
                     )
+
+                    AttemptMode.RANDOM_QUIZ -> Unit
                 }
 
                 state.error?.let { message ->
@@ -165,6 +168,7 @@ internal fun TestSetupContent(
                                 AttemptMode.PRACTICE -> stringResource(R.string.begin_practice)
                                 AttemptMode.DRILL -> stringResource(R.string.begin_drill)
                                 AttemptMode.MOCK -> stringResource(R.string.begin)
+                                AttemptMode.RANDOM_QUIZ -> stringResource(R.string.begin)
                             }
                         )
                     }
@@ -180,7 +184,7 @@ private fun ModeSelector(
     selected: AttemptMode,
     onSelected: (AttemptMode) -> Unit
 ) {
-    val modes = AttemptMode.entries
+    val modes = AttemptMode.entries.filter { it != AttemptMode.RANDOM_QUIZ }
     SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
         modes.forEachIndexed { index, mode ->
             SegmentedButton(
@@ -193,6 +197,7 @@ private fun ModeSelector(
                             AttemptMode.PRACTICE -> stringResource(R.string.mode_practice)
                             AttemptMode.DRILL -> stringResource(R.string.mode_drill)
                             AttemptMode.MOCK -> stringResource(R.string.mock)
+                            AttemptMode.RANDOM_QUIZ -> stringResource(R.string.mode_random_quiz)
                         }
                     )
                 },
@@ -305,92 +310,6 @@ private fun MockSetup(
 }
 
 @Composable
-private fun SummaryCard(
-    title: String,
-    questionCount: Int,
-    minutes: Int?,
-    description: String
-) {
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        shape = MaterialTheme.shapes.medium,
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
-        )
-    ) {
-        Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            Text(
-                text = title,
-                style = MaterialTheme.typography.bodyMedium
-            )
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(24.dp),
-                verticalAlignment = Alignment.Bottom
-            ) {
-                Metric(value = questionCount, label = stringResource(R.string.questions_metric))
-                if (minutes != null) {
-                    Metric(value = minutes, label = stringResource(R.string.minutes_metric))
-                }
-            }
-            Text(
-                text = description,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis
-            )
-        }
-    }
-}
-
-@Composable
-private fun Metric(value: Int, label: String) {
-    Row(verticalAlignment = Alignment.Bottom) {
-        Text(
-            text = value.toString(),
-            style = MaterialTheme.typography.displaySmall.tabular()
-        )
-        Spacer(modifier = Modifier.width(6.dp))
-        Text(
-            text = label,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.padding(bottom = 6.dp)
-        )
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun QuestionCountSelector(
-    selected: Int,
-    onSelected: (Int) -> Unit
-) {
-    Text(
-        text = stringResource(R.string.questions),
-        style = MaterialTheme.typography.titleMedium,
-        modifier = Modifier.padding(top = 4.dp)
-    )
-    val counts = listOf(10, 20, 40)
-    SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
-        counts.forEachIndexed { index, count ->
-            SegmentedButton(
-                selected = selected == count,
-                onClick = { onSelected(count) },
-                shape = SegmentedButtonDefaults.itemShape(index = index, count = counts.size),
-                label = { Text(count.toString()) },
-                modifier = Modifier
-                    .weight(1f)
-                    .testTag("setup_questions_$count")
-            )
-        }
-    }
-}
-
-@Composable
 private fun SelectableRow(
     label: String,
     selected: Boolean,
@@ -481,32 +400,6 @@ private fun SelectionCircle(selected: Boolean) {
 }
 
 @Composable
-private fun InfoCard(title: String, body: String) {
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        shape = MaterialTheme.shapes.medium,
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainer
-        )
-    ) {
-        Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp)
-        ) {
-            Text(
-                text = title,
-                style = MaterialTheme.typography.titleSmall
-            )
-            Text(
-                text = body,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-    }
-}
-
-@Composable
 private fun EmptyCard(message: String) {
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -552,8 +445,6 @@ private fun sectionsDescription(sections: List<String>): String {
         sections.joinToString(", ")
     )
 }
-
-private fun TextStyle.tabular(): TextStyle = copy(fontFeatureSettings = "tnum")
 
 @Preview
 @Composable

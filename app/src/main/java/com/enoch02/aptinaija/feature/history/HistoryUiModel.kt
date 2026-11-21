@@ -67,4 +67,5 @@ private fun Attempt.subject(template: TestTemplate?): String = when (mode) {
         ?: ""
     AttemptMode.DRILL -> section ?: company.orEmpty()
     AttemptMode.PRACTICE -> company ?: section.orEmpty()
+    AttemptMode.RANDOM_QUIZ -> ""
 }

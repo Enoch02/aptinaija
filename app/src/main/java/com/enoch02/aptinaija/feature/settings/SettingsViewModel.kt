@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.enoch02.aptinaija.domain.model.AppSettings
 import com.enoch02.aptinaija.domain.model.AppThemeMode
+import com.enoch02.aptinaija.domain.model.QuestionCount
 import com.enoch02.aptinaija.domain.repository.SettingsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -36,7 +37,7 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun setDefaultQuestionCount(value: Int) {
-        viewModelScope.launch { repository.setDefaultQuestionCount(value.coerceIn(5, 100)) }
+        viewModelScope.launch { repository.setDefaultQuestionCount(QuestionCount.normalize(value)) }
     }
 
     fun setPassMarkPercent(value: Int) {

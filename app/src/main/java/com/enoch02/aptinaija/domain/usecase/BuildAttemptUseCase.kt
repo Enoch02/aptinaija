@@ -58,6 +58,12 @@ class BuildAttemptUseCase @Inject constructor(
                 limit = request.questionCount
             ).ordered(preferences.shuffleQuestions).map { it.section to it }
 
+            request.mode == AttemptMode.RANDOM_QUIZ -> questions.randomQuestions(
+                company = null,
+                section = null,
+                limit = request.questionCount
+            ).ordered(preferences.shuffleQuestions).map { it.section to it }
+
             else -> questions.randomQuestions(
                 company = request.company,
                 section = null,
@@ -82,10 +88,11 @@ class BuildAttemptUseCase @Inject constructor(
             )
         }
 
-        val durationMinutes = if (request.mode == AttemptMode.MOCK) {
-            templates.template(request.templateId.orEmpty())?.sections?.sumOf { it.minutes } ?: 0
-        } else {
-            0
+        val durationMinutes = when (request.mode) {
+            AttemptMode.MOCK -> templates.template(request.templateId.orEmpty())
+                ?.sections?.sumOf { it.minutes } ?: 0
+            AttemptMode.RANDOM_QUIZ -> request.questionCount
+            else -> 0
         }
 
         val attempt = Attempt(

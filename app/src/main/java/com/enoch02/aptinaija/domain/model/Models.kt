@@ -9,7 +9,7 @@ enum class Difficulty {
     }
 }
 
-enum class AttemptMode { PRACTICE, DRILL, MOCK }
+enum class AttemptMode { PRACTICE, DRILL, MOCK, RANDOM_QUIZ }
 
 enum class AttemptStatus { IN_PROGRESS, COMPLETED, ABANDONED }
 
@@ -129,10 +129,18 @@ enum class AppThemeMode {
     }
 }
 
+object QuestionCount {
+    const val MIN = 5
+    const val MAX = 100
+    const val DEFAULT = 20
+
+    fun normalize(value: Int): Int = value.coerceIn(MIN, MAX)
+}
+
 data class AppSettings(
     val themeMode: AppThemeMode = AppThemeMode.AUTO,
     val shuffleQuestions: Boolean = true,
     val shuffleOptions: Boolean = true,
-    val defaultQuestionCount: Int = 20,
+    val defaultQuestionCount: Int = QuestionCount.DEFAULT,
     val passMarkPercent: Int = 50
 )

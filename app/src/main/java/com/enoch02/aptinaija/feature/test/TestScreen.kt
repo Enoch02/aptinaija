@@ -241,6 +241,7 @@ private fun TestTopBar(
                     AttemptMode.PRACTICE -> stringResource(R.string.practice_untimed)
                     AttemptMode.DRILL -> stringResource(R.string.drill_untimed)
                     AttemptMode.MOCK -> stringResource(R.string.mock_untimed)
+                    AttemptMode.RANDOM_QUIZ -> stringResource(R.string.random_quiz_untimed)
                 },
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,

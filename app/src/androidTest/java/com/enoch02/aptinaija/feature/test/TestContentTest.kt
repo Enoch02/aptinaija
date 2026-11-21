@@ -59,6 +59,20 @@ class TestContentTest {
     }
 
     @Test
+    fun randomQuizState_showsTimerInsteadOfModeLabel() {
+        setTest(
+            baseState().copy(
+                mode = AttemptMode.RANDOM_QUIZ,
+                remainingSeconds = 1200L,
+                totalSeconds = 1200L
+            )
+        )
+
+        composeRule.onNodeWithTag("test_timer").assertIsDisplayed()
+        composeRule.onNodeWithTag("test_mode_label").assertDoesNotExist()
+    }
+
+    @Test
     fun practiceState_showsUntimedLabelAndNoTimer() {
         setTest(baseState())
 
@@ -107,6 +121,22 @@ class TestContentTest {
         composeRule.runOnIdle {
             assertEquals(1, chosen)
         }
+    }
+
+    @Test
+    fun randomQuizState_keepsAnsweredQuestionEditableAndHidesFeedback() {
+        var chosen: Int? = null
+        setTest(
+            baseState().copy(mode = AttemptMode.RANDOM_QUIZ).withSelection(question = 0, option = 0),
+            onSelectOption = { chosen = it }
+        )
+
+        composeRule.onNodeWithTag("test_option_1").performClick()
+
+        composeRule.runOnIdle {
+            assertEquals(1, chosen)
+        }
+        composeRule.onNodeWithTag("test_feedback").assertDoesNotExist()
     }
 
     @Test

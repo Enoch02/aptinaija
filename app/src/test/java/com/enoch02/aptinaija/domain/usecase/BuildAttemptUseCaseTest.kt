@@ -146,6 +146,65 @@ class BuildAttemptUseCaseTest {
         assertEquals(listOf(QuestionQuery("FCSC", null, 5)), questions.queries)
     }
 
+    @Test
+    fun randomQuiz_drawsFromWholeBankAndAllotsOneMinutePerQuestion() = runBlocking {
+        val questions = RecordingQuestionRepository()
+        val attempts = FakeAttemptRepository()
+        val useCase = BuildAttemptUseCase(
+            questions = questions,
+            templates = FakeTestRepository(),
+            attempts = attempts,
+            bookmarks = FakeBookmarkRepository(),
+            optionShuffler = OptionShuffler(),
+            settings = FakeSettingsRepository()
+        )
+
+        useCase(
+            BuildAttemptRequest(
+                mode = AttemptMode.RANDOM_QUIZ,
+                company = "FCSC",
+                questionCount = 10
+            )
+        )
+
+        assertEquals(listOf(QuestionQuery(null, null, 10)), questions.queries)
+        val attempt = checkNotNull(attempts.created?.first)
+        assertEquals(AttemptMode.RANDOM_QUIZ, attempt.mode)
+        assertEquals(10 * 60_000L, checkNotNull(attempt.deadlineAt) - attempt.startedAt)
+    }
+
+    @Test
+    fun randomQuiz_withShuffleDisabled_ordersQuestionsDeterministically() = runBlocking {
+        val recording = RecordingQuestionRepository()
+        val questions = object : QuestionRepository by recording {
+            override suspend fun randomQuestions(
+                company: String?,
+                section: String?,
+                limit: Int
+            ): List<Question> = listOf(
+                testQuestion("Q-3"),
+                testQuestion("Q-1"),
+                testQuestion("Q-2")
+            )
+        }
+        val attempts = FakeAttemptRepository()
+        val useCase = BuildAttemptUseCase(
+            questions = questions,
+            templates = FakeTestRepository(),
+            attempts = attempts,
+            bookmarks = FakeBookmarkRepository(),
+            optionShuffler = OptionShuffler(),
+            settings = FakeSettingsRepository()
+        )
+
+        useCase(BuildAttemptRequest(mode = AttemptMode.RANDOM_QUIZ, questionCount = 3))
+
+        assertEquals(
+            listOf("Q-1", "Q-2", "Q-3"),
+            attempts.created?.second?.map { it.question.id }
+        )
+    }
+
     private data class QuestionQuery(
         val company: String?,
         val section: String?,

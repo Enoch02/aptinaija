@@ -289,6 +289,7 @@ private fun HistoryEntry.titleRes(): Int = when (mode) {
     AttemptMode.MOCK -> R.string.history_title_mock
     AttemptMode.DRILL -> R.string.history_title_drill
     AttemptMode.PRACTICE -> R.string.history_title_practice
+    AttemptMode.RANDOM_QUIZ -> R.string.history_title_random_quiz
 }
 
 @StringRes
@@ -296,6 +297,7 @@ private fun AttemptMode.labelRes(): Int = when (this) {
     AttemptMode.MOCK -> R.string.mode_mock
     AttemptMode.DRILL -> R.string.mode_drill
     AttemptMode.PRACTICE -> R.string.mode_practice
+    AttemptMode.RANDOM_QUIZ -> R.string.mode_random_quiz
 }
 
 private fun TextStyle.tabular(): TextStyle = copy(fontFeatureSettings = "tnum")

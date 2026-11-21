@@ -27,6 +27,7 @@ import com.enoch02.aptinaija.feature.bookmarks.BookmarksScreen
 import com.enoch02.aptinaija.feature.companies.CompaniesScreen
 import com.enoch02.aptinaija.feature.history.HistoryScreen
 import com.enoch02.aptinaija.feature.home.HomeScreen
+import com.enoch02.aptinaija.feature.randomquiz.RandomQuizSetupScreen
 import com.enoch02.aptinaija.feature.results.ResultsScreen
 import com.enoch02.aptinaija.feature.review.ReviewScreen
 import com.enoch02.aptinaija.feature.settings.SettingsScreen
@@ -108,7 +109,9 @@ private fun AptiNaijaNavHost(
         composable<HomeRoute> {
             HomeScreen(
                 onStartPractice = { navController.navigateToTopLevel(CompaniesRoute) },
-                onStartMock = { navController.navigateToTopLevel(CompaniesRoute) },
+                onStartRandomQuiz = {
+                    navController.navigate(RandomQuizSetupRoute())
+                },
                 onDrillSection = { section ->
                     navController.navigate(
                         TestSetupRoute(mode = "DRILL", section = section)
@@ -139,18 +142,29 @@ private fun AptiNaijaNavHost(
             )
         }
 
+        composable<RandomQuizSetupRoute> {
+            RandomQuizSetupScreen(
+                onBack = { navController.popBackStack() },
+                onStarted = { attemptId ->
+                    navController.navigate(TestRoute(attemptId, fromRandomQuiz = true))
+                }
+            )
+        }
+
         composable<TestRoute> { entry ->
-            val hideTryAgain = entry.toRoute<TestRoute>().hideTryAgain
+            val route = entry.toRoute<TestRoute>()
             TestScreen(
                 onBack = { navController.popBackStack() },
                 onFinished = { attemptId ->
-                    navController.navigate(ResultsRoute(attemptId, hideTryAgain = hideTryAgain)) {
-                        // A retest has no setup entry to pop; pop the finished
-                        // test itself so back never reopens it.
-                        if (hideTryAgain) {
-                            popUpTo<TestRoute> { inclusive = true }
-                        } else {
-                            popUpTo<TestSetupRoute> { inclusive = true }
+                    navController.navigate(
+                        ResultsRoute(attemptId, hideTryAgain = route.hideTryAgain)
+                    ) {
+                        // Remove the entry the test was launched from so Results
+                        // returns to its origin instead of the finished test.
+                        when {
+                            route.hideTryAgain -> popUpTo<TestRoute> { inclusive = true }
+                            route.fromRandomQuiz -> popUpTo<RandomQuizSetupRoute> { inclusive = true }
+                            else -> popUpTo<TestSetupRoute> { inclusive = true }
                         }
                     }
                 }
@@ -161,7 +175,9 @@ private fun AptiNaijaNavHost(
             ResultsScreen(
                 onBack = { navController.popBackStack() },
                 onTryAgain = { attempt ->
-                    navController.navigate(
+                    val setupRoute = if (attempt.mode == AttemptMode.RANDOM_QUIZ) {
+                        RandomQuizSetupRoute(questionCount = attempt.totalQuestions)
+                    } else {
                         TestSetupRoute(
                             mode = attempt.mode.name,
                             company = attempt.company,
@@ -171,12 +187,12 @@ private fun AptiNaijaNavHost(
                                 AttemptMode.MOCK -> null
                                 else -> attempt.totalQuestions
                             }
-                        ),
-                        builder = {
-                            // Drop the finished result so back never returns to a stale attempt.
-                            popUpTo<ResultsRoute> { inclusive = true }
-                        }
-                    )
+                        )
+                    }
+                    navController.navigate(setupRoute) {
+                        // Drop the finished result so back never returns to a stale attempt.
+                        popUpTo<ResultsRoute> { inclusive = true }
+                    }
                 },
                 onReview = { attemptId -> navController.navigate(ReviewRoute(attemptId)) }
             )

@@ -74,6 +74,16 @@ class TestSetupContentTest {
     }
 
     @Test
+    fun modeSelector_doesNotOfferRandomQuiz() {
+        setSetup(baseState())
+
+        composeRule.onNodeWithTag("setup_mode_practice").assertIsDisplayed()
+        composeRule.onNodeWithTag("setup_mode_drill").assertIsDisplayed()
+        composeRule.onNodeWithTag("setup_mode_mock").assertIsDisplayed()
+        composeRule.onNodeWithTag("setup_mode_random_quiz").assertDoesNotExist()
+    }
+
+    @Test
     fun drillState_showsSectionsAndInvokesSectionCallback() {
         var selectedSection: String? = null
         setSetup(
