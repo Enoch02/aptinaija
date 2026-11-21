@@ -818,7 +818,7 @@
         "Reservoir",
         "Formation",
         "Rock",
-        "Microscope Abstract/Logical Reasoning"
+        "Microscope"
       ],
       "answer": 3,
       "explanation": "Reservoir, formation and rock belong to geology. A microscope does not.",
@@ -1025,7 +1025,7 @@
         "Porosity",
         "Permeability",
         "Evaporation",
-        "Saturation Oil & Gas Technical Knowledge"
+        "Saturation"
       ],
       "answer": 2,
       "explanation": "Porosity, permeability and saturation describe reservoir rock. Evaporation is a phase change.",
@@ -3375,9 +3375,9 @@
       "difficulty": "easy",
       "stem": "Which country is known as the \"Giant of Africa\"?",
       "options": [
-        "Lagos",
-        "Kano",
-        "Rivers",
+        "South Africa",
+        "Ghana",
+        "Ethiopia",
         "Nigeria"
       ],
       "answer": 3,
@@ -3779,7 +3779,7 @@
         "The Patriot’s Song",
         "Land of Our Birth"
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "'Arise, O Compatriots' is Nigeria's national anthem.",
       "tags": [
         "nigeria",
@@ -4431,6 +4431,616 @@
       "tags": [
         "agriculture",
         "economics"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0001",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "What is the smallest whole number that is divisible by 6, 9 and 12?",
+      "options": [
+        "24",
+        "36",
+        "48",
+        "72"
+      ],
+      "answer": 1,
+      "explanation": "Prime factors: 6 = 2 x 3, 9 = 3^2, 12 = 2^2 x 3. The LCM is 2^2 x 3^2 = 36.",
+      "difficulty": "easy",
+      "tags": [
+        "lcm",
+        "number-theory"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0002",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "One pipe fills a tank in 6 hours and another pipe empties it in 9 hours. With both pipes open, how long does it take to fill the empty tank?",
+      "options": [
+        "12 hours",
+        "15 hours",
+        "18 hours",
+        "24 hours"
+      ],
+      "answer": 2,
+      "explanation": "Net rate = 1/6 - 1/9 = 1/18 of the tank per hour, so filling takes 18 hours.",
+      "difficulty": "medium",
+      "tags": [
+        "work-and-time",
+        "pipes"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0003",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "A train 150 metres long passes a pole in 12 seconds. What is its speed in kilometres per hour?",
+      "options": [
+        "36 km/h",
+        "42 km/h",
+        "45 km/h",
+        "50 km/h"
+      ],
+      "answer": 2,
+      "explanation": "Speed = 150 / 12 = 12.5 m/s. Multiplying by 3.6 gives 45 km/h.",
+      "difficulty": "medium",
+      "tags": [
+        "speed-distance-time",
+        "unit-conversion"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0004",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "A town's population rises by 10% one year and then falls by 10% the next. What is the overall percentage change?",
+      "options": [
+        "No change",
+        "1% increase",
+        "1% decrease",
+        "2% decrease"
+      ],
+      "answer": 2,
+      "explanation": "1.10 x 0.90 = 0.99, so the population ends 1% below its starting value.",
+      "difficulty": "easy",
+      "tags": [
+        "percentage",
+        "successive-change"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0005",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "What is the next term in the pattern: 7, 10, 20, 23, 46, ?",
+      "options": [
+        "49",
+        "52",
+        "69",
+        "92"
+      ],
+      "answer": 0,
+      "explanation": "The operations alternate: add 3, then multiply by 2. After 46 the next step is +3, giving 49.",
+      "difficulty": "hard",
+      "tags": [
+        "number-series",
+        "patterns"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0006",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "A trader has ₦90,000. She spends 2/5 of it on stock and then 1/3 of the remainder on transport. How much is left?",
+      "options": [
+        "₦30,000",
+        "₦36,000",
+        "₦42,000",
+        "₦54,000"
+      ],
+      "answer": 1,
+      "explanation": "Stock costs 36,000, leaving 54,000. Transport costs 18,000, leaving 36,000.",
+      "difficulty": "easy",
+      "tags": [
+        "fractions",
+        "money"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0007",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "Three partners share a profit in the ratio 2:3:5. If the smallest share is ₦24,000, what is the total profit?",
+      "options": [
+        "₦96,000",
+        "₦108,000",
+        "₦120,000",
+        "₦144,000"
+      ],
+      "answer": 2,
+      "explanation": "One part is 24,000 / 2 = 12,000. Ten parts in total give 120,000.",
+      "difficulty": "easy",
+      "tags": [
+        "ratio",
+        "profit-sharing"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0008",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "A car travels from town A to town B at 60 km/h and returns along the same road at 40 km/h. What is the average speed for the whole journey?",
+      "options": [
+        "44 km/h",
+        "48 km/h",
+        "50 km/h",
+        "52 km/h"
+      ],
+      "answer": 1,
+      "explanation": "For equal distances the average is 2ab/(a+b) = (2 x 60 x 40)/100 = 48 km/h.",
+      "difficulty": "hard",
+      "tags": [
+        "average-speed",
+        "speed-distance-time"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0009",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "If (2x + 3)/5 = 7, what is the value of x?",
+      "options": [
+        "13",
+        "14",
+        "16",
+        "18"
+      ],
+      "answer": 2,
+      "explanation": "Multiply by 5: 2x + 3 = 35. Then 2x = 32, so x = 16.",
+      "difficulty": "medium",
+      "tags": [
+        "algebra",
+        "linear-equation"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0010",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "A bag holds 4 red and 6 blue balls. Two balls are drawn one after the other without replacement. What is the probability that both are red?",
+      "options": [
+        "2/15",
+        "4/25",
+        "1/5",
+        "3/10"
+      ],
+      "answer": 0,
+      "explanation": "P(both red) = (4/10) x (3/9) = 12/90 = 2/15.",
+      "difficulty": "medium",
+      "tags": [
+        "probability",
+        "without-replacement"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-VER-0001",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "A third teller was made available.",
+        "Customers began arriving later in the day.",
+        "The bank shortened its opening hours.",
+        "Fewer customers needed to use the bank."
+      ],
+      "answer": 0,
+      "passage": "Only two tellers were on duty at a busy bank, so customers waited an average of 25 minutes. When a third teller was opened, the average wait fell to 9 minutes.",
+      "explanation": "The passage links the opening of a third teller directly to the fall from 25 to 9 minutes.",
+      "difficulty": "easy",
+      "tags": [
+        "comprehension",
+        "cause-effect"
+      ],
+      "status": "published",
+      "stem": "What best explains the drop in waiting time?"
+    },
+    {
+      "id": "GEN-VER-0002",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Remote work caused the firm's output to fall.",
+        "Remote work brought benefits but created a problem for new staff.",
+        "Every employee preferred working from home.",
+        "The firm planned to close its office."
+      ],
+      "answer": 1,
+      "passage": "A firm moved all staff to remote work. Output rose by 12%, but new employees reported feeling isolated and several left within a year. The manager concluded that a hybrid arrangement would suit the firm best.",
+      "explanation": "Output rose, but new employees felt isolated and some left, so the passage supports both a benefit and a drawback.",
+      "difficulty": "medium",
+      "tags": [
+        "inference",
+        "workplace"
+      ],
+      "status": "published",
+      "stem": "Which conclusion is best supported by the passage?"
+    },
+    {
+      "id": "GEN-VER-0003",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Brief and curt",
+        "Warm and encouraging",
+        "Long and detailed",
+        "Slow and hesitant"
+      ],
+      "answer": 0,
+      "passage": "The manager's terse reply ended the discussion abruptly, leaving the team unsure what to do next.",
+      "explanation": "A terse reply is short and blunt, which fits the abrupt end of the discussion.",
+      "difficulty": "easy",
+      "tags": [
+        "vocabulary",
+        "context"
+      ],
+      "status": "published",
+      "stem": "What does the word 'terse' most nearly mean in this passage?"
+    },
+    {
+      "id": "GEN-VER-0004",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Passengers choose flights mainly on price, not free meals.",
+        "Every passenger preferred free meals to lower fares.",
+        "Ticket sales had been falling for several years.",
+        "Other airlines were also removing free meals."
+      ],
+      "answer": 0,
+      "passage": "To reduce costs, an airline stopped providing free meals. It expected ticket sales to remain unchanged.",
+      "explanation": "Expecting sales to stay the same requires believing that meals are not a deciding factor for passengers.",
+      "difficulty": "medium",
+      "tags": [
+        "assumption",
+        "reasoning"
+      ],
+      "status": "published",
+      "stem": "Which assumption most likely underlies the airline's expectation?"
+    },
+    {
+      "id": "GEN-VER-0005",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Why small loans always fail",
+        "Microfinance helped traders, but repayments need flexibility",
+        "Seasonal sales and banking hours",
+        "How to open a market stall"
+      ],
+      "answer": 1,
+      "passage": "Small loans helped market traders buy more stock, but rigid weekly repayments often clashed with their seasonal sales.",
+      "explanation": "The passage gives one benefit and one limitation, which this title captures.",
+      "difficulty": "medium",
+      "tags": [
+        "main-idea",
+        "summarisation"
+      ],
+      "status": "published",
+      "stem": "Which title best summarises the passage?"
+    },
+    {
+      "id": "GEN-VER-0006",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Longer study sessions always produce better recall.",
+        "Spacing study over days may improve long-term recall.",
+        "Students who crammed studied fewer total hours.",
+        "Recall was measured immediately after studying."
+      ],
+      "answer": 1,
+      "passage": "In a training study, students who revised in short daily sessions recalled more a week later than students who studied the same total hours in one night.",
+      "explanation": "Both groups studied the same total hours, so the better week-later recall points to the spacing of sessions.",
+      "difficulty": "hard",
+      "tags": [
+        "inference",
+        "research"
+      ],
+      "status": "published",
+      "stem": "Which inference is best supported by the study?"
+    },
+    {
+      "id": "GEN-VER-0007",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "6 p.m.",
+        "7 p.m.",
+        "8 p.m.",
+        "10 p.m."
+      ],
+      "answer": 2,
+      "passage": "The community library extended its weekday closing time to 8 p.m. Weekend hours were unchanged.",
+      "explanation": "The passage states that weekday closing time moved to 8 p.m.",
+      "difficulty": "easy",
+      "tags": [
+        "detail",
+        "comprehension"
+      ],
+      "status": "published",
+      "stem": "What time does the library now close on weekdays?"
+    },
+    {
+      "id": "GEN-VER-0008",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "It treats a necessary condition as if it were sufficient.",
+        "It relies on an outdated test.",
+        "It assumes all applicants had a degree.",
+        "It uses a sample that is far too small."
+      ],
+      "answer": 0,
+      "passage": "Every applicant who passed the test had a degree. Therefore, having a degree guarantees passing the test.",
+      "explanation": "Passing required a degree, but having a degree does not by itself guarantee passing.",
+      "difficulty": "medium",
+      "tags": [
+        "logical-flaw",
+        "conditions"
+      ],
+      "status": "published",
+      "stem": "What is the main flaw in the argument in the passage?"
+    },
+    {
+      "id": "GEN-VER-0009",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Fully supportive",
+        "Angry and dismissive",
+        "Critical, while acknowledging good intent",
+        "Completely indifferent"
+      ],
+      "answer": 2,
+      "passage": "The policy was introduced with good intentions, but its reporting rules have buried staff in paperwork and slowed the very work it was meant to help.",
+      "explanation": "The writer accepts the good intentions but criticises the paperwork the rules created.",
+      "difficulty": "hard",
+      "tags": [
+        "tone",
+        "attitude"
+      ],
+      "status": "published",
+      "stem": "Which best describes the writer's attitude to the policy?"
+    },
+    {
+      "id": "GEN-VER-0010",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Buses were the most common mode of travel.",
+        "More people walked than took the train.",
+        "Half of the commuters travelled by train.",
+        "Cost was mentioned by only a small minority."
+      ],
+      "answer": 0,
+      "passage": "A survey of 200 commuters found that 60% travelled by bus, 25% by train and the remainder walked. Cost was the most common reason given.",
+      "explanation": "At 60%, buses outrank trains at 25% and walking at 15%.",
+      "difficulty": "easy",
+      "tags": [
+        "data-comprehension",
+        "survey"
+      ],
+      "status": "published",
+      "stem": "Which statement is supported by the survey?"
+    },
+    {
+      "id": "GEN-LOG-0001",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Every engineer at the firm is a graduate. No graduate at the firm is a manager. Which statement must be true?",
+      "options": [
+        "No engineer at the firm is a manager.",
+        "Every graduate at the firm is an engineer.",
+        "Some engineers at the firm are managers.",
+        "All managers at the firm are graduates."
+      ],
+      "answer": 0,
+      "explanation": "Engineers are inside the graduate group, and no graduate is a manager, so no engineer is a manager.",
+      "difficulty": "easy",
+      "tags": [
+        "syllogism",
+        "deduction"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0002",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Ada finished a race before Chidi, Chidi finished before Bola, and Bola finished before Tunde. Who finished first?",
+      "options": [
+        "Ada",
+        "Chidi",
+        "Bola",
+        "Tunde"
+      ],
+      "answer": 0,
+      "explanation": "The order is Ada, then Chidi, then Bola, then Tunde, so Ada was first.",
+      "difficulty": "easy",
+      "tags": [
+        "ordering",
+        "sequence"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0003",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "If the alarm sounds, the guard checks the gate. The alarm did not sound. What can be concluded with certainty?",
+      "options": [
+        "The gate was checked.",
+        "The gate was not checked.",
+        "The guard was absent.",
+        "Nothing definite about the gate check."
+      ],
+      "answer": 3,
+      "explanation": "The rule says what follows when the alarm sounds; it says nothing about what happens when it stays silent.",
+      "difficulty": "medium",
+      "tags": [
+        "conditionals",
+        "deduction"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0004",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "In a class of 40 students, 25 study French, 18 study Spanish and 10 study both. How many study neither language?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "12"
+      ],
+      "answer": 1,
+      "explanation": "Studying at least one language: 25 + 18 - 10 = 33. Neither: 40 - 33 = 7.",
+      "difficulty": "medium",
+      "tags": [
+        "sets",
+        "counting"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0005",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Ship is to sea as train is to:",
+      "options": [
+        "Station",
+        "Track",
+        "Engine",
+        "Passenger"
+      ],
+      "answer": 1,
+      "explanation": "A ship travels on the sea just as a train travels on a track.",
+      "difficulty": "medium",
+      "tags": [
+        "analogy",
+        "relationships"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0006",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Two boxes are labelled 'Gold' and 'Silver'. Both labels are wrong. Which box contains the gold?",
+      "options": [
+        "The box labelled Gold",
+        "The box labelled Silver",
+        "Neither box",
+        "It cannot be determined"
+      ],
+      "answer": 1,
+      "explanation": "The box labelled Silver cannot hold silver (its label is wrong), so it must hold the gold.",
+      "difficulty": "hard",
+      "tags": [
+        "logic-puzzle",
+        "labels"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0007",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "What comes next in the pattern: 2, 6, 3, 9, 4, 12, 5, ?",
+      "options": [
+        "13",
+        "15",
+        "18",
+        "20"
+      ],
+      "answer": 1,
+      "explanation": "The entries form pairs: 2 and 6, 3 and 9, 4 and 12. Each second number is three times the first, so after 5 comes 5 x 3 = 15.",
+      "difficulty": "easy",
+      "tags": [
+        "number-pattern",
+        "sequence"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0008",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "If CAT is coded as DBU, how would DOG be coded using the same rule?",
+      "options": [
+        "EPH",
+        "EPI",
+        "DPH",
+        "FPH"
+      ],
+      "answer": 0,
+      "explanation": "Each letter moves one place forward: D->E, O->P, G->H, giving EPH.",
+      "difficulty": "easy",
+      "tags": [
+        "coding-decoding",
+        "letters"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0009",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Four friends - Ada, Bola, Chidi and Dara - sit in a row. Ada sits immediately to the left of Bola, Chidi sits at one end, and Dara sits next to Chidi. Which arrangement is possible?",
+      "options": [
+        "Ada, Chidi, Bola, Dara",
+        "Chidi, Dara, Bola, Ada",
+        "Chidi, Dara, Ada, Bola",
+        "Dara, Chidi, Ada, Bola"
+      ],
+      "answer": 2,
+      "explanation": "With Chidi at the left end, Dara must be beside him, leaving seats 3 and 4 for Ada and Bola in that order.",
+      "difficulty": "hard",
+      "tags": [
+        "arrangement",
+        "constraints"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0010",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Either the meeting is moved or the report is delayed. The meeting is not moved. What must follow?",
+      "options": [
+        "The report is delayed.",
+        "The report is not delayed.",
+        "The meeting will be cancelled.",
+        "Nothing can be concluded."
+      ],
+      "answer": 0,
+      "explanation": "With one of the two options ruled out, the other must hold.",
+      "difficulty": "medium",
+      "tags": [
+        "disjunction",
+        "deduction"
       ],
       "status": "published"
     }

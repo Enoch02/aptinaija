@@ -54,6 +54,29 @@
         }
       ],
       "source": "https://www.jobsregion.com/wp-content/uploads/2025/03/FCSC-Aptitude-Test-Jobsregion.pdf"
+    },
+    "GENERIC_GMAP": {
+      "title": "Generic GMAP Practice Mock",
+      "company_id": "GEN",
+      "company": "Generic (cross-industry)",
+      "provider": "Generic / AI-generated",
+      "sections": [
+        {
+          "section": "Numerical Reasoning",
+          "count": 10,
+          "minutes": 12
+        },
+        {
+          "section": "Verbal Reasoning",
+          "count": 10,
+          "minutes": 12
+        },
+        {
+          "section": "Logical Reasoning",
+          "count": 10,
+          "minutes": 11
+        }
+      ]
     }
   }
 }
