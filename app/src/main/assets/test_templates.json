@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "defaults": {},
+  "templates": {
+    "SEPLAT_TECH_TRAINEE": {
+      "title": "Seplat Technical Trainee Mock",
+      "company_id": "SEP",
+      "company": "Seplat Energy",
+      "provider": "HCP (Human Capital Partners)",
+      "sections": [
+        {
+          "section": "Numerical Reasoning",
+          "count": 20,
+          "minutes": 20
+        },
+        {
+          "section": "Verbal Reasoning",
+          "count": 20,
+          "minutes": 18
+        },
+        {
+          "section": "Logical Reasoning",
+          "count": 10,
+          "minutes": 12
+        },
+        {
+          "section": "Engineering/Technical",
+          "count": 50,
+          "minutes": 30
+        }
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf"
+    },
+    "FCSC_APTITUDE": {
+      "title": "FCSC Aptitude Test Mock",
+      "company_id": "FCSC",
+      "company": "Federal Civil Service Commission",
+      "provider": "In-house",
+      "sections": [
+        {
+          "section": "Verbal Reasoning",
+          "count": 30,
+          "minutes": 30
+        },
+        {
+          "section": "Numerical Reasoning",
+          "count": 30,
+          "minutes": 30
+        },
+        {
+          "section": "General Knowledge",
+          "count": 60,
+          "minutes": 60
+        }
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2025/03/FCSC-Aptitude-Test-Jobsregion.pdf"
+    },
+    "GENERIC_GMAP": {
+      "title": "Generic GMAP Practice Mock",
+      "company_id": "GEN",
+      "company": "Generic (cross-industry)",
+      "provider": "Generic / AI-generated",
+      "sections": [
+        {
+          "section": "Numerical Reasoning",
+          "count": 10,
+          "minutes": 12
+        },
+        {
+          "section": "Verbal Reasoning",
+          "count": 10,
+          "minutes": 12
+        },
+        {
+          "section": "Logical Reasoning",
+          "count": 10,
+          "minutes": 11
+        }
+      ]
+    }
+  }
+}

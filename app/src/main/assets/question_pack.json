@@ -1,0 +1,5048 @@
+{
+  "schema_version": 2,
+  "questions": [
+    {
+      "id": "SEP-NUM-0001",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "What is 15% of 420?",
+      "options": [
+        "60",
+        "63",
+        "65",
+        "70"
+      ],
+      "answer": 1,
+      "explanation": "10% of 420 is 42 and 5% is 21. 42 + 21 = 63.",
+      "difficulty": "easy",
+      "tags": [
+        "percentage"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0002",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "A well produces 2,500 barrels of oil per day. If production declines by 8% annually, what will be the production rate after one year?",
+      "options": [
+        "2,300 bpd",
+        "2,250 bpd",
+        "2,400 bpd",
+        "2,200 bpd"
+      ],
+      "answer": 0,
+      "explanation": "An 8% decline leaves 92% of the rate: 2,500 x 0.92 = 2,300 barrels per day.",
+      "difficulty": "medium",
+      "tags": [
+        "percentage",
+        "decline-rate"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0003",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "If 5 drilling rigs can complete 15 wells in 30 days, how many wells can 8 rigs complete in 45 days?",
+      "options": [
+        "30",
+        "36",
+        "42",
+        "48"
+      ],
+      "answer": 1,
+      "explanation": "One rig completes 15 / (5 x 30) = 0.1 wells per day. 8 x 45 x 0.1 = 36 wells.",
+      "difficulty": "medium",
+      "tags": [
+        "work-rate",
+        "ratio"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0004",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "A gas pipeline has a flow rate of 500,000 standard cubic feet per day (SCFD). What is the flow rate in MMSCFD?",
+      "options": [
+        "0.5",
+        "5.0",
+        "50",
+        "500"
+      ],
+      "answer": 0,
+      "explanation": "1 MMSCFD is 1,000,000 standard cubic feet per day, so 500,000 SCFD = 0.5 MMSCFD.",
+      "difficulty": "easy",
+      "tags": [
+        "unit-conversion",
+        "gas"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0005",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "The ratio of water to oil in a well is 3:7. If the total fluid produced is 1,000 barrels, how many barrels are oil?",
+      "options": [
+        "300",
+        "500",
+        "700",
+        "750"
+      ],
+      "answer": 2,
+      "explanation": "Oil is 7 of the 10 parts: 1,000 x 7/10 = 700 barrels.",
+      "difficulty": "easy",
+      "tags": [
+        "ratio"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0006",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "A drill bit costs ₦450,000 and has a useful life of 90 drilling hours. What is the cost per drilling hour?",
+      "options": [
+        "₦5,000",
+        "₦4,500",
+        "₦5,500",
+        "₦6,000"
+      ],
+      "answer": 0,
+      "explanation": "450,000 / 90 = 5,000 naira per drilling hour.",
+      "difficulty": "easy",
+      "tags": [
+        "unit-cost",
+        "drilling"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0007",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "If the specific gravity of a crude oil sample is 0.85, what is its API gravity? (API = (141.5/SG) - 131.5)",
+      "options": [
+        "32.5",
+        "35.0",
+        "38.5",
+        "40.0"
+      ],
+      "answer": 1,
+      "explanation": "141.5 / 0.85 = 166.47. 166.47 - 131.5 = 34.97, which rounds to 35.0.",
+      "difficulty": "medium",
+      "tags": [
+        "api-gravity",
+        "formula"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0008",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "A reservoir has an area of 500 acres and an average thickness of 40 feet. What is the volume in acre-feet?",
+      "options": [
+        "12,500",
+        "15,000",
+        "20,000",
+        "25,000"
+      ],
+      "answer": 2,
+      "explanation": "Volume = area x thickness = 500 x 40 = 20,000 acre-feet.",
+      "difficulty": "easy",
+      "tags": [
+        "volume",
+        "reservoir"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0009",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "If a pump moves 300 barrels per hour and operates for 18 hours daily, how many barrels are pumped in a 30-day month?",
+      "options": [
+        "162,000",
+        "150,000",
+        "180,000",
+        "200,000"
+      ],
+      "answer": 0,
+      "explanation": "300 x 18 = 5,400 barrels per day. 5,400 x 30 = 162,000 barrels.",
+      "difficulty": "easy",
+      "tags": [
+        "rate",
+        "production"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0010",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "An investment of ₦5,000,000 in a gas plant yields a return of ₦750,000 annually. What is the percentage return on investment?",
+      "options": [
+        "12%",
+        "15%",
+        "18%",
+        "20%"
+      ],
+      "answer": 1,
+      "explanation": "750,000 / 5,000,000 = 0.15, which is 15%.",
+      "difficulty": "easy",
+      "tags": [
+        "percentage",
+        "roi"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0011",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "A 5,000-foot well costs ₦50,000,000 to drill. What is the cost per foot?",
+      "options": [
+        "₦8,000",
+        "₦10,000",
+        "₦12,000",
+        "₦15,000"
+      ],
+      "answer": 1,
+      "explanation": "50,000,000 / 5,000 = 10,000 naira per foot.",
+      "difficulty": "easy",
+      "tags": [
+        "unit-cost",
+        "drilling"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0012",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "If 1 barrel = 42 US gallons, how many gallons are in 250 barrels?",
+      "options": [
+        "8,500",
+        "9,500",
+        "10,500",
+        "11,500"
+      ],
+      "answer": 2,
+      "explanation": "250 x 42 = 10,500 US gallons.",
+      "difficulty": "easy",
+      "tags": [
+        "unit-conversion"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0013",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "A gas well produces at a rate that declines by 30% per year. If the initial rate is 400 MMSCFD, what is the rate after 2 years?",
+      "options": [
+        "160 MMSCFD",
+        "196 MMSCFD",
+        "200 MMSCFD",
+        "240 MMSCFD"
+      ],
+      "answer": 1,
+      "explanation": "Each year keeps 70% of the rate: 400 x 0.7 x 0.7 = 196 MMSCFD.",
+      "difficulty": "medium",
+      "tags": [
+        "percentage",
+        "decline-rate"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0014",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "What is 333 multiplied by 135?",
+      "options": [
+        "43,923",
+        "44,955",
+        "45,000",
+        "46,323"
+      ],
+      "answer": 1,
+      "explanation": "333 x 135 = 333 x 100 + 333 x 35 = 33,300 + 11,655 = 44,955.",
+      "difficulty": "medium",
+      "tags": [
+        "multiplication"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0015",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "Simplify: (86 × 207) - (86 × 107)",
+      "options": [
+        "6,400",
+        "7,800",
+        "8,600",
+        "9,200"
+      ],
+      "answer": 2,
+      "explanation": "Factor out 86: 86 x (207 - 107) = 86 x 100 = 8,600.",
+      "difficulty": "medium",
+      "tags": [
+        "algebra",
+        "distributive-law"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0016",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "Which fraction is larger than 3/5?",
+      "options": [
+        "1/2",
+        "39/50",
+        "7/25",
+        "3/10"
+      ],
+      "answer": 1,
+      "explanation": "3/5 = 0.6. Only 39/50 = 0.78 is larger.",
+      "difficulty": "easy",
+      "tags": [
+        "fractions"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0017",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "In a class with x girls and y boys, what fraction of the class is girls?",
+      "options": [
+        "y/(x+y)",
+        "x/y",
+        "x/(x+y)",
+        "y/x"
+      ],
+      "answer": 2,
+      "explanation": "The class has x + y pupils and x girls, so the fraction is x/(x + y).",
+      "difficulty": "easy",
+      "tags": [
+        "fractions",
+        "algebra"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0018",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "If a number squared minus 11³ equals 6,590, what is the number?",
+      "options": [
+        "36",
+        "58",
+        "89",
+        "48"
+      ],
+      "answer": 2,
+      "explanation": "11 cubed is 1,331, so the square is 6,590 + 1,331 = 7,921. The square root of 7,921 is 89.",
+      "difficulty": "hard",
+      "tags": [
+        "algebra",
+        "squares"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0019",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "A pipeline is 120 kilometers long. If 35% of it needs replacement, how many kilometers need replacement?",
+      "options": [
+        "35 km",
+        "40 km",
+        "42 km",
+        "45 km"
+      ],
+      "answer": 2,
+      "explanation": "35% of 120 km = 0.35 x 120 = 42 km.",
+      "difficulty": "medium",
+      "tags": [
+        "percentage"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-NUM-0020",
+      "company_id": "SEP",
+      "section": "Numerical Reasoning",
+      "stem": "The pressure at a depth of 1,000 feet in a well is approximately 433 psi. What is the pressure at 2,500 feet?",
+      "options": [
+        "866 psi",
+        "1,000 psi",
+        "1,082.5 psi",
+        "1,200 psi Verbal Reasoning"
+      ],
+      "answer": 2,
+      "explanation": "The gradient is 433 psi per 1,000 ft, or 0.433 psi/ft. 0.433 x 2,500 = 1,082.5 psi.",
+      "difficulty": "medium",
+      "tags": [
+        "ratio",
+        "pressure"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0001",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Choose the word that best completes the sentence: The oil spill had a ______ effect on marine life in the region.",
+      "options": [
+        "beneficial",
+        "negligible",
+        "devastating",
+        "minimal"
+      ],
+      "answer": 2,
+      "explanation": "The spill harmed marine life, so 'devastating' fits. The other options mean little or no harm.",
+      "difficulty": "easy",
+      "tags": [
+        "sentence-completion",
+        "vocabulary"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0002",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Select the synonym for \"dormant\" as used in \"a dormant oil well\":",
+      "options": [
+        "active",
+        "inactive",
+        "productive",
+        "flowing"
+      ],
+      "answer": 1,
+      "explanation": "'Dormant' means not active or not flowing, so 'inactive' is the synonym.",
+      "difficulty": "easy",
+      "tags": [
+        "synonym",
+        "vocabulary"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0003",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Which word is most opposite in meaning to \"flammable\"?",
+      "options": [
+        "combustible",
+        "volatile",
+        "non-flammable",
+        "ignitable"
+      ],
+      "answer": 2,
+      "explanation": "'Flammable' means able to burn, so its opposite is 'non-flammable'.",
+      "difficulty": "easy",
+      "tags": [
+        "antonym",
+        "vocabulary"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0004",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Fill in the blank: The drilling team worked ______ to reach the target depth before the deadline.",
+      "options": [
+        "diligently",
+        "carelessly",
+        "slowly",
+        "reluctantly"
+      ],
+      "answer": 0,
+      "explanation": "'Diligently' means with steady effort, which matches reaching the target before the deadline.",
+      "difficulty": "easy",
+      "tags": [
+        "sentence-completion",
+        "adverb"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0005",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Choose the sentence that is grammatically correct:",
+      "options": [
+        "He has been working on the rig for five years.",
+        "He have been working on the rig for five years.",
+        "He has been worked on the rig for five years.",
+        "He is been working on the rig for five years."
+      ],
+      "answer": 0,
+      "explanation": "Only the first sentence uses the present perfect continuous correctly: 'has been working'.",
+      "difficulty": "easy",
+      "tags": [
+        "grammar",
+        "tense"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0006",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "\"The reservoir pressure has declined significantly.\" The word \"declined\" means:",
+      "options": [
+        "increased",
+        "remained the same",
+        "decreased",
+        "fluctuated"
+      ],
+      "answer": 2,
+      "explanation": "'Declined' means went down, so 'decreased' is correct.",
+      "difficulty": "easy",
+      "tags": [
+        "vocabulary"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0007",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Select the antonym of \"permeable\":",
+      "options": [
+        "porous",
+        "absorbent",
+        "impermeable",
+        "penetrable"
+      ],
+      "answer": 2,
+      "explanation": "'Permeable' means fluid can pass through, so its opposite is 'impermeable'.",
+      "difficulty": "easy",
+      "tags": [
+        "antonym",
+        "vocabulary"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0008",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Fill in the blank with the correct tense: He ______ a fortune by writing various kinds of technical books.",
+      "options": [
+        "did making",
+        "would made",
+        "is making",
+        "will made"
+      ],
+      "answer": 2,
+      "explanation": "Only 'is making' is a correct verb form here: he is making a fortune by writing books.",
+      "difficulty": "medium",
+      "tags": [
+        "grammar",
+        "tense"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0009",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Identify the tense: \"He will have been working for four hours.\"",
+      "options": [
+        "Past Perfect Continuous",
+        "Present Perfect Continuous",
+        "Future Perfect",
+        "Future Perfect Continuous"
+      ],
+      "answer": 3,
+      "explanation": "'Will have been working' is the future perfect continuous.",
+      "difficulty": "medium",
+      "tags": [
+        "grammar",
+        "tense"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0010",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Identify the tense: \"John had been working in a bank for some years.\"",
+      "options": [
+        "Simple past",
+        "Past continuous",
+        "Past perfect continuous",
+        "Past perfect"
+      ],
+      "answer": 2,
+      "explanation": "'Had been working' is the past perfect continuous.",
+      "difficulty": "medium",
+      "tags": [
+        "grammar",
+        "tense"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0011",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Choose the correct word to fill the blank: I ______ with my sister ______ I find an apartment.",
+      "options": [
+        "am living, until",
+        "have been living, since",
+        "had lived, since",
+        "had been living, since"
+      ],
+      "answer": 0,
+      "explanation": "'Am living ... until' fits a temporary arrangement with a clear end point.",
+      "difficulty": "medium",
+      "tags": [
+        "grammar",
+        "tense"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0012",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "The word \"derrick\" refers to which of the following?",
+      "options": [
+        "A type of pump",
+        "The main structure of a drilling rig",
+        "A safety device",
+        "A measuring instrument"
+      ],
+      "answer": 1,
+      "explanation": "The derrick is the steel tower that supports the drilling equipment.",
+      "difficulty": "easy",
+      "tags": [
+        "oil-gas-terminology"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0013",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "\"Roughneck\" is a nickname for workers who work on which area of a drilling rig?",
+      "options": [
+        "The office",
+        "The drill floor",
+        "The kitchen",
+        "The warehouse"
+      ],
+      "answer": 1,
+      "explanation": "Roughnecks are the crew who work on the drill floor.",
+      "difficulty": "easy",
+      "tags": [
+        "oil-gas-terminology"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0014",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "\"Sour gas\" refers to natural gas that contains which component?",
+      "options": [
+        "Carbon dioxide",
+        "Oxygen",
+        "Hydrogen sulfide",
+        "Methane"
+      ],
+      "answer": 2,
+      "explanation": "Sour gas contains hydrogen sulfide (H2S), which is toxic and corrosive.",
+      "difficulty": "medium",
+      "tags": [
+        "oil-gas-terminology",
+        "hse"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0015",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Choose the best word to fill the blank: The well was ______ after producing for 20 years.",
+      "options": [
+        "drilled",
+        "abandoned",
+        "constructed",
+        "completed"
+      ],
+      "answer": 1,
+      "explanation": "A well is abandoned when it is permanently taken out of service after production ends.",
+      "difficulty": "easy",
+      "tags": [
+        "oil-gas-terminology"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0016",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "What does the acronym \"FPSO\" stand for?",
+      "options": [
+        "Floating Production, Storage, and Offloading",
+        "Floating Petroleum Storage Operation",
+        "Fixed Production Storage Offshore",
+        "Fast Pipeline Storage Operation"
+      ],
+      "answer": 0,
+      "explanation": "FPSO stands for Floating Production, Storage, and Offloading.",
+      "difficulty": "easy",
+      "tags": [
+        "oil-gas-terminology"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0017",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "The term \"kick\" in drilling operations refers to:",
+      "options": [
+        "A routine safety drill",
+        "Pressure overcoming hydrostatic pressure of drilling fluid",
+        "Kicking equipment into place",
+        "Starting the drilling process"
+      ],
+      "answer": 1,
+      "explanation": "A kick is formation pressure that overcomes the hydrostatic pressure of the drilling fluid.",
+      "difficulty": "medium",
+      "tags": [
+        "oil-gas-terminology",
+        "well-control"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0018",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Select the word closest in meaning to \"extraction\":",
+      "options": [
+        "Injection",
+        "Removal",
+        "Addition",
+        "Storage"
+      ],
+      "answer": 1,
+      "explanation": "Extraction means removal, for example removing oil from a reservoir.",
+      "difficulty": "easy",
+      "tags": [
+        "synonym",
+        "vocabulary"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0019",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "\"The company is looking for candidates with strong technical fundamentals and analytical capability.\" What is the best synonym for \"analytical\"?",
+      "options": [
+        "Creative",
+        "Logical",
+        "Artistic",
+        "Emotional"
+      ],
+      "answer": 1,
+      "explanation": "Analytical work is logical and systematic, so 'logical' is the closest synonym.",
+      "difficulty": "easy",
+      "tags": [
+        "synonym",
+        "vocabulary"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-VER-0020",
+      "company_id": "SEP",
+      "section": "Verbal Reasoning",
+      "stem": "Which word is the odd one out?",
+      "options": [
+        "Reservoir",
+        "Formation",
+        "Rock",
+        "Microscope"
+      ],
+      "answer": 3,
+      "explanation": "Reservoir, formation and rock belong to geology. A microscope does not.",
+      "difficulty": "medium",
+      "tags": [
+        "odd-one-out",
+        "oil-gas-terminology"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-LOG-0001",
+      "company_id": "SEP",
+      "section": "Logical Reasoning",
+      "stem": "What comes next in the sequence: 2, 6, 12, 20, 30, ?",
+      "options": [
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "answer": 2,
+      "explanation": "The differences are 4, 6, 8 and 10, so the next is 12. 30 + 12 = 42.",
+      "difficulty": "medium",
+      "tags": [
+        "number-series"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-LOG-0002",
+      "company_id": "SEP",
+      "section": "Logical Reasoning",
+      "stem": "If all A are B, and all B are C, which statement is true?",
+      "options": [
+        "All C are A",
+        "Some C are A",
+        "All A are C",
+        "No A are C"
+      ],
+      "answer": 2,
+      "explanation": "If every A is B and every B is C, then every A is C.",
+      "difficulty": "medium",
+      "tags": [
+        "syllogism"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-LOG-0003",
+      "company_id": "SEP",
+      "section": "Logical Reasoning",
+      "stem": "What number comes next: 3, 9, 27, 81, ?",
+      "options": [
+        "162",
+        "216",
+        "243",
+        "324"
+      ],
+      "answer": 2,
+      "explanation": "Each term is multiplied by 3: 81 x 3 = 243.",
+      "difficulty": "easy",
+      "tags": [
+        "number-series",
+        "powers"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-LOG-0004",
+      "company_id": "SEP",
+      "section": "Logical Reasoning",
+      "stem": "Which shape would complete the sequence: Circle, Triangle, Square, ?",
+      "options": [
+        "Rectangle",
+        "Pentagon",
+        "Hexagon",
+        "All of the above"
+      ],
+      "answer": 1,
+      "explanation": "After the circle the number of sides rises: triangle 3, square 4, so pentagon 5.",
+      "difficulty": "medium",
+      "tags": [
+        "shape-sequence",
+        "pattern"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-LOG-0005",
+      "company_id": "SEP",
+      "section": "Logical Reasoning",
+      "stem": "If you rearrange the letters \"CIFAIPC\" you get the name of a:",
+      "options": [
+        "Country",
+        "City",
+        "Ocean",
+        "Chemical"
+      ],
+      "answer": 2,
+      "explanation": "CIFAIPC rearranges to PACIFIC, which is an ocean.",
+      "difficulty": "easy",
+      "tags": [
+        "anagram",
+        "pattern"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-LOG-0006",
+      "company_id": "SEP",
+      "section": "Logical Reasoning",
+      "stem": "Select the word that does not belong to the group:",
+      "options": [
+        "Drill bit",
+        "Derrick",
+        "Pump",
+        "Telephone"
+      ],
+      "answer": 3,
+      "explanation": "Drill bit, derrick and pump are drilling equipment. A telephone is not.",
+      "difficulty": "easy",
+      "tags": [
+        "odd-one-out",
+        "oil-gas-terminology"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-LOG-0007",
+      "company_id": "SEP",
+      "section": "Logical Reasoning",
+      "stem": "What is the missing number: 4, 10, 22, 46, ?",
+      "options": [
+        "70",
+        "82",
+        "94",
+        "102"
+      ],
+      "answer": 2,
+      "explanation": "Each term is double the previous term plus 2: 46 x 2 + 2 = 94.",
+      "difficulty": "medium",
+      "tags": [
+        "number-series"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-LOG-0008",
+      "company_id": "SEP",
+      "section": "Logical Reasoning",
+      "stem": "If a well produces twice as much as another, and the total production is 1,500 barrels, how much does the smaller well produce?",
+      "options": [
+        "1,000 barrels",
+        "750 barrels",
+        "500 barrels",
+        "375 barrels"
+      ],
+      "answer": 2,
+      "explanation": "Let the smaller well be x. Then x + 2x = 1,500, so x = 500 barrels.",
+      "difficulty": "medium",
+      "tags": [
+        "word-problem",
+        "algebra"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-LOG-0009",
+      "company_id": "SEP",
+      "section": "Logical Reasoning",
+      "stem": "Continue the pattern: 1, 1, 2, 3, 5, 8, 13, ?",
+      "options": [
+        "18",
+        "20",
+        "21",
+        "23"
+      ],
+      "answer": 2,
+      "explanation": "Each term is the sum of the two before it: 8 + 13 = 21.",
+      "difficulty": "medium",
+      "tags": [
+        "number-series",
+        "fibonacci"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-LOG-0010",
+      "company_id": "SEP",
+      "section": "Logical Reasoning",
+      "stem": "Which of the following is not a petroleum engineering term?",
+      "options": [
+        "Porosity",
+        "Permeability",
+        "Evaporation",
+        "Saturation"
+      ],
+      "answer": 2,
+      "explanation": "Porosity, permeability and saturation describe reservoir rock. Evaporation is a phase change.",
+      "difficulty": "easy",
+      "tags": [
+        "odd-one-out",
+        "petroleum-terms"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0001",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What type of rock favours petroleum formation?",
+      "options": [
+        "Igneous rock",
+        "Metamorphic rock",
+        "Sedimentary rock",
+        "Volcanic rock"
+      ],
+      "answer": 2,
+      "explanation": "Petroleum forms in sedimentary rock, where organic matter is buried and matured.",
+      "difficulty": "easy",
+      "tags": [
+        "geology",
+        "reservoir"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0002",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Which of the following is an artificial lift method?",
+      "options": [
+        "Natural flow",
+        "Gas lift system",
+        "Gravity flow",
+        "Artesian flow"
+      ],
+      "answer": 1,
+      "explanation": "A gas lift is an artificial lift method. The other options describe natural flow.",
+      "difficulty": "easy",
+      "tags": [
+        "artificial-lift"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0003",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the name of the equipment used to control well pressure?",
+      "options": [
+        "Christmas tree",
+        "Downhole safety valve",
+        "Surface safety valve",
+        "All of the above"
+      ],
+      "answer": 3,
+      "explanation": "The Christmas tree, downhole safety valve and surface safety valve all control well pressure.",
+      "difficulty": "medium",
+      "tags": [
+        "wellhead",
+        "safety"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0004",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "The main reason for using a gas lift system is to:",
+      "options": [
+        "Reduce pressure in the production tubing",
+        "Increase reservoir pressure",
+        "Bring the well back into production",
+        "Reduce gas bubbles in the tubing"
+      ],
+      "answer": 2,
+      "explanation": "Gas lift lightens the fluid column so that a well that has stopped flowing can produce again.",
+      "difficulty": "medium",
+      "tags": [
+        "artificial-lift"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0005",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "In well completion, what is the purpose of a production packer?",
+      "options": [
+        "Protect the casing",
+        "Isolate zones",
+        "Separate multiple zones",
+        "All of the above"
+      ],
+      "answer": 3,
+      "explanation": "A production packer protects the casing, isolates zones and separates multiple zones.",
+      "difficulty": "medium",
+      "tags": [
+        "completion",
+        "packer"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0006",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the full form of MMSCFD?",
+      "options": [
+        "Multi Million Standard Cumulative Flow Per Day",
+        "Million Standard Cubic Feet Per Day",
+        "Million Standard Cumulative Flow Per Day",
+        "Multi Million Standard Cubic Feet Per Day"
+      ],
+      "answer": 1,
+      "explanation": "MMSCFD stands for Million Standard Cubic Feet Per Day.",
+      "difficulty": "easy",
+      "tags": [
+        "acronyms",
+        "units"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0007",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "One standard barrel (bbl) is equal to how many US gallons?",
+      "options": [
+        "19",
+        "42",
+        "55",
+        "26"
+      ],
+      "answer": 1,
+      "explanation": "One barrel is defined as 42 US gallons.",
+      "difficulty": "easy",
+      "tags": [
+        "units",
+        "barrels"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0008",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Which test is considered the first test after drilling an exploration oil well?",
+      "options": [
+        "Production test",
+        "Drill Stem Test (DST)",
+        "Formation test",
+        "Injectivity test"
+      ],
+      "answer": 1,
+      "explanation": "The drill stem test (DST) is the first test after drilling an exploration well.",
+      "difficulty": "medium",
+      "tags": [
+        "drilling",
+        "well-testing"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0009",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "In drilling operations, what does \"overbalanced mud building filter cake\" serve as?",
+      "options": [
+        "Primary barrier",
+        "Secondary barrier",
+        "Tertiary barrier",
+        "No barrier function"
+      ],
+      "answer": 1,
+      "explanation": "The filter cake from overbalanced mud acts as a secondary barrier; the mud column is the primary barrier.",
+      "difficulty": "medium",
+      "tags": [
+        "well-control",
+        "drilling"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0010",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the limitation of using multiple string completion?",
+      "options": [
+        "Packers cannot be used",
+        "Cannot produce oil and gas from the same well",
+        "Limited tubing size may restrict production",
+        "All of the above"
+      ],
+      "answer": 2,
+      "explanation": "Multiple tubing strings share a limited casing size, so the tubing diameter and production rate are restricted.",
+      "difficulty": "medium",
+      "tags": [
+        "completion",
+        "production"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0011",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "The completion type that allows more than one zone to produce from one tubing is called:",
+      "options": [
+        "Commingled completion",
+        "Sequential zonal completion",
+        "Multi-zone completion",
+        "Dual completion"
+      ],
+      "answer": 0,
+      "explanation": "Commingled completion produces more than one zone through a single tubing string.",
+      "difficulty": "medium",
+      "tags": [
+        "completion"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0012",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "When should tubingless completion be proposed?",
+      "options": [
+        "When high production rates are required",
+        "When high surface pressure is required",
+        "When low production rates are required",
+        "None of the above"
+      ],
+      "answer": 0,
+      "explanation": "Tubingless completion is proposed when high production rates are required.",
+      "difficulty": "medium",
+      "tags": [
+        "completion",
+        "production"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0013",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "The productivity index is the relationship between:",
+      "options": [
+        "Pressure and temperature",
+        "Production rate and pressure",
+        "Pressure and time",
+        "Temperature and volume"
+      ],
+      "answer": 1,
+      "explanation": "The productivity index relates production rate to the pressure drawdown.",
+      "difficulty": "medium",
+      "tags": [
+        "reservoir",
+        "productivity"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0014",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "When is artificial lift needed?",
+      "options": [
+        "If reservoir pressure is low",
+        "If the main drive mechanism is water",
+        "During secondary recovery",
+        "All of the above"
+      ],
+      "answer": 3,
+      "explanation": "Low reservoir pressure, water drive and secondary recovery can all make artificial lift necessary.",
+      "difficulty": "easy",
+      "tags": [
+        "artificial-lift"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0015",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the primary function of a heater treater in oil production?",
+      "options": [
+        "Heating crude oil to get all components",
+        "Removing heavy components",
+        "Separating water from crude oil",
+        "Separating lighter gases"
+      ],
+      "answer": 2,
+      "explanation": "A heater treater heats the emulsion so that water separates from the crude oil.",
+      "difficulty": "medium",
+      "tags": [
+        "facilities",
+        "separation"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0016",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Directional drilling refers to the act of:",
+      "options": [
+        "Drilling vertically",
+        "Deviating the wellbore in a desired direction",
+        "Drilling multiple wells from one platform",
+        "Reducing wellbore diameter"
+      ],
+      "answer": 1,
+      "explanation": "Directional drilling deviates the wellbore towards a target that is not directly below the rig.",
+      "difficulty": "easy",
+      "tags": [
+        "drilling",
+        "directional"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0017",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Fluids movement in porous media within a reservoir is governed by which forces?",
+      "options": [
+        "Viscous, hydraulic and gravitational",
+        "Viscous, capillary and gravitational",
+        "Viscous, capillary and hydraulic",
+        "Hydraulic, capillary and gravitational"
+      ],
+      "answer": 1,
+      "explanation": "Flow in porous media is governed by viscous, capillary and gravitational forces.",
+      "difficulty": "hard",
+      "tags": [
+        "reservoir",
+        "fluid-flow"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0018",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Injection of pressurized gas or water to increase production is a form of:",
+      "options": [
+        "Primary recovery",
+        "Secondary recovery",
+        "Tertiary recovery",
+        "None of the above"
+      ],
+      "answer": 1,
+      "explanation": "Injecting gas or water to raise production is secondary recovery.",
+      "difficulty": "easy",
+      "tags": [
+        "recovery",
+        "injection"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0019",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What test is used to find the parting pressure of a formation?",
+      "options": [
+        "Pulse test",
+        "Build up test",
+        "Step rate test",
+        "Injectivity test"
+      ],
+      "answer": 2,
+      "explanation": "A step rate test finds the parting or fracture pressure of the formation.",
+      "difficulty": "hard",
+      "tags": [
+        "well-testing",
+        "reservoir"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0020",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Carbon dioxide flooding is classified under which Enhanced Oil Recovery category?",
+      "options": [
+        "Chemical",
+        "Thermal",
+        "Miscible",
+        "None of the above"
+      ],
+      "answer": 2,
+      "explanation": "Carbon dioxide flooding is a miscible enhanced oil recovery method.",
+      "difficulty": "hard",
+      "tags": [
+        "eor",
+        "miscible"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0021",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the purpose of a drilling fluid? (Mud)",
+      "options": [
+        "To cool the drill bit",
+        "To remove cuttings",
+        "To maintain hydrostatic pressure",
+        "All of the above"
+      ],
+      "answer": 3,
+      "explanation": "Drilling fluid cools the bit, removes cuttings and maintains hydrostatic pressure.",
+      "difficulty": "easy",
+      "tags": [
+        "drilling-fluids"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0022",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Slotted liner is used to prevent:",
+      "options": [
+        "Control of a single interval",
+        "Hole collapse",
+        "Formation damage",
+        "None of the above"
+      ],
+      "answer": 1,
+      "explanation": "A slotted liner supports the borehole and prevents hole collapse.",
+      "difficulty": "medium",
+      "tags": [
+        "completion",
+        "sand-control"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0023",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Well completion operations include:",
+      "options": [
+        "Production packer installation",
+        "Christmas tree installation",
+        "Tubing string installation",
+        "All of the above"
+      ],
+      "answer": 3,
+      "explanation": "Completion operations include the packer, the Christmas tree and the tubing string.",
+      "difficulty": "easy",
+      "tags": [
+        "completion"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0024",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the advantage of a perforated liner?",
+      "options": [
+        "Log interpretation is critical",
+        "Reduced wellbore diameter",
+        "Production continues without sand or formation damage",
+        "None of the above"
+      ],
+      "answer": 2,
+      "explanation": "A perforated liner lets the well produce while limiting sand and formation damage.",
+      "difficulty": "medium",
+      "tags": [
+        "completion",
+        "sand-control"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0025",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "The gathering system consists of the following except?",
+      "options": [
+        "Wellhead",
+        "Flowline",
+        "Separator",
+        "Transformer"
+      ],
+      "answer": 3,
+      "explanation": "The gathering system has wellheads, flowlines and separators. A transformer is electrical equipment.",
+      "difficulty": "easy",
+      "tags": [
+        "facilities",
+        "gathering"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0026",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is used to prevent water and gas coning?",
+      "options": [
+        "Select perfect places for new perforation",
+        "Go to another formation",
+        "Re-completion",
+        "Produce at the optimum rate"
+      ],
+      "answer": 3,
+      "explanation": "Producing at the optimum rate limits the pressure drawdown that pulls water and gas towards the wellbore.",
+      "difficulty": "medium",
+      "tags": [
+        "production",
+        "coning"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0027",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Heavy oil is typically produced using:",
+      "options": [
+        "Natural flow",
+        "Progressing cavity pump",
+        "Jet pump",
+        "Hydraulic pump"
+      ],
+      "answer": 1,
+      "explanation": "Heavy oil is lifted with a progressing cavity pump, which handles viscous fluid.",
+      "difficulty": "medium",
+      "tags": [
+        "artificial-lift",
+        "heavy-oil"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0028",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is another name for a well log?",
+      "options": [
+        "Drilling log",
+        "Formation log",
+        "Borehole log",
+        "Depth log"
+      ],
+      "answer": 2,
+      "explanation": "A well log is also called a borehole log.",
+      "difficulty": "easy",
+      "tags": [
+        "logging"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0029",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the purpose of a test separator in production testing?",
+      "options": [
+        "To separate water from oil",
+        "To measure flow from individual wells",
+        "To heat crude oil",
+        "To store produced oil"
+      ],
+      "answer": 1,
+      "explanation": "A test separator measures the flow from individual wells.",
+      "difficulty": "medium",
+      "tags": [
+        "facilities",
+        "well-testing"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0030",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "The production system consists of the following except:",
+      "options": [
+        "Surface facilities",
+        "Reservoir",
+        "Transformer",
+        "Wellbore"
+      ],
+      "answer": 2,
+      "explanation": "The production system includes the reservoir, wellbore and surface facilities. A transformer is not part of it.",
+      "difficulty": "easy",
+      "tags": [
+        "facilities",
+        "production"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0031",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Inflow performance determines:",
+      "options": [
+        "Production-related pressure",
+        "Reservoir compilation",
+        "Different reservoir pressure",
+        "Production decline minimization"
+      ],
+      "answer": 0,
+      "explanation": "Inflow performance describes how production rate depends on the flowing pressure.",
+      "difficulty": "medium",
+      "tags": [
+        "reservoir",
+        "inflow"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0032",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "The completion interface is between the reservoir and:",
+      "options": [
+        "Surface production facilities",
+        "Drilling equipment",
+        "Pipeline network",
+        "Refinery"
+      ],
+      "answer": 0,
+      "explanation": "The completion connects the reservoir to the surface production facilities.",
+      "difficulty": "medium",
+      "tags": [
+        "completion"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0033",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Does well completion always have tubing?",
+      "options": [
+        "Yes",
+        "No",
+        "Sometimes",
+        "Not specified"
+      ],
+      "answer": 1,
+      "explanation": "A well can be completed without tubing, for example a tubingless completion.",
+      "difficulty": "easy",
+      "tags": [
+        "completion"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0034",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the preferred objective of an oil and gas well?",
+      "options": [
+        "More production",
+        "Establish effective flow communication between wellbore and formation",
+        "Obtain clean",
+        "All of the above"
+      ],
+      "answer": 1,
+      "explanation": "The preferred objective is effective flow communication between the wellbore and the formation.",
+      "difficulty": "medium",
+      "tags": [
+        "completion",
+        "well-objectives"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0035",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What are the applications of production packers?",
+      "options": [
+        "Casing protection",
+        "Separation of multiple zones",
+        "Zone isolation",
+        "All of the above"
+      ],
+      "answer": 3,
+      "explanation": "Production packers protect the casing, separate multiple zones and isolate zones.",
+      "difficulty": "medium",
+      "tags": [
+        "completion",
+        "packer"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0036",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Gas and water coning is a term that describes:",
+      "options": [
+        "Movement of water and gas to the wellbore",
+        "The shape of the well",
+        "A type of drilling rig",
+        "Production equipment"
+      ],
+      "answer": 0,
+      "explanation": "Coning is the movement of water and gas towards the wellbore.",
+      "difficulty": "medium",
+      "tags": [
+        "production",
+        "coning"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0037",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "The first step after an oil spill occurs should be to:",
+      "options": [
+        "Call the EPA",
+        "Cover it with dirt",
+        "Initiate containment measures",
+        "Wait for instructions"
+      ],
+      "answer": 2,
+      "explanation": "Containment comes first so that the spill does not spread.",
+      "difficulty": "easy",
+      "tags": [
+        "hse",
+        "spill-response"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0038",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the most dangerous to human health among the following?",
+      "options": [
+        "Salt water",
+        "H₂S",
+        "CO₂",
+        "SO₂"
+      ],
+      "answer": 1,
+      "explanation": "H2S is highly toxic even at low concentrations.",
+      "difficulty": "medium",
+      "tags": [
+        "hse",
+        "gas-safety"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0039",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "A berm is used for:",
+      "options": [
+        "Scenic beauty",
+        "Fluid containment",
+        "Stopping vehicles",
+        "Topographical formation"
+      ],
+      "answer": 1,
+      "explanation": "A berm is a low wall that contains spilled fluid.",
+      "difficulty": "medium",
+      "tags": [
+        "hse",
+        "containment"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0040",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the purpose of deliverability testing in gas wells?",
+      "options": [
+        "Measure production capabilities during high demand",
+        "Measure production capabilities under specific reservoir conditions",
+        "Measure production capabilities during winter",
+        "Measure production under specific conditions of reservoir and bottom-hole flowing pressures"
+      ],
+      "answer": 3,
+      "explanation": "Deliverability testing measures production under specific reservoir and bottom-hole flowing pressures.",
+      "difficulty": "hard",
+      "tags": [
+        "well-testing",
+        "gas"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0041",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Why is FPSO better than an offshore platform?",
+      "options": [
+        "Abandonment costs are less",
+        "Can evade harsh weather",
+        "Can move from field to field",
+        "All of the above"
+      ],
+      "answer": 3,
+      "explanation": "An FPSO can move between fields and avoids some abandonment and weather problems.",
+      "difficulty": "medium",
+      "tags": [
+        "facilities",
+        "offshore"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0042",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Water content in natural gas is removed through:",
+      "options": [
+        "Electric heater",
+        "Dissolving water vapour using chemicals",
+        "Gas dehydration using Glycol",
+        "Addition of Mono Ethylene Glycol"
+      ],
+      "answer": 2,
+      "explanation": "Glycol dehydration removes water vapour from natural gas.",
+      "difficulty": "medium",
+      "tags": [
+        "gas-processing",
+        "dehydration"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0043",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "If API gravity of hydrocarbon liquid increases, what happens to specific gravity?",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains the same",
+        "Depends on temperature"
+      ],
+      "answer": 1,
+      "explanation": "Higher API gravity means lighter oil, so specific gravity decreases.",
+      "difficulty": "medium",
+      "tags": [
+        "api-gravity",
+        "crude-properties"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0044",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "The barge type drilling rig is classified as:",
+      "options": [
+        "Conventional land rig",
+        "Floating offshore rig",
+        "Conventional mobile rig",
+        "Bottom supported offshore rig"
+      ],
+      "answer": 3,
+      "explanation": "A barge rig rests on the seabed, so it is a bottom-supported offshore rig.",
+      "difficulty": "medium",
+      "tags": [
+        "rigs",
+        "offshore"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0045",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "At what water depth are semi-submersible drilling rigs used?",
+      "options": [
+        "20,000 ft",
+        "1,200 ft",
+        "12,000 ft",
+        "32,000 ft"
+      ],
+      "answer": 2,
+      "explanation": "Semi-submersible rigs work in water depths of about 12,000 feet.",
+      "difficulty": "medium",
+      "tags": [
+        "rigs",
+        "offshore"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0046",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Compositional modelling is generally not applicable for:",
+      "options": [
+        "Gas condensate recovery estimation",
+        "Volatile oil recovery estimation",
+        "Carbon dioxide flooding effectiveness",
+        "Polymer flood oil recovery"
+      ],
+      "answer": 3,
+      "explanation": "Compositional modelling is not suited to polymer flooding, which is an immiscible chemical process.",
+      "difficulty": "hard",
+      "tags": [
+        "reservoir-simulation",
+        "eor"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0047",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the full form of RFT?",
+      "options": [
+        "Reservoir Formation Testing",
+        "Repeat Formation Test",
+        "Repeat Flow Test",
+        "Reservoir Flow Testing Situational Judgment & Workplace Scenarios"
+      ],
+      "answer": 1,
+      "explanation": "RFT stands for Repeat Formation Test.",
+      "difficulty": "medium",
+      "tags": [
+        "well-testing",
+        "formation"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0048",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the primary component of natural gas?",
+      "options": [
+        "Ethane",
+        "Propane",
+        "Methane",
+        "Butane"
+      ],
+      "answer": 2,
+      "explanation": "Methane is the main component of natural gas.",
+      "difficulty": "easy",
+      "tags": [
+        "gas-composition"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0049",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "Which of the following is a characteristic of a good reservoir rock?",
+      "options": [
+        "High porosity and high permeability",
+        "Low porosity and low permeability",
+        "High porosity and low permeability",
+        "Low porosity and high permeability"
+      ],
+      "answer": 0,
+      "explanation": "A good reservoir rock has high porosity to store fluid and high permeability to flow it.",
+      "difficulty": "easy",
+      "tags": [
+        "reservoir",
+        "rock-properties"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "SEP-ENG-0050",
+      "company_id": "SEP",
+      "section": "Engineering/Technical",
+      "stem": "What is the function of a \"separator\" in oil production?",
+      "options": [
+        "To separate oil, gas, and water",
+        "To separate oil from sand",
+        "To separate different types of oil",
+        "To separate gas from air"
+      ],
+      "answer": 0,
+      "explanation": "A separator splits the produced stream into oil, gas and water.",
+      "difficulty": "easy",
+      "tags": [
+        "facilities",
+        "separation"
+      ],
+      "source": "https://www.jobsregion.com/wp-content/uploads/2026/06/SEPLAT-Technical-Trainee-Programme-Aptitude-Test-Jobsregion.pdf",
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0001",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Choose the word that best completes the sentence: She was ______ to the idea of working late.",
+      "options": [
+        "Opposed",
+        "Opposing",
+        "Oppose",
+        "Opposition"
+      ],
+      "answer": 0,
+      "explanation": "'Opposed to' is the correct collocation; 'opposed' is an adjective meaning strongly against something.",
+      "tags": [
+        "prepositions",
+        "collocations"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0002",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Identify the synonym of \"Benevolent\":",
+      "options": [
+        "Malevolent",
+        "Kind",
+        "Hostile",
+        "Cruel"
+      ],
+      "answer": 1,
+      "explanation": "Benevolent means kind and well-meaning, so 'kind' is the synonym; the other options are opposites.",
+      "tags": [
+        "vocabulary",
+        "synonyms"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0003",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Which sentence is grammatically correct?",
+      "options": [
+        "She don’t like apples.",
+        "She doesn’t likes apples.",
+        "She doesn’t like apples.",
+        "She don’t likes apples."
+      ],
+      "answer": 2,
+      "explanation": "'She doesn't like apples' uses the correct third-person singular negative: does not plus the base verb.",
+      "tags": [
+        "grammar",
+        "subject-verb-agreement"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0004",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the plural form of \"Child\"?",
+      "options": [
+        "Childs",
+        "Children",
+        "Childes",
+        "Childen"
+      ],
+      "answer": 1,
+      "explanation": "The irregular plural of 'child' is 'children'.",
+      "tags": [
+        "grammar",
+        "plurals"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0005",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Choose the correct preposition: He is good ______ Mathematics.",
+      "options": [
+        "At",
+        "In",
+        "On",
+        "For"
+      ],
+      "answer": 0,
+      "explanation": "'Good at' is the fixed preposition used for skills and school subjects.",
+      "tags": [
+        "prepositions"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0006",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Choose the correct antonym of \"Generous\":",
+      "options": [
+        "Stingy",
+        "Kind",
+        "Friendly",
+        "Charitable"
+      ],
+      "answer": 0,
+      "explanation": "Generous means willing to give freely; stingy means unwilling to give, so it is the antonym.",
+      "tags": [
+        "vocabulary",
+        "antonyms"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0007",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Identify the part of speech for the word \"quickly\" in the sentence: She ran quickly to catch the bus.",
+      "options": [
+        "Noun",
+        "Verb",
+        "Adverb",
+        "Adjective"
+      ],
+      "answer": 2,
+      "explanation": "'Quickly' modifies the verb 'ran', so it is an adverb.",
+      "tags": [
+        "parts-of-speech",
+        "adverbs"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0008",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "medium",
+      "stem": "Which of the following is a compound sentence?",
+      "options": [
+        "She went to the market.",
+        "She went to the market, and she bought groceries.",
+        "Because she went to the market.",
+        "Going to the market."
+      ],
+      "answer": 1,
+      "explanation": "A compound sentence joins two independent clauses; here the coordinating conjunction 'and' does that.",
+      "tags": [
+        "sentence-types"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0009",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "medium",
+      "stem": "Choose the correct spelling:",
+      "options": [
+        "Accomodate",
+        "Acommodate",
+        "Accommodate",
+        "Acomodate"
+      ],
+      "answer": 2,
+      "explanation": "'Accommodate' is spelled with a double c and a double m.",
+      "tags": [
+        "spelling"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0010",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the past tense of \"Go\"?",
+      "options": [
+        "Went",
+        "Gone",
+        "Going",
+        "Goes"
+      ],
+      "answer": 0,
+      "explanation": "'Go' is irregular: go, went, gone. 'Went' is the simple past tense.",
+      "tags": [
+        "grammar",
+        "tenses"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0011",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Which word is a synonym for \"Happy\"?",
+      "options": [
+        "Sad",
+        "Joyful",
+        "Angry",
+        "Bored"
+      ],
+      "answer": 1,
+      "explanation": "Joyful means very happy, so it is the synonym; sad, angry and bored are not.",
+      "tags": [
+        "vocabulary",
+        "synonyms"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0012",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "medium",
+      "stem": "Identify the error in the sentence: \"Each of the students are responsible for their own work.\"",
+      "options": [
+        "Each",
+        "Are",
+        "Responsible",
+        "Their"
+      ],
+      "answer": 1,
+      "explanation": "'Each' is singular, so the verb must be 'is', not 'are'.",
+      "tags": [
+        "grammar",
+        "subject-verb-agreement"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0013",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Choose the correct preposition: \"She is allergic ______ cats.\"",
+      "options": [
+        "To",
+        "With",
+        "For",
+        "On"
+      ],
+      "answer": 0,
+      "explanation": "The fixed expression is 'allergic to'.",
+      "tags": [
+        "prepositions"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0014",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the plural form of \"Mouse\"?",
+      "options": [
+        "Mouses",
+        "Mice",
+        "Mousees",
+        "Mices"
+      ],
+      "answer": 1,
+      "explanation": "The irregular plural of 'mouse' is 'mice'.",
+      "tags": [
+        "grammar",
+        "plurals"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0015",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "medium",
+      "stem": "Which sentence is in the passive voice?",
+      "options": [
+        "The cat chased the mouse.",
+        "The mouse was chased by the cat.",
+        "The cat is chasing the mouse.",
+        "The cat will chase the mouse."
+      ],
+      "answer": 1,
+      "explanation": "In 'The mouse was chased by the cat', the subject receives the action and the doer follows 'by'.",
+      "tags": [
+        "grammar",
+        "passive-voice"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0016",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Choose the correct word to complete the sentence: \"He is the ______ of the two brothers.\"",
+      "options": [
+        "Taller",
+        "Tallest",
+        "More tall",
+        "Most tall"
+      ],
+      "answer": 0,
+      "explanation": "When comparing two people, use the comparative 'taller', not the superlative 'tallest'.",
+      "tags": [
+        "grammar",
+        "comparatives"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0017",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the meaning of the idiom \"Break the ice\"?",
+      "options": [
+        "To cause trouble",
+        "To start a conversation in a formal setting",
+        "To break something",
+        "To end a relationship"
+      ],
+      "answer": 1,
+      "explanation": "'Break the ice' means to ease tension and start a conversation.",
+      "tags": [
+        "idioms"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0018",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "medium",
+      "stem": "Identify the direct object in the sentence: \"She gave him a book.\"",
+      "options": [
+        "She",
+        "Gave",
+        "Him",
+        "Book"
+      ],
+      "answer": 3,
+      "explanation": "'A book' receives the action of 'gave'; 'him' is the indirect object.",
+      "tags": [
+        "grammar",
+        "objects"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0019",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Which of the following is a proper noun?",
+      "options": [
+        "City",
+        "Lagos",
+        "River",
+        "Mountain"
+      ],
+      "answer": 1,
+      "explanation": "Lagos is the name of a specific place, so it is a proper noun and takes a capital letter.",
+      "tags": [
+        "grammar",
+        "nouns"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0020",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Choose the correct word to complete the sentence: \"The weather is ______ today.\"",
+      "options": [
+        "Beauty",
+        "Beautiful",
+        "Beautify",
+        "Beautifully"
+      ],
+      "answer": 1,
+      "explanation": "The adjective 'beautiful' describes the noun 'weather' after the linking verb 'is'.",
+      "tags": [
+        "grammar",
+        "adjectives"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0021",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the meaning of the word \"Benevolent\"?",
+      "options": [
+        "Cruel",
+        "Kind",
+        "Angry",
+        "Sad"
+      ],
+      "answer": 1,
+      "explanation": "Benevolent means kind and caring.",
+      "tags": [
+        "vocabulary"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0022",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Identify the conjunction in the sentence: \"I wanted to go, but I was too tired.\"",
+      "options": [
+        "I",
+        "Wanted",
+        "But",
+        "Tired"
+      ],
+      "answer": 2,
+      "explanation": "'But' joins the two clauses and shows contrast, so it is a conjunction.",
+      "tags": [
+        "grammar",
+        "conjunctions"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0023",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "medium",
+      "stem": "Choose the correct word to complete the sentence: \"She has ______ finished her homework.\"",
+      "options": [
+        "Already",
+        "All ready",
+        "Ready",
+        "Readily"
+      ],
+      "answer": 0,
+      "explanation": "'Already' means before now or sooner than expected; 'all ready' means fully prepared.",
+      "tags": [
+        "vocabulary",
+        "usage"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0024",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the comparative form of \"Good\"?",
+      "options": [
+        "Gooder",
+        "Better",
+        "Best",
+        "More good"
+      ],
+      "answer": 1,
+      "explanation": "'Good' has the irregular comparative 'better' and superlative 'best'.",
+      "tags": [
+        "grammar",
+        "comparatives"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0025",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "medium",
+      "stem": "Identify the type of sentence: \"Please close the door.\"",
+      "options": [
+        "Declarative",
+        "Interrogative",
+        "Imperative",
+        "Exclamatory"
+      ],
+      "answer": 2,
+      "explanation": "'Please close the door' gives a command or request, so it is an imperative sentence.",
+      "tags": [
+        "sentence-types",
+        "imperatives"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0026",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "medium",
+      "stem": "Choose the correct word to complete the sentence: \"He is ______ to the new school.\"",
+      "options": [
+        "Adapting",
+        "Adapt",
+        "Adapted",
+        "Adapts"
+      ],
+      "answer": 0,
+      "explanation": "'Adapting to' fits the present continuous: he is getting used to the new school.",
+      "tags": [
+        "grammar",
+        "verb-forms"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0027",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "medium",
+      "stem": "What is the meaning of the word \"Obsolete\"?",
+      "options": [
+        "Modern",
+        "Outdated",
+        "Useful",
+        "New"
+      ],
+      "answer": 1,
+      "explanation": "Obsolete means no longer in use or out of date.",
+      "tags": [
+        "vocabulary"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0028",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Identify the subject in the sentence: \"The dog barked loudly.\"",
+      "options": [
+        "The dog",
+        "Barked",
+        "Loudly",
+        "The"
+      ],
+      "answer": 0,
+      "explanation": "'The dog' performs the action 'barked', so it is the subject of the sentence.",
+      "tags": [
+        "grammar",
+        "subjects"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0029",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "Choose the correct word to complete the sentence: \"She is ______ than her sister.\"",
+      "options": [
+        "More intelligent",
+        "Intelligenter",
+        "Most intelligent",
+        "Intelligentest"
+      ],
+      "answer": 0,
+      "explanation": "For longer adjectives, form the comparative with 'more': more intelligent than.",
+      "tags": [
+        "grammar",
+        "comparatives"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-VER-0030",
+      "company_id": "FCSC",
+      "section": "Verbal Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the meaning of the idiom \"Hit the nail on the head\"?",
+      "options": [
+        "To make a mistake",
+        "To do something exactly right",
+        "To cause trouble",
+        "To fail completely"
+      ],
+      "answer": 1,
+      "explanation": "'Hit the nail on the head' means to be exactly right about something.",
+      "tags": [
+        "idioms"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0001",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is 25% of 200?",
+      "options": [
+        "50",
+        "100",
+        "150",
+        "200"
+      ],
+      "answer": 0,
+      "explanation": "25% is one quarter, and 200 ÷ 4 = 50.",
+      "tags": [
+        "percentages"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0002",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "Solve for x: 2x + 5 = 15",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "Subtract 5 from both sides: 2x = 10, so x = 5.",
+      "tags": [
+        "algebra",
+        "linear-equations"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0003",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the square root of 144?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "answer": 1,
+      "explanation": "12 × 12 = 144, so the square root of 144 is 12.",
+      "tags": [
+        "roots",
+        "squares"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0004",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "If a train travels 300 km in 5 hours, what is its speed?",
+      "options": [
+        "50 km/h",
+        "60 km/h",
+        "70 km/h",
+        "80 km/h"
+      ],
+      "answer": 1,
+      "explanation": "Speed = distance ÷ time = 300 ÷ 5 = 60 km/h.",
+      "tags": [
+        "speed-distance-time"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0005",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the area of a rectangle with length 10 cm and width 5 cm?",
+      "options": [
+        "15 cm²",
+        "30 cm²",
+        "50 cm²",
+        "100 cm²"
+      ],
+      "answer": 2,
+      "explanation": "Area of a rectangle = length × width = 10 × 5 = 50 cm².",
+      "tags": [
+        "area",
+        "geometry"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0006",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "medium",
+      "stem": "What is the value of 3² + 4²?",
+      "options": [
+        "5",
+        "7",
+        "25",
+        "49"
+      ],
+      "answer": 2,
+      "explanation": "3² = 9 and 4² = 16, so 9 + 16 = 25.",
+      "tags": [
+        "exponents"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0007",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "If 5x = 25, what is the value of x?",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "Divide both sides by 5: x = 25 ÷ 5 = 5.",
+      "tags": [
+        "algebra",
+        "linear-equations"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0008",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the perimeter of a square with a side length of 6 cm?",
+      "options": [
+        "12 cm",
+        "18 cm",
+        "24 cm",
+        "36 cm"
+      ],
+      "answer": 2,
+      "explanation": "A square has four equal sides: 4 × 6 = 24 cm.",
+      "tags": [
+        "perimeter",
+        "geometry"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0009",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "Solve for y: y - 7 = 14",
+      "options": [
+        "7",
+        "14",
+        "21",
+        "28"
+      ],
+      "answer": 2,
+      "explanation": "Add 7 to both sides: y = 14 + 7 = 21.",
+      "tags": [
+        "algebra",
+        "linear-equations"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0010",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "medium",
+      "stem": "What is the area of a triangle with a base of 10 cm and a height of 5 cm?",
+      "options": [
+        "15 cm²",
+        "25 cm²",
+        "50 cm²",
+        "100 cm²"
+      ],
+      "answer": 1,
+      "explanation": "Area of a triangle = ½ × base × height = ½ × 10 × 5 = 25 cm².",
+      "tags": [
+        "area",
+        "geometry"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0011",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is 1/4 of 100?",
+      "options": [
+        "10",
+        "20",
+        "25",
+        "50"
+      ],
+      "answer": 2,
+      "explanation": "One quarter of 100 is 100 ÷ 4 = 25.",
+      "tags": [
+        "fractions"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0012",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "If a car travels at 60 km/h for 3 hours, how far does it go?",
+      "options": [
+        "120 km",
+        "150 km",
+        "180 km",
+        "200 km"
+      ],
+      "answer": 2,
+      "explanation": "Distance = speed × time = 60 × 3 = 180 km.",
+      "tags": [
+        "speed-distance-time"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0013",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the next number in the sequence: 2, 4, 6, 8, ___?",
+      "options": [
+        "9",
+        "10",
+        "12",
+        "14"
+      ],
+      "answer": 1,
+      "explanation": "The sequence increases by 2 each time, so 8 + 2 = 10.",
+      "tags": [
+        "number-series"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0014",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the sum of 12 and 18?",
+      "options": [
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "answer": 1,
+      "explanation": "12 + 18 = 30.",
+      "tags": [
+        "arithmetic"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0015",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of π (pi) rounded to two decimal places?",
+      "options": [
+        "3.14",
+        "3.16",
+        "3.18",
+        "3.20"
+      ],
+      "answer": 0,
+      "explanation": "π ≈ 3.14159, which rounds to 3.14 at two decimal places.",
+      "tags": [
+        "pi",
+        "circles"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0016",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "medium",
+      "stem": "What is the volume of a cube with a side length of 3 cm?",
+      "options": [
+        "9 cm³",
+        "18 cm³",
+        "27 cm³",
+        "36 cm³"
+      ],
+      "answer": 2,
+      "explanation": "Volume of a cube = side³ = 3 × 3 × 3 = 27 cm³.",
+      "tags": [
+        "volume",
+        "geometry"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0017",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is 20% of 150?",
+      "options": [
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "answer": 1,
+      "explanation": "20% = 0.2, and 0.2 × 150 = 30.",
+      "tags": [
+        "percentages"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0018",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 7 × 8?",
+      "options": [
+        "48",
+        "56",
+        "64",
+        "72"
+      ],
+      "answer": 1,
+      "explanation": "7 × 8 = 56.",
+      "tags": [
+        "multiplication"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0019",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the average of 10, 20, and 30?",
+      "options": [
+        "10",
+        "20",
+        "25",
+        "30"
+      ],
+      "answer": 1,
+      "explanation": "(10 + 20 + 30) ÷ 3 = 60 ÷ 3 = 20.",
+      "tags": [
+        "averages"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0020",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 15 ÷ 3?",
+      "options": [
+        "3",
+        "5",
+        "10",
+        "15"
+      ],
+      "answer": 1,
+      "explanation": "15 ÷ 3 = 5.",
+      "tags": [
+        "division"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0021",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the smallest prime number?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": 1,
+      "explanation": "A prime number has exactly two factors; 2 is the smallest (1 is not prime).",
+      "tags": [
+        "prime-numbers"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0022",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 9 × (6 - 2)?",
+      "options": [
+        "18",
+        "36",
+        "54",
+        "72"
+      ],
+      "answer": 1,
+      "explanation": "Brackets first: 6 − 2 = 4, then 9 × 4 = 36.",
+      "tags": [
+        "order-of-operations"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0023",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 100 - 45?",
+      "options": [
+        "45",
+        "55",
+        "65",
+        "75"
+      ],
+      "answer": 1,
+      "explanation": "100 − 45 = 55.",
+      "tags": [
+        "subtraction"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0024",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 12 × 5?",
+      "options": [
+        "50",
+        "60",
+        "70",
+        "80"
+      ],
+      "answer": 1,
+      "explanation": "12 × 5 = 60.",
+      "tags": [
+        "multiplication"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0025",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 16 ÷ 4?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer": 1,
+      "explanation": "16 ÷ 4 = 4.",
+      "tags": [
+        "division"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0026",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 3.5 + 2.5?",
+      "options": [
+        "5.0",
+        "5.5",
+        "6.0",
+        "6.5"
+      ],
+      "answer": 2,
+      "explanation": "3.5 + 2.5 = 6.0.",
+      "tags": [
+        "decimals",
+        "addition"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0027",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 8²?",
+      "options": [
+        "16",
+        "32",
+        "64",
+        "128"
+      ],
+      "answer": 2,
+      "explanation": "8² = 8 × 8 = 64.",
+      "tags": [
+        "exponents"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0028",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 100 ÷ 10?",
+      "options": [
+        "1",
+        "10",
+        "100",
+        "1000"
+      ],
+      "answer": 1,
+      "explanation": "100 ÷ 10 = 10.",
+      "tags": [
+        "division"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0029",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 25 + 35?",
+      "options": [
+        "50",
+        "60",
+        "70",
+        "80"
+      ],
+      "answer": 1,
+      "explanation": "25 + 35 = 60.",
+      "tags": [
+        "addition"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-NUM-0030",
+      "company_id": "FCSC",
+      "section": "Numerical Reasoning",
+      "difficulty": "easy",
+      "stem": "What is the value of 4 × (3 + 2)?",
+      "options": [
+        "12",
+        "20",
+        "24",
+        "28"
+      ],
+      "answer": 1,
+      "explanation": "Brackets first: 3 + 2 = 5, then 4 × 5 = 20.",
+      "tags": [
+        "order-of-operations"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0001",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Who is the current President of Nigeria?",
+      "options": [
+        "Muhammadu Buhari",
+        "Bola Tinubu",
+        "Atiku Abubakar",
+        "Peter Obi"
+      ],
+      "answer": 1,
+      "explanation": "Bola Tinubu became President of Nigeria in May 2023.",
+      "tags": [
+        "government",
+        "nigeria"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0002",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which country hosted the 2022 FIFA World Cup?",
+      "options": [
+        "Brazil",
+        "Qatar",
+        "Russia",
+        "France"
+      ],
+      "answer": 1,
+      "explanation": "Qatar hosted the 2022 FIFA World Cup.",
+      "tags": [
+        "sports",
+        "world-cup"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0003",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the capital of France?",
+      "options": [
+        "Berlin",
+        "Paris",
+        "Madrid",
+        "Rome"
+      ],
+      "answer": 1,
+      "explanation": "Paris is the capital of France.",
+      "tags": [
+        "world-geography"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0004",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which Nigerian state is known as the \"Centre of Excellence\"?",
+      "options": [
+        "Lagos",
+        "Abuja",
+        "Kano",
+        "Rivers"
+      ],
+      "answer": 0,
+      "explanation": "Lagos State is nicknamed the Centre of Excellence.",
+      "tags": [
+        "nigeria",
+        "state-nicknames"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0005",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the currency of Japan?",
+      "options": [
+        "Yen",
+        "Dollar",
+        "Euro",
+        "Pound"
+      ],
+      "answer": 0,
+      "explanation": "Japan's currency is the yen.",
+      "tags": [
+        "world-geography",
+        "currency"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0006",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Who is the current Vice President of Nigeria?",
+      "options": [
+        "Yemi Osinbajo",
+        "Kashim Shettima",
+        "Atiku Abubakar",
+        "Peter Obi"
+      ],
+      "answer": 1,
+      "explanation": "Kashim Shettima became Vice President of Nigeria in May 2023.",
+      "tags": [
+        "government",
+        "nigeria"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0007",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which country is known as the \"Giant of Africa\"?",
+      "options": [
+        "South Africa",
+        "Ghana",
+        "Ethiopia",
+        "Nigeria"
+      ],
+      "answer": 3,
+      "explanation": "Nigeria is often called the Giant of Africa.",
+      "tags": [
+        "nigeria"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0008",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the official language of Nigeria?",
+      "options": [
+        "Hausa",
+        "Yoruba",
+        "English",
+        "Igbo"
+      ],
+      "answer": 2,
+      "explanation": "English is Nigeria's official language.",
+      "tags": [
+        "nigeria",
+        "language"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0009",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian artist won the Grammy Award for Best Global Music Album in 2021?",
+      "options": [
+        "Burna Boy",
+        "Wizkid",
+        "Davido",
+        "Tiwa Savage"
+      ],
+      "answer": 0,
+      "explanation": "Burna Boy won the 2021 Grammy Award for Best Global Music Album with 'Twice as Tall'.",
+      "tags": [
+        "entertainment",
+        "music"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0010",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which Nigerian city is the capital of Lagos State?",
+      "options": [
+        "Abuja",
+        "Ikeja",
+        "Port Harcourt",
+        "Kano"
+      ],
+      "answer": 1,
+      "explanation": "Ikeja is the capital of Lagos State.",
+      "tags": [
+        "nigeria",
+        "lagos"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0011",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the name of Nigeria’s central bank?",
+      "options": [
+        "First Bank of Nigeria",
+        "Central Bank of Nigeria",
+        "Union Bank of Nigeria",
+        "Guaranty Trust Bank"
+      ],
+      "answer": 1,
+      "explanation": "The Central Bank of Nigeria is the country's apex bank.",
+      "tags": [
+        "nigeria",
+        "banking"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0012",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian state is known as the \"Home of Peace\"?",
+      "options": [
+        "Plateau",
+        "Kaduna",
+        "Borno",
+        "Ekiti"
+      ],
+      "answer": 2,
+      "explanation": "Borno State is nicknamed the Home of Peace.",
+      "tags": [
+        "nigeria",
+        "state-nicknames"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0013",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Who is the current Senate President of Nigeria?",
+      "options": [
+        "Bukola Saraki",
+        "Ahmed Lawan",
+        "Godswill Akpabio",
+        "Yakubu Dogara"
+      ],
+      "answer": 2,
+      "explanation": "Godswill Akpabio is the Senate President of Nigeria.",
+      "tags": [
+        "government",
+        "nigeria"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0014",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian state is the largest by land area?",
+      "options": [
+        "Kano",
+        "Niger",
+        "Borno",
+        "Taraba"
+      ],
+      "answer": 1,
+      "explanation": "Niger State is the largest Nigerian state by land area.",
+      "tags": [
+        "nigeria",
+        "geography"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0015",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "What was the name of Nigeria's former national airline?",
+      "options": [
+        "Arik Air",
+        "Air Peace",
+        "Nigeria Airways",
+        "Aero Contractors"
+      ],
+      "answer": 2,
+      "explanation": "Nigeria Airways was the country's former national airline.",
+      "tags": [
+        "nigeria",
+        "aviation"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0016",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian state is known as the \"Land of Beauty\"?",
+      "options": [
+        "Adamawa",
+        "Enugu",
+        "Osun",
+        "Ondo"
+      ],
+      "answer": 0,
+      "explanation": "Adamawa State is nicknamed the Land of Beauty.",
+      "tags": [
+        "nigeria",
+        "state-nicknames"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0017",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Who is the current Chief Justice of Nigeria?",
+      "options": [
+        "Walter Onnoghen",
+        "Ibrahim Tanko Muhammad",
+        "Kudirat Kekere-Ekun",
+        "Muhammadu Uwais"
+      ],
+      "answer": 2,
+      "explanation": "Kudirat Kekere-Ekun became Chief Justice of Nigeria in 2024.",
+      "tags": [
+        "government",
+        "judiciary"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0018",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian state is known as the \"Coal City State\"?",
+      "options": [
+        "Enugu",
+        "Anambra",
+        "Ebonyi",
+        "Imo"
+      ],
+      "answer": 0,
+      "explanation": "Enugu State is nicknamed the Coal City State.",
+      "tags": [
+        "nigeria",
+        "state-nicknames"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0019",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the name of Nigeria’s national football team?",
+      "options": [
+        "Super Falcons",
+        "Super Eagles",
+        "Golden Eaglets",
+        "Flying Eagles"
+      ],
+      "answer": 1,
+      "explanation": "The Super Eagles is Nigeria's men's national football team.",
+      "tags": [
+        "sports",
+        "football"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0020",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian state is known as the \"Pace Setter State\"?",
+      "options": [
+        "Oyo",
+        "Lagos",
+        "Ogun",
+        "Ekiti"
+      ],
+      "answer": 0,
+      "explanation": "Oyo State is nicknamed the Pace Setter State.",
+      "tags": [
+        "nigeria",
+        "state-nicknames"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0021",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Who is the current Governor of Lagos State?",
+      "options": [
+        "Babajide Sanwo-Olu",
+        "Akinwunmi Ambode",
+        "Bola Tinubu",
+        "Femi Gbajabiamila"
+      ],
+      "answer": 0,
+      "explanation": "Babajide Sanwo-Olu is the Governor of Lagos State.",
+      "tags": [
+        "government",
+        "lagos"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0022",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian state is known as the \"Sunshine State\"?",
+      "options": [
+        "Ondo",
+        "Ekiti",
+        "Osun",
+        "Ogun"
+      ],
+      "answer": 0,
+      "explanation": "Ondo State is nicknamed the Sunshine State.",
+      "tags": [
+        "nigeria",
+        "state-nicknames"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0023",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the name of Nigeria’s national currency?",
+      "options": [
+        "Dollar",
+        "Pound",
+        "Naira",
+        "Euro"
+      ],
+      "answer": 2,
+      "explanation": "The naira is Nigeria's national currency.",
+      "tags": [
+        "nigeria",
+        "currency"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0024",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian state is known as the \"Land of Equity\"?",
+      "options": [
+        "Kebbi",
+        "Benue",
+        "Nasarawa",
+        "Taraba"
+      ],
+      "answer": 0,
+      "explanation": "Kebbi State is nicknamed the Land of Equity.",
+      "tags": [
+        "nigeria",
+        "state-nicknames"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0025",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Who is the current Speaker of the House of Representatives?",
+      "options": [
+        "Femi Gbajabiamila",
+        "Yakubu Dogara",
+        "Aminu Tambuwal",
+        "Tajudeen Abbas"
+      ],
+      "answer": 3,
+      "explanation": "Tajudeen Abbas is the Speaker of the House of Representatives.",
+      "tags": [
+        "government",
+        "legislature"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0026",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian state is known as the \"Heartbeat of the Nation\"?",
+      "options": [
+        "Edo",
+        "Delta",
+        "Rivers",
+        "Bayelsa"
+      ],
+      "answer": 0,
+      "explanation": "Edo State is nicknamed the Heartbeat of the Nation.",
+      "tags": [
+        "nigeria",
+        "state-nicknames"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0027",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the name of Nigeria’s national anthem?",
+      "options": [
+        "Arise, O Compatriots",
+        "Nigeria, We Hail Thee",
+        "The Patriot’s Song",
+        "Land of Our Birth"
+      ],
+      "answer": 1,
+      "explanation": "'Arise, O Compatriots' is Nigeria's national anthem.",
+      "tags": [
+        "nigeria",
+        "national-symbols"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0028",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian state is known as the \"Gateway State\"?",
+      "options": [
+        "Ogun",
+        "Lagos",
+        "Oyo",
+        "Osun"
+      ],
+      "answer": 0,
+      "explanation": "Ogun State is nicknamed the Gateway State.",
+      "tags": [
+        "nigeria",
+        "state-nicknames"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0029",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Who is the current Inspector General of Police in Nigeria?",
+      "options": [
+        "Mohammed Adamu",
+        "Kayode Egbetokun",
+        "Solomon Arase",
+        "Ibrahim Idris"
+      ],
+      "answer": 1,
+      "explanation": "Kayode Egbetokun became Inspector General of Police in 2023.",
+      "tags": [
+        "government",
+        "police"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GEN-0030",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which Nigerian state is known as the \"Land of Honour\"?",
+      "options": [
+        "Kano",
+        "Kaduna",
+        "Ekiti",
+        "Katsina"
+      ],
+      "answer": 2,
+      "explanation": "Ekiti State is nicknamed the Land of Honour.",
+      "tags": [
+        "nigeria",
+        "state-nicknames"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0001",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which of the following is the highest court in Nigeria?",
+      "options": [
+        "Federal High Court",
+        "Court of Appeal",
+        "Supreme Court",
+        "High Court"
+      ],
+      "answer": 2,
+      "explanation": "The Supreme Court is the highest court in Nigeria.",
+      "tags": [
+        "law",
+        "nigeria"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0002",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which river is the longest in the world?",
+      "options": [
+        "Nile",
+        "Amazon",
+        "Mississippi",
+        "Yangtze"
+      ],
+      "answer": 0,
+      "explanation": "The Nile is traditionally regarded as the world's longest river.",
+      "tags": [
+        "world-geography",
+        "rivers"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0003",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the chemical symbol for water?",
+      "options": [
+        "H2O",
+        "CO2",
+        "O2",
+        "NaCl"
+      ],
+      "answer": 0,
+      "explanation": "H2O is the chemical formula for water.",
+      "tags": [
+        "chemistry"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0004",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Who wrote the novel \"Things Fall Apart\"?",
+      "options": [
+        "Wole Soyinka",
+        "Chinua Achebe",
+        "Chimamanda Ngozi Adichie",
+        "Ben Okri"
+      ],
+      "answer": 1,
+      "explanation": "Chinua Achebe wrote 'Things Fall Apart'.",
+      "tags": [
+        "literature"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0005",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which planet is known as the \"Red Planet\"?",
+      "options": [
+        "Earth",
+        "Mars",
+        "Venus",
+        "Jupiter"
+      ],
+      "answer": 1,
+      "explanation": "Mars is called the Red Planet because iron oxide on its surface gives it a reddish colour.",
+      "tags": [
+        "astronomy"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0006",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which continent is known as the \"Cradle of Civilization\"?",
+      "options": [
+        "Asia",
+        "Africa",
+        "Europe",
+        "North America"
+      ],
+      "answer": 1,
+      "explanation": "Africa is often called the cradle of civilization, especially the Nile Valley.",
+      "tags": [
+        "history"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0007",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the chemical symbol for gold?",
+      "options": [
+        "Ag",
+        "Au",
+        "Fe",
+        "Cu"
+      ],
+      "answer": 1,
+      "explanation": "Au is the chemical symbol for gold, from the Latin word 'aurum'.",
+      "tags": [
+        "chemistry"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0008",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Who is the author of \"Half of a Yellow Sun\"?",
+      "options": [
+        "Chinua Achebe",
+        "Wole Soyinka",
+        "Chimamanda Ngozi Adichie",
+        "Ben Okri"
+      ],
+      "answer": 2,
+      "explanation": "Chimamanda Ngozi Adichie wrote 'Half of a Yellow Sun'.",
+      "tags": [
+        "literature"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0009",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which planet is closest to the Sun?",
+      "options": [
+        "Earth",
+        "Venus",
+        "Mercury",
+        "Mars"
+      ],
+      "answer": 2,
+      "explanation": "Mercury is the planet closest to the Sun.",
+      "tags": [
+        "astronomy"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0010",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the largest organ in the human body?",
+      "options": [
+        "Liver",
+        "Heart",
+        "Skin",
+        "Brain"
+      ],
+      "answer": 2,
+      "explanation": "The skin is the largest organ of the human body.",
+      "tags": [
+        "biology",
+        "human-body"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0011",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which country is known as the \"Land of the Rising Sun\"?",
+      "options": [
+        "China",
+        "Japan",
+        "South Korea",
+        "Thailand"
+      ],
+      "answer": 1,
+      "explanation": "Japan is known as the Land of the Rising Sun.",
+      "tags": [
+        "world-geography"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0012",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the capital of the United States?",
+      "options": [
+        "New York",
+        "Washington, D.C.",
+        "Los Angeles",
+        "Chicago"
+      ],
+      "answer": 1,
+      "explanation": "Washington, D.C. is the capital of the United States.",
+      "tags": [
+        "world-geography",
+        "capitals"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0013",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which gas is most abundant in the Earth’s atmosphere?",
+      "options": [
+        "Oxygen",
+        "Carbon dioxide",
+        "Nitrogen",
+        "Hydrogen"
+      ],
+      "answer": 2,
+      "explanation": "Nitrogen makes up about 78% of the Earth's atmosphere.",
+      "tags": [
+        "earth-science",
+        "atmosphere"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0014",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Who is the first female Chancellor of Germany?",
+      "options": [
+        "Angela Merkel",
+        "Margaret Thatcher",
+        "Theresa May",
+        "Indira Gandhi"
+      ],
+      "answer": 0,
+      "explanation": "Angela Merkel was Germany's first female Chancellor.",
+      "tags": [
+        "history",
+        "politics"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0015",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the name of the longest river in Africa?",
+      "options": [
+        "Nile",
+        "Congo",
+        "Niger",
+        "Zambezi"
+      ],
+      "answer": 0,
+      "explanation": "The Nile is the longest river in Africa.",
+      "tags": [
+        "world-geography",
+        "rivers"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0016",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which country is the largest producer of cocoa in the world?",
+      "options": [
+        "Ghana",
+        "Ivory Coast",
+        "Nigeria",
+        "Cameroon"
+      ],
+      "answer": 1,
+      "explanation": "Ivory Coast (Côte d'Ivoire) is the world's largest producer of cocoa.",
+      "tags": [
+        "agriculture",
+        "economics"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0017",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "What is the name of the smallest country in the world?",
+      "options": [
+        "Monaco",
+        "Vatican City",
+        "San Marino",
+        "Liechtenstein"
+      ],
+      "answer": 1,
+      "explanation": "Vatican City is the smallest country in the world.",
+      "tags": [
+        "world-geography"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0018",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which African country was formerly known as Abyssinia?",
+      "options": [
+        "Ethiopia",
+        "Sudan",
+        "Somalia",
+        "Kenya"
+      ],
+      "answer": 0,
+      "explanation": "Abyssinia was the former name of Ethiopia.",
+      "tags": [
+        "history"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0019",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the name of the highest mountain in Africa?",
+      "options": [
+        "Mount Kenya",
+        "Mount Kilimanjaro",
+        "Mount Elgon",
+        "Mount Meru"
+      ],
+      "answer": 1,
+      "explanation": "Mount Kilimanjaro is the highest mountain in Africa.",
+      "tags": [
+        "world-geography",
+        "mountains"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0020",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "Which country is known as the \"Land of the Midnight Sun\"?",
+      "options": [
+        "Norway",
+        "Sweden",
+        "Finland",
+        "Iceland"
+      ],
+      "answer": 0,
+      "explanation": "Norway is known as the Land of the Midnight Sun.",
+      "tags": [
+        "world-geography"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0021",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "What is the name of the largest desert in the world?",
+      "options": [
+        "Sahara",
+        "Arabian",
+        "Gobi",
+        "Kalahari"
+      ],
+      "answer": 0,
+      "explanation": "The Sahara is the world's largest hot desert.",
+      "tags": [
+        "world-geography",
+        "deserts"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0022",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which country is the largest producer of oil in Africa?",
+      "options": [
+        "Nigeria",
+        "Libya",
+        "Angola",
+        "Algeria"
+      ],
+      "answer": 0,
+      "explanation": "Nigeria is Africa's largest producer of oil.",
+      "tags": [
+        "economics",
+        "oil"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0023",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the name of the currency used in the United Kingdom?",
+      "options": [
+        "Euro",
+        "Dollar",
+        "Pound",
+        "Yen"
+      ],
+      "answer": 2,
+      "explanation": "The pound sterling is the currency of the United Kingdom.",
+      "tags": [
+        "world-geography",
+        "currency"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0024",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which country is known as the \"Land of the Thunder Dragon\"?",
+      "options": [
+        "Nepal",
+        "Bhutan",
+        "Myanmar",
+        "Sri Lanka"
+      ],
+      "answer": 1,
+      "explanation": "Bhutan is known as the Land of the Thunder Dragon.",
+      "tags": [
+        "world-geography"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0025",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the name of the longest wall in the world?",
+      "options": [
+        "Great Wall of China",
+        "Berlin Wall",
+        "Hadrian’s Wall",
+        "Wall of Jericho"
+      ],
+      "answer": 0,
+      "explanation": "The Great Wall of China is the world's longest wall.",
+      "tags": [
+        "world-geography",
+        "landmarks"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0026",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which country is the largest producer of diamonds in the world?",
+      "options": [
+        "South Africa",
+        "Russia",
+        "Botswana",
+        "Australia"
+      ],
+      "answer": 1,
+      "explanation": "Russia is the world's largest producer of diamonds by volume.",
+      "tags": [
+        "mining",
+        "economics"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0027",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the name of the largest ocean in the world?",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Pacific Ocean",
+        "Arctic Ocean"
+      ],
+      "answer": 2,
+      "explanation": "The Pacific Ocean is the largest ocean in the world.",
+      "tags": [
+        "world-geography",
+        "oceans"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0028",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which country is known as the \"Land of the White Elephant\"?",
+      "options": [
+        "Thailand",
+        "India",
+        "Vietnam",
+        "Cambodia"
+      ],
+      "answer": 0,
+      "explanation": "Thailand is known as the Land of the White Elephant.",
+      "tags": [
+        "world-geography"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0029",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "easy",
+      "stem": "What is the name of the smallest continent in the world?",
+      "options": [
+        "Asia",
+        "Africa",
+        "Australia",
+        "Europe"
+      ],
+      "answer": 2,
+      "explanation": "Australia is the smallest continent.",
+      "tags": [
+        "world-geography",
+        "continents"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "FCSC-GKS-0030",
+      "company_id": "FCSC",
+      "section": "General Knowledge",
+      "difficulty": "medium",
+      "stem": "Which country is the largest producer of coffee in the world?",
+      "options": [
+        "Brazil",
+        "Colombia",
+        "Vietnam",
+        "Ethiopia"
+      ],
+      "answer": 0,
+      "explanation": "Brazil is the world's largest producer of coffee.",
+      "tags": [
+        "agriculture",
+        "economics"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0001",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "What is the smallest whole number that is divisible by 6, 9 and 12?",
+      "options": [
+        "24",
+        "36",
+        "48",
+        "72"
+      ],
+      "answer": 1,
+      "explanation": "Prime factors: 6 = 2 x 3, 9 = 3^2, 12 = 2^2 x 3. The LCM is 2^2 x 3^2 = 36.",
+      "difficulty": "easy",
+      "tags": [
+        "lcm",
+        "number-theory"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0002",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "One pipe fills a tank in 6 hours and another pipe empties it in 9 hours. With both pipes open, how long does it take to fill the empty tank?",
+      "options": [
+        "12 hours",
+        "15 hours",
+        "18 hours",
+        "24 hours"
+      ],
+      "answer": 2,
+      "explanation": "Net rate = 1/6 - 1/9 = 1/18 of the tank per hour, so filling takes 18 hours.",
+      "difficulty": "medium",
+      "tags": [
+        "work-and-time",
+        "pipes"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0003",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "A train 150 metres long passes a pole in 12 seconds. What is its speed in kilometres per hour?",
+      "options": [
+        "36 km/h",
+        "42 km/h",
+        "45 km/h",
+        "50 km/h"
+      ],
+      "answer": 2,
+      "explanation": "Speed = 150 / 12 = 12.5 m/s. Multiplying by 3.6 gives 45 km/h.",
+      "difficulty": "medium",
+      "tags": [
+        "speed-distance-time",
+        "unit-conversion"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0004",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "A town's population rises by 10% one year and then falls by 10% the next. What is the overall percentage change?",
+      "options": [
+        "No change",
+        "1% increase",
+        "1% decrease",
+        "2% decrease"
+      ],
+      "answer": 2,
+      "explanation": "1.10 x 0.90 = 0.99, so the population ends 1% below its starting value.",
+      "difficulty": "easy",
+      "tags": [
+        "percentage",
+        "successive-change"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0005",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "What is the next term in the pattern: 7, 10, 20, 23, 46, ?",
+      "options": [
+        "49",
+        "52",
+        "69",
+        "92"
+      ],
+      "answer": 0,
+      "explanation": "The operations alternate: add 3, then multiply by 2. After 46 the next step is +3, giving 49.",
+      "difficulty": "hard",
+      "tags": [
+        "number-series",
+        "patterns"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0006",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "A trader has ₦90,000. She spends 2/5 of it on stock and then 1/3 of the remainder on transport. How much is left?",
+      "options": [
+        "₦30,000",
+        "₦36,000",
+        "₦42,000",
+        "₦54,000"
+      ],
+      "answer": 1,
+      "explanation": "Stock costs 36,000, leaving 54,000. Transport costs 18,000, leaving 36,000.",
+      "difficulty": "easy",
+      "tags": [
+        "fractions",
+        "money"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0007",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "Three partners share a profit in the ratio 2:3:5. If the smallest share is ₦24,000, what is the total profit?",
+      "options": [
+        "₦96,000",
+        "₦108,000",
+        "₦120,000",
+        "₦144,000"
+      ],
+      "answer": 2,
+      "explanation": "One part is 24,000 / 2 = 12,000. Ten parts in total give 120,000.",
+      "difficulty": "easy",
+      "tags": [
+        "ratio",
+        "profit-sharing"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0008",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "A car travels from town A to town B at 60 km/h and returns along the same road at 40 km/h. What is the average speed for the whole journey?",
+      "options": [
+        "44 km/h",
+        "48 km/h",
+        "50 km/h",
+        "52 km/h"
+      ],
+      "answer": 1,
+      "explanation": "For equal distances the average is 2ab/(a+b) = (2 x 60 x 40)/100 = 48 km/h.",
+      "difficulty": "hard",
+      "tags": [
+        "average-speed",
+        "speed-distance-time"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0009",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "If (2x + 3)/5 = 7, what is the value of x?",
+      "options": [
+        "13",
+        "14",
+        "16",
+        "18"
+      ],
+      "answer": 2,
+      "explanation": "Multiply by 5: 2x + 3 = 35. Then 2x = 32, so x = 16.",
+      "difficulty": "medium",
+      "tags": [
+        "algebra",
+        "linear-equation"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-NUM-0010",
+      "company_id": "GEN",
+      "section": "Numerical Reasoning",
+      "stem": "A bag holds 4 red and 6 blue balls. Two balls are drawn one after the other without replacement. What is the probability that both are red?",
+      "options": [
+        "2/15",
+        "4/25",
+        "1/5",
+        "3/10"
+      ],
+      "answer": 0,
+      "explanation": "P(both red) = (4/10) x (3/9) = 12/90 = 2/15.",
+      "difficulty": "medium",
+      "tags": [
+        "probability",
+        "without-replacement"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-VER-0001",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "A third teller was made available.",
+        "Customers began arriving later in the day.",
+        "The bank shortened its opening hours.",
+        "Fewer customers needed to use the bank."
+      ],
+      "answer": 0,
+      "passage": "Only two tellers were on duty at a busy bank, so customers waited an average of 25 minutes. When a third teller was opened, the average wait fell to 9 minutes.",
+      "explanation": "The passage links the opening of a third teller directly to the fall from 25 to 9 minutes.",
+      "difficulty": "easy",
+      "tags": [
+        "comprehension",
+        "cause-effect"
+      ],
+      "status": "published",
+      "stem": "What best explains the drop in waiting time?"
+    },
+    {
+      "id": "GEN-VER-0002",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Remote work caused the firm's output to fall.",
+        "Remote work brought benefits but created a problem for new staff.",
+        "Every employee preferred working from home.",
+        "The firm planned to close its office."
+      ],
+      "answer": 1,
+      "passage": "A firm moved all staff to remote work. Output rose by 12%, but new employees reported feeling isolated and several left within a year. The manager concluded that a hybrid arrangement would suit the firm best.",
+      "explanation": "Output rose, but new employees felt isolated and some left, so the passage supports both a benefit and a drawback.",
+      "difficulty": "medium",
+      "tags": [
+        "inference",
+        "workplace"
+      ],
+      "status": "published",
+      "stem": "Which conclusion is best supported by the passage?"
+    },
+    {
+      "id": "GEN-VER-0003",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Brief and curt",
+        "Warm and encouraging",
+        "Long and detailed",
+        "Slow and hesitant"
+      ],
+      "answer": 0,
+      "passage": "The manager's terse reply ended the discussion abruptly, leaving the team unsure what to do next.",
+      "explanation": "A terse reply is short and blunt, which fits the abrupt end of the discussion.",
+      "difficulty": "easy",
+      "tags": [
+        "vocabulary",
+        "context"
+      ],
+      "status": "published",
+      "stem": "What does the word 'terse' most nearly mean in this passage?"
+    },
+    {
+      "id": "GEN-VER-0004",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Passengers choose flights mainly on price, not free meals.",
+        "Every passenger preferred free meals to lower fares.",
+        "Ticket sales had been falling for several years.",
+        "Other airlines were also removing free meals."
+      ],
+      "answer": 0,
+      "passage": "To reduce costs, an airline stopped providing free meals. It expected ticket sales to remain unchanged.",
+      "explanation": "Expecting sales to stay the same requires believing that meals are not a deciding factor for passengers.",
+      "difficulty": "medium",
+      "tags": [
+        "assumption",
+        "reasoning"
+      ],
+      "status": "published",
+      "stem": "Which assumption most likely underlies the airline's expectation?"
+    },
+    {
+      "id": "GEN-VER-0005",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Why small loans always fail",
+        "Microfinance helped traders, but repayments need flexibility",
+        "Seasonal sales and banking hours",
+        "How to open a market stall"
+      ],
+      "answer": 1,
+      "passage": "Small loans helped market traders buy more stock, but rigid weekly repayments often clashed with their seasonal sales.",
+      "explanation": "The passage gives one benefit and one limitation, which this title captures.",
+      "difficulty": "medium",
+      "tags": [
+        "main-idea",
+        "summarisation"
+      ],
+      "status": "published",
+      "stem": "Which title best summarises the passage?"
+    },
+    {
+      "id": "GEN-VER-0006",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Longer study sessions always produce better recall.",
+        "Spacing study over days may improve long-term recall.",
+        "Students who crammed studied fewer total hours.",
+        "Recall was measured immediately after studying."
+      ],
+      "answer": 1,
+      "passage": "In a training study, students who revised in short daily sessions recalled more a week later than students who studied the same total hours in one night.",
+      "explanation": "Both groups studied the same total hours, so the better week-later recall points to the spacing of sessions.",
+      "difficulty": "hard",
+      "tags": [
+        "inference",
+        "research"
+      ],
+      "status": "published",
+      "stem": "Which inference is best supported by the study?"
+    },
+    {
+      "id": "GEN-VER-0007",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "6 p.m.",
+        "7 p.m.",
+        "8 p.m.",
+        "10 p.m."
+      ],
+      "answer": 2,
+      "passage": "The community library extended its weekday closing time to 8 p.m. Weekend hours were unchanged.",
+      "explanation": "The passage states that weekday closing time moved to 8 p.m.",
+      "difficulty": "easy",
+      "tags": [
+        "detail",
+        "comprehension"
+      ],
+      "status": "published",
+      "stem": "What time does the library now close on weekdays?"
+    },
+    {
+      "id": "GEN-VER-0008",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "It treats a necessary condition as if it were sufficient.",
+        "It relies on an outdated test.",
+        "It assumes all applicants had a degree.",
+        "It uses a sample that is far too small."
+      ],
+      "answer": 0,
+      "passage": "Every applicant who passed the test had a degree. Therefore, having a degree guarantees passing the test.",
+      "explanation": "Passing required a degree, but having a degree does not by itself guarantee passing.",
+      "difficulty": "medium",
+      "tags": [
+        "logical-flaw",
+        "conditions"
+      ],
+      "status": "published",
+      "stem": "What is the main flaw in the argument in the passage?"
+    },
+    {
+      "id": "GEN-VER-0009",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Fully supportive",
+        "Angry and dismissive",
+        "Critical, while acknowledging good intent",
+        "Completely indifferent"
+      ],
+      "answer": 2,
+      "passage": "The policy was introduced with good intentions, but its reporting rules have buried staff in paperwork and slowed the very work it was meant to help.",
+      "explanation": "The writer accepts the good intentions but criticises the paperwork the rules created.",
+      "difficulty": "hard",
+      "tags": [
+        "tone",
+        "attitude"
+      ],
+      "status": "published",
+      "stem": "Which best describes the writer's attitude to the policy?"
+    },
+    {
+      "id": "GEN-VER-0010",
+      "company_id": "GEN",
+      "section": "Verbal Reasoning",
+      "options": [
+        "Buses were the most common mode of travel.",
+        "More people walked than took the train.",
+        "Half of the commuters travelled by train.",
+        "Cost was mentioned by only a small minority."
+      ],
+      "answer": 0,
+      "passage": "A survey of 200 commuters found that 60% travelled by bus, 25% by train and the remainder walked. Cost was the most common reason given.",
+      "explanation": "At 60%, buses outrank trains at 25% and walking at 15%.",
+      "difficulty": "easy",
+      "tags": [
+        "data-comprehension",
+        "survey"
+      ],
+      "status": "published",
+      "stem": "Which statement is supported by the survey?"
+    },
+    {
+      "id": "GEN-LOG-0001",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Every engineer at the firm is a graduate. No graduate at the firm is a manager. Which statement must be true?",
+      "options": [
+        "No engineer at the firm is a manager.",
+        "Every graduate at the firm is an engineer.",
+        "Some engineers at the firm are managers.",
+        "All managers at the firm are graduates."
+      ],
+      "answer": 0,
+      "explanation": "Engineers are inside the graduate group, and no graduate is a manager, so no engineer is a manager.",
+      "difficulty": "easy",
+      "tags": [
+        "syllogism",
+        "deduction"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0002",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Ada finished a race before Chidi, Chidi finished before Bola, and Bola finished before Tunde. Who finished first?",
+      "options": [
+        "Ada",
+        "Chidi",
+        "Bola",
+        "Tunde"
+      ],
+      "answer": 0,
+      "explanation": "The order is Ada, then Chidi, then Bola, then Tunde, so Ada was first.",
+      "difficulty": "easy",
+      "tags": [
+        "ordering",
+        "sequence"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0003",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "If the alarm sounds, the guard checks the gate. The alarm did not sound. What can be concluded with certainty?",
+      "options": [
+        "The gate was checked.",
+        "The gate was not checked.",
+        "The guard was absent.",
+        "Nothing definite about the gate check."
+      ],
+      "answer": 3,
+      "explanation": "The rule says what follows when the alarm sounds; it says nothing about what happens when it stays silent.",
+      "difficulty": "medium",
+      "tags": [
+        "conditionals",
+        "deduction"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0004",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "In a class of 40 students, 25 study French, 18 study Spanish and 10 study both. How many study neither language?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "12"
+      ],
+      "answer": 1,
+      "explanation": "Studying at least one language: 25 + 18 - 10 = 33. Neither: 40 - 33 = 7.",
+      "difficulty": "medium",
+      "tags": [
+        "sets",
+        "counting"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0005",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Ship is to sea as train is to:",
+      "options": [
+        "Station",
+        "Track",
+        "Engine",
+        "Passenger"
+      ],
+      "answer": 1,
+      "explanation": "A ship travels on the sea just as a train travels on a track.",
+      "difficulty": "medium",
+      "tags": [
+        "analogy",
+        "relationships"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0006",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Two boxes are labelled 'Gold' and 'Silver'. Both labels are wrong. Which box contains the gold?",
+      "options": [
+        "The box labelled Gold",
+        "The box labelled Silver",
+        "Neither box",
+        "It cannot be determined"
+      ],
+      "answer": 1,
+      "explanation": "The box labelled Silver cannot hold silver (its label is wrong), so it must hold the gold.",
+      "difficulty": "hard",
+      "tags": [
+        "logic-puzzle",
+        "labels"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0007",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "What comes next in the pattern: 2, 6, 3, 9, 4, 12, 5, ?",
+      "options": [
+        "13",
+        "15",
+        "18",
+        "20"
+      ],
+      "answer": 1,
+      "explanation": "The entries form pairs: 2 and 6, 3 and 9, 4 and 12. Each second number is three times the first, so after 5 comes 5 x 3 = 15.",
+      "difficulty": "easy",
+      "tags": [
+        "number-pattern",
+        "sequence"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0008",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "If CAT is coded as DBU, how would DOG be coded using the same rule?",
+      "options": [
+        "EPH",
+        "EPI",
+        "DPH",
+        "FPH"
+      ],
+      "answer": 0,
+      "explanation": "Each letter moves one place forward: D->E, O->P, G->H, giving EPH.",
+      "difficulty": "easy",
+      "tags": [
+        "coding-decoding",
+        "letters"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0009",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Four friends - Ada, Bola, Chidi and Dara - sit in a row. Ada sits immediately to the left of Bola, Chidi sits at one end, and Dara sits next to Chidi. Which arrangement is possible?",
+      "options": [
+        "Ada, Chidi, Bola, Dara",
+        "Chidi, Dara, Bola, Ada",
+        "Chidi, Dara, Ada, Bola",
+        "Dara, Chidi, Ada, Bola"
+      ],
+      "answer": 2,
+      "explanation": "With Chidi at the left end, Dara must be beside him, leaving seats 3 and 4 for Ada and Bola in that order.",
+      "difficulty": "hard",
+      "tags": [
+        "arrangement",
+        "constraints"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "GEN-LOG-0010",
+      "company_id": "GEN",
+      "section": "Logical Reasoning",
+      "stem": "Either the meeting is moved or the report is delayed. The meeting is not moved. What must follow?",
+      "options": [
+        "The report is delayed.",
+        "The report is not delayed.",
+        "The meeting will be cancelled.",
+        "Nothing can be concluded."
+      ],
+      "answer": 0,
+      "explanation": "With one of the two options ruled out, the other must hold.",
+      "difficulty": "medium",
+      "tags": [
+        "disjunction",
+        "deduction"
+      ],
+      "status": "published"
+    }
+  ]
+}
