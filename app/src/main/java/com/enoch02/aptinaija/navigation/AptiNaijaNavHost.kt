@@ -112,9 +112,9 @@ private fun AptiNaijaNavHost(
                 onStartRandomQuiz = {
                     navController.navigate(RandomQuizSetupRoute())
                 },
-                onDrillSection = { section ->
+                onDrillStarted = { attemptId ->
                     navController.navigate(
-                        TestSetupRoute(mode = "DRILL", section = section)
+                        TestRoute(attemptId, setupEntry = SetupEntry.NONE)
                     )
                 },
                 onOpenLastResult = { attemptId ->
@@ -146,7 +146,7 @@ private fun AptiNaijaNavHost(
             RandomQuizSetupScreen(
                 onBack = { navController.popBackStack() },
                 onStarted = { attemptId ->
-                    navController.navigate(TestRoute(attemptId, fromRandomQuiz = true))
+                    navController.navigate(TestRoute(attemptId, setupEntry = SetupEntry.RANDOM_QUIZ))
                 }
             )
         }
@@ -159,11 +159,13 @@ private fun AptiNaijaNavHost(
                     navController.navigate(
                         ResultsRoute(attemptId, hideTryAgain = route.hideTryAgain)
                     ) {
-                        // Remove the entry the test was launched from so Results
+                        // Remove the entries the test was launched from so Results
                         // returns to its origin instead of the finished test.
                         when {
-                            route.hideTryAgain -> popUpTo<TestRoute> { inclusive = true }
-                            route.fromRandomQuiz -> popUpTo<RandomQuizSetupRoute> { inclusive = true }
+                            route.hideTryAgain || route.setupEntry == SetupEntry.NONE ->
+                                popUpTo<TestRoute> { inclusive = true }
+                            route.setupEntry == SetupEntry.RANDOM_QUIZ ->
+                                popUpTo<RandomQuizSetupRoute> { inclusive = true }
                             else -> popUpTo<TestSetupRoute> { inclusive = true }
                         }
                     }

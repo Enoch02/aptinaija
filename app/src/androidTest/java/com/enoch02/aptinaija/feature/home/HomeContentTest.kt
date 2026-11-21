@@ -6,6 +6,7 @@ import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assertRangeInfoEquals
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
@@ -120,6 +121,29 @@ class HomeContentTest {
     }
 
     @Test
+    fun errorState_showsDismissableSnackbar() {
+        var dismissed = false
+        setHome(
+            HomeUiState(loading = false, error = "Could not start the drill."),
+            onErrorDismissed = { dismissed = true }
+        )
+
+        composeRule.onNodeWithText("Could not start the drill.").assertIsDisplayed()
+        composeRule.onNodeWithText("Dismiss").performClick()
+
+        composeRule.runOnIdle {
+            assertTrue(dismissed)
+        }
+    }
+
+    @Test
+    fun startingDrill_disablesDrillChips() {
+        setHome(populatedState().copy(startingDrill = true))
+
+        composeRule.onNodeWithTag("home_drill_Numerical Reasoning").assertIsNotEnabled()
+    }
+
+    @Test
     fun lastScoreCard_invokesOpenResult() {
         var openedAttemptId: String? = null
         setHome(
@@ -164,6 +188,7 @@ class HomeContentTest {
         onStartRandomQuiz: () -> Unit = {},
         onDrillSection: (String) -> Unit = {},
         onOpenLastResult: (String) -> Unit = {},
+        onErrorDismissed: () -> Unit = {},
         fontScale: Float = 1f
     ) {
         composeRule.setContent {
@@ -173,7 +198,8 @@ class HomeContentTest {
                     onStartPractice = onStartPractice,
                     onStartRandomQuiz = onStartRandomQuiz,
                     onDrillSection = onDrillSection,
-                    onOpenLastResult = onOpenLastResult
+                    onOpenLastResult = onOpenLastResult,
+                    onErrorDismissed = onErrorDismissed
                 )
             }
         }

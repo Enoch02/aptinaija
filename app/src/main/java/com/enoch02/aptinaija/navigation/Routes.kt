@@ -20,13 +20,17 @@ data class TestSetupRoute(
 @Serializable
 data class RandomQuizSetupRoute(val questionCount: Int? = null)
 
+/** Which setup entry, if any, the test was launched from. */
+@Serializable
+enum class SetupEntry { SHARED, RANDOM_QUIZ, NONE }
+
 @Serializable
 data class TestRoute(
     val attemptId: String,
     /** Retests have no setup screen, so their Results must not offer "Try again". */
     val hideTryAgain: Boolean = false,
-    /** Random quiz has its own setup route, which must be popped when the test finishes. */
-    val fromRandomQuiz: Boolean = false
+    /** Determines which entry to pop when the test finishes. */
+    val setupEntry: SetupEntry = SetupEntry.SHARED
 )
 
 @Serializable

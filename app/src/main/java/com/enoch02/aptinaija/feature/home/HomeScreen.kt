@@ -2,6 +2,7 @@ package com.enoch02.aptinaija.feature.home
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,9 +19,15 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -46,18 +53,26 @@ import com.enoch02.aptinaija.domain.model.TestTemplate
 fun HomeScreen(
     onStartPractice: () -> Unit,
     onStartRandomQuiz: () -> Unit,
-    onDrillSection: (String) -> Unit,
+    onDrillStarted: (String) -> Unit,
     onOpenLastResult: (String) -> Unit,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
 
+    LaunchedEffect(state.drillAttemptId) {
+        state.drillAttemptId?.let { attemptId ->
+            onDrillStarted(attemptId)
+            viewModel.consumeDrillAttemptId()
+        }
+    }
+
     HomeContent(
         state = state,
         onStartPractice = onStartPractice,
         onStartRandomQuiz = onStartRandomQuiz,
-        onDrillSection = onDrillSection,
-        onOpenLastResult = onOpenLastResult
+        onDrillSection = viewModel::startDrill,
+        onOpenLastResult = onOpenLastResult,
+        onErrorDismissed = viewModel::dismissError
     )
 }
 
@@ -67,72 +82,98 @@ internal fun HomeContent(
     onStartPractice: () -> Unit,
     onStartRandomQuiz: () -> Unit,
     onDrillSection: (String) -> Unit,
-    onOpenLastResult: (String) -> Unit
+    onOpenLastResult: (String) -> Unit,
+    onErrorDismissed: () -> Unit = {}
 ) {
     if (state.loading) {
         LoadingState(Modifier.testTag("home_loading"))
         return
     }
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        Column(
-            modifier = Modifier
-                .weight(1f)
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            LastScoreCard(
-                state = state,
-                onOpenLastResult = onOpenLastResult
-            )
+    val snackbarHostState = remember { SnackbarHostState() }
+    val errorMessage = state.error
+    val dismissLabel = stringResource(R.string.dismiss)
+    LaunchedEffect(errorMessage, dismissLabel) {
+        if (errorMessage == null) return@LaunchedEffect
+        val result = snackbarHostState.showSnackbar(
+            message = errorMessage,
+            actionLabel = dismissLabel,
+            duration = SnackbarDuration.Long
+        )
+        if (result == SnackbarResult.ActionPerformed || result == SnackbarResult.Dismissed) {
+            onErrorDismissed()
+        }
+    }
 
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+    Box(modifier = Modifier.fillMaxSize()) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                Button(
-                    onClick = onStartPractice,
-                    modifier = Modifier
-                        .weight(1f)
-                        .heightIn(min = 48.dp)
+                LastScoreCard(
+                    state = state,
+                    onOpenLastResult = onOpenLastResult
+                )
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Text(stringResource(R.string.start_practice))
+                    Button(
+                        onClick = onStartPractice,
+                        modifier = Modifier
+                            .weight(1f)
+                            .heightIn(min = 48.dp)
+                    ) {
+                        Text(stringResource(R.string.start_practice))
+                    }
+                    OutlinedButton(
+                        onClick = onStartRandomQuiz,
+                        modifier = Modifier
+                            .weight(1f)
+                            .heightIn(min = 48.dp)
+                            .testTag("home_start_random_quiz")
+                    ) {
+                        Text(stringResource(R.string.random_quiz))
+                    }
                 }
-                OutlinedButton(
-                    onClick = onStartRandomQuiz,
-                    modifier = Modifier
-                        .weight(1f)
-                        .heightIn(min = 48.dp)
-                        .testTag("home_start_random_quiz")
-                ) {
-                    Text(stringResource(R.string.random_quiz))
+
+                Text(
+                    text = stringResource(R.string.weakest_sections),
+                    style = MaterialTheme.typography.titleMedium,
+                    modifier = Modifier.padding(top = 4.dp)
+                )
+
+                if (state.weakSections.isEmpty()) {
+                    EmptyWeakSectionsCard()
+                } else {
+                    state.weakSections.forEach { weakness ->
+                        WeakSectionCard(
+                            weakness = weakness,
+                            enabled = !state.startingDrill,
+                            onDrill = { onDrillSection(weakness.section) }
+                        )
+                    }
                 }
             }
 
-            Text(
-                text = stringResource(R.string.weakest_sections),
-                style = MaterialTheme.typography.titleMedium,
-                modifier = Modifier.padding(top = 4.dp)
+            AdSlot(
+                modifier = Modifier
+                    .padding(horizontal = 16.dp)
+                    .padding(bottom = 8.dp),
+                testTag = "home_ad_slot"
             )
-
-            if (state.weakSections.isEmpty()) {
-                EmptyWeakSectionsCard()
-            } else {
-                state.weakSections.forEach { weakness ->
-                    WeakSectionCard(
-                        weakness = weakness,
-                        onDrill = { onDrillSection(weakness.section) }
-                    )
-                }
-            }
         }
 
-        AdSlot(
+        SnackbarHost(
+            hostState = snackbarHostState,
             modifier = Modifier
-                .padding(horizontal = 16.dp)
-                .padding(bottom = 8.dp),
-            testTag = "home_ad_slot"
+                .align(Alignment.BottomCenter)
+                .padding(16.dp)
         )
     }
 }
@@ -214,6 +255,7 @@ private fun LastScoreCard(
 @Composable
 private fun WeakSectionCard(
     weakness: SectionWeakness,
+    enabled: Boolean = true,
     onDrill: () -> Unit
 ) {
     val percent = if (weakness.total == 0) {
@@ -258,6 +300,7 @@ private fun WeakSectionCard(
             )
             AssistChip(
                 onClick = onDrill,
+                enabled = enabled,
                 label = { Text(stringResource(R.string.drill_this)) },
                 modifier = Modifier
                     .padding(top = 4.dp)

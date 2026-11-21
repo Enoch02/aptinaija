@@ -21,6 +21,7 @@
     <string name="begin_practice">Begin practice</string>
     <string name="begin_drill">Begin drill</string>
     <string name="starting">Starting…</string>
+    <string name="dismiss">Dismiss</string>
     <string name="questions_metric">questions</string>
     <string name="minutes_metric">minutes</string>
     <string name="no_sections_available">No sections available for this company.</string>
