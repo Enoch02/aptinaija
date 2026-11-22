@@ -9,6 +9,8 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.swipeDown
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.enoch02.aptinaija.core.designsystem.AptiNaijaTheme
 import com.enoch02.aptinaija.domain.model.AppSettings
@@ -102,6 +104,35 @@ class SettingsContentTest {
     }
 
     @Test
+    fun openSourceLicensesRow_opensBottomSheet() {
+        setSettings(AppSettings())
+
+        composeRule.onNodeWithTag("settings_open_source_licenses_sheet").assertDoesNotExist()
+
+        composeRule.onNodeWithTag("settings_open_source_licenses")
+            .performScrollTo()
+            .performClick()
+
+        composeRule.onNodeWithTag("settings_open_source_licenses_sheet").assertIsDisplayed()
+    }
+
+    @Test
+    fun openSourceLicensesSheet_dismissesOnSwipeDown() {
+        setSettings(AppSettings())
+
+        composeRule.onNodeWithTag("settings_open_source_licenses")
+            .performScrollTo()
+            .performClick()
+        composeRule.onNodeWithTag("settings_open_source_licenses_sheet").assertIsDisplayed()
+
+        composeRule.onNodeWithTag("settings_open_source_licenses_sheet").performTouchInput {
+            swipeDown(startY = top + 1f, endY = bottom, durationMillis = 300)
+        }
+
+        composeRule.onNodeWithTag("settings_open_source_licenses_sheet").assertDoesNotExist()
+    }
+
+    @Test
     fun largeFontScale_keepsAllRowsReachableByScrolling() {
         setSettings(AppSettings(), fontScale = 2f)
 
@@ -110,6 +141,9 @@ class SettingsContentTest {
             .performScrollTo()
             .assertIsDisplayed()
         composeRule.onNodeWithTag("settings_ads_consent").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithTag("settings_open_source_licenses")
+            .performScrollTo()
+            .assertIsDisplayed()
     }
 
     private fun setSettings(

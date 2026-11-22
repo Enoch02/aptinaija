@@ -12,15 +12,18 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -37,6 +40,8 @@ import com.enoch02.aptinaija.R
 import com.enoch02.aptinaija.core.designsystem.AptiNaijaTheme
 import com.enoch02.aptinaija.domain.model.AppSettings
 import com.enoch02.aptinaija.domain.model.AppThemeMode
+import com.mikepenz.aboutlibraries.ui.compose.android.produceLibraries
+import com.mikepenz.aboutlibraries.ui.compose.m3.LibrariesContainer
 
 @Composable
 fun SettingsScreen(
@@ -53,6 +58,7 @@ fun SettingsScreen(
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 internal fun SettingsContent(
     settings: AppSettings,
@@ -62,6 +68,8 @@ internal fun SettingsContent(
     onDefaultCount: (Int) -> Unit
 ) {
     var showAdsDialog by rememberSaveable { mutableStateOf(false) }
+    var showLibrariesSheet by rememberSaveable { mutableStateOf(false) }
+    val libraries by produceLibraries(R.raw.aboutlibraries)
 
     Column(
         modifier = Modifier
@@ -90,7 +98,19 @@ internal fun SettingsContent(
 
         DefaultCountRow(selected = settings.defaultQuestionCount, onSelected = onDefaultCount)
 
-        AdsConsentRow(onClick = { showAdsDialog = true })
+        TextRow(
+            title = stringResource(R.string.settings_ads_consent),
+            subtitle = stringResource(R.string.settings_ads_manage),
+            testTag = "settings_ads_consent",
+            onClick = { showAdsDialog = true }
+        )
+
+        TextRow(
+            title = stringResource(R.string.settings_open_source_licenses),
+            subtitle = stringResource(R.string.settings_open_source_licenses_subtitle),
+            testTag = "settings_open_source_licenses",
+            onClick = { showLibrariesSheet = true }
+        )
     }
 
     if (showAdsDialog) {
@@ -108,6 +128,20 @@ internal fun SettingsContent(
                 }
             }
         )
+    }
+
+    if (showLibrariesSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { showLibrariesSheet = false },
+            sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+        ) {
+            LibrariesContainer(
+                libraries = libraries,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .testTag("settings_open_source_licenses_sheet")
+            )
+        }
     }
 }
 
@@ -206,17 +240,22 @@ private fun DefaultCountRow(selected: Int, onSelected: (Int) -> Unit) {
 }
 
 @Composable
-private fun AdsConsentRow(onClick: () -> Unit) {
+private fun TextRow(
+    title: String,
+    subtitle: String,
+    testTag: String,
+    onClick: () -> Unit
+) {
     ListItem(
         headlineContent = {
             Text(
-                text = stringResource(R.string.settings_ads_consent),
+                text = title,
                 style = MaterialTheme.typography.titleMedium
             )
         },
         supportingContent = {
             Text(
-                text = stringResource(R.string.settings_ads_manage),
+                text = subtitle,
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -231,7 +270,7 @@ private fun AdsConsentRow(onClick: () -> Unit) {
             .fillMaxWidth()
             .clickable(onClick = onClick)
             .heightIn(min = 72.dp)
-            .testTag("settings_ads_consent")
+            .testTag(testTag)
     )
 }
 
