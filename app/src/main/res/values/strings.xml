@@ -153,4 +153,6 @@
     <string name="timer_warning_20">20% of test time left</string>
     <string name="timer_warning_10">10% of test time left</string>
     <string name="attempt_empty">This attempt has no questions.</string>
+    <string name="settings_open_source_licenses">Open source acknowledgements</string>
+    <string name="settings_open_source_licenses_subtitle">Credits for the libraries used in this app</string>
 </resources>
