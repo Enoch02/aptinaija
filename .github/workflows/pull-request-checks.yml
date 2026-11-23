@@ -1,6 +1,6 @@
-name: CI
+name: Pull request checks
 
-# Pull requests only. Pushes to the default branch are covered by main.yml.
+# Pull requests only. Pushes to the default branch are covered by master-build.yml.
 on:
   pull_request:
     branches:

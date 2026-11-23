@@ -1,6 +1,6 @@
-name: Main
+name: Master build
 
-# Default branch only. PRs are covered by ci.yml.
+# Default branch only. PRs are covered by pull-request-checks.yml.
 on:
   push:
     branches:
